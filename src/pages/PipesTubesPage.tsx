@@ -13,8 +13,8 @@ export function PipesTubesPage() {
             />
             <PageHero
                 eyebrow="Pipes &amp; Tubes"
-                title="Titanium and stainless steel pipes and tubes for critical applications."
-                description="This route will support the most important search term cluster for the product line and link directly into related categories."
+                title="Titanium and Stainless Steel Pipes and Tubes for Critical Applications."
+                description="Specialist & India's largest supplier and exporter of high-grade pipes and tubes."
                 breadcrumbs={
                     <>
                         <Link to="/">Home</Link>
@@ -26,18 +26,40 @@ export function PipesTubesPage() {
                 }
             />
 
-            <section className="container page-content-grid page-content-grid--two">
-                <article className="info-card">
-                    <h2>What will live here</h2>
-                    <p>
-                        Grades, standards, sizes, and application notes will be added once the page is mapped from the source site.
-                    </p>
+            <section className="container" style={{ marginTop: '4rem' }}>
+                <article className="feature-split">
+                    <div className="feature-split__media">
+                        <img src="/assets/home/product-6.webp" alt="Stainless Steel Pipes and Tubes bundle" loading="lazy" />
+                    </div>
+                    <div className="feature-split__content">
+                        <h2>Stainless Steel Pipes &amp; Tubes</h2>
+                        <p>
+                            Stainless Steel remains one of the most versatile and widely used materials across industries due to its strength, corrosion resistance, and long service life.
+                        </p>
+                        <ul className="feature-list">
+                            <li><Link to="/products/stainless-steel-304-pipes-tubes">Stainless Steel 304 Pipes &amp; Tubes</Link></li>
+                            <li><Link to="/products/stainless-steel-304l-pipes-tubes">Stainless Steel 304L Pipes &amp; Tubes</Link></li>
+                            <li><Link to="/products/stainless-steel-316l-pipes-tubes">Stainless Steel 316L Pipes &amp; Tubes</Link></li>
+                            <li><Link to="/products/stainless-steel-316ti-pipes-tubes">Stainless Steel 316Ti Pipes &amp; Tubes</Link></li>
+                        </ul>
+                    </div>
                 </article>
-                <article className="info-card">
-                    <h2>Internal linking</h2>
-                    <p>
-                        Linking from the product hub and footer helps search engines understand the site structure.
-                    </p>
+
+                <article className="feature-split" style={{ direction: 'rtl' }}>
+                    <div className="feature-split__media" style={{ direction: 'ltr' }}>
+                        <img src="/assets/home/product-3.webp" alt="Titanium Pipes and Tubes rack" loading="lazy" />
+                    </div>
+                    <div className="feature-split__content" style={{ direction: 'ltr' }}>
+                        <h2>Titanium Pipes &amp; Tubes</h2>
+                        <p>
+                            At Nevio Steel India, we provide a complete range of Titanium Pipes &amp; Tubes, Sheets &amp; Coils, Round Bars, and Wires, manufactured under stringent quality checks to deliver unmatched durability and consistency.
+                        </p>
+                        <ul className="feature-list">
+                            <li><Link to="/products/titanium-grade-2-pipes-tubes">Titanium Gr 2 Pipes &amp; Tubes</Link></li>
+                            <li><Link to="/products/titanium-grade-5-pipes-tubes">Titanium Gr 5 Pipes &amp; Tubes</Link></li>
+                            <li><Link to="/products/titanium-eli-f136-pipes-tubes">Titanium ELI F136 Pipes &amp; Tubes</Link></li>
+                        </ul>
+                    </div>
                 </article>
             </section>
         </div>

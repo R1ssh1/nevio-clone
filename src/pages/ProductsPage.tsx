@@ -27,15 +27,15 @@ export function ProductsPage() {
 
             <section className="container product-grid product-grid--page">
                 {productCards.map((card) => (
-                    <article className="product-card" key={card.title}>
-                        <Link to={card.href} className="product-card__media">
+                    <Link to={card.href} className="product-card" style={{ display: 'block', textDecoration: 'none', color: 'inherit' }} key={card.title}>
+                        <div className="product-card__media">
                             <img src={card.image} alt={card.title} loading="lazy" />
-                        </Link>
+                        </div>
                         <div className="product-card__footer">
                             <h3>{card.title}</h3>
                             <span>View</span>
                         </div>
-                    </article>
+                    </Link>
                 ))}
             </section>
         </div>

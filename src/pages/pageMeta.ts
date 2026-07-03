@@ -18,9 +18,9 @@ export const pageMeta = {
         path: '/products',
     },
     pipesTubes: {
-        title: 'Pipes & Tubes | Vedantara Metal & Alloys',
+        title: 'Stainless Steel & Titanium Pipes & Tubes Manufacturers, Suppliers, Exporters',
         description:
-            'Browse titanium and stainless steel pipes and tubes built for critical industries and export markets.',
+            'Vedantara Metal & Alloys is India’s leading manufacturer, supplier, and exporter of Stainless Steel 304/316L and Titanium Gr 2/Gr 5 Pipes & Tubes.',
         path: '/pipes-tubes',
     },
     roundBars: {

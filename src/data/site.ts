@@ -116,24 +116,32 @@ export const productCards = [
 
 export const industryCards = [
     {
-        title: 'surgical and orthopaedic implants',
+        title: 'Petrochemical Industry',
         image: '/assets/home/orthopaedic-industry.webp',
     },
     {
-        title: 'Aerospace Industry',
+        title: 'Marine Industry',
         image: '/assets/home/aerospace-industry.webp',
     },
     {
-        title: 'Chemical Industry',
+        title: 'Cookware',
         image: '/assets/home/chemical-industry.webp',
     },
     {
-        title: 'Oil & Gas Industry',
+        title: 'Medical Industry',
         image: '/assets/home/oil-gas-industry.webp',
     },
     {
-        title: 'Defense Industry',
+        title: 'Aerospace Industry',
         image: '/assets/home/defense-industry.webp',
+    },
+    {
+        title: 'Chemical Industry',
+        image: '/assets/home/construction-industry.webp',
+    },
+    {
+        title: 'Automotive Industry',
+        image: '/assets/home/construction-industry.webp',
     },
     {
         title: 'Construction Industry',

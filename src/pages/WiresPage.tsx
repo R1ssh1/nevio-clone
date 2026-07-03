@@ -21,14 +21,40 @@ export function WiresPage() {
                     </>
                 }
             />
-            <section className="container page-content-grid page-content-grid--two">
-                <article className="info-card">
-                    <h2>Future content</h2>
-                    <p>Wire product details will be added from the original site export later.</p>
+            <section className="container" style={{ marginTop: '4rem' }}>
+                <article className="feature-split">
+                    <div className="feature-split__media">
+                        <img src="/assets/home/product-4.webp" alt="Stainless Steel Wires" loading="lazy" />
+                    </div>
+                    <div className="feature-split__content">
+                        <h2>Stainless Steel Wires</h2>
+                        <p>
+                            Stainless Steel remains one of the most versatile and widely used materials across industries due to its strength, corrosion resistance, and long service life.
+                        </p>
+                        <ul className="feature-list">
+                            <li><Link to="/products/stainless-steel-304-wires">Stainless Steel 304 Wires</Link></li>
+                            <li><Link to="/products/stainless-steel-304l-wires">Stainless Steel 304L Wires</Link></li>
+                            <li><Link to="/products/stainless-steel-316l-wires">Stainless Steel 316L Wires</Link></li>
+                            <li><Link to="/products/stainless-steel-316ti-wires">Stainless Steel 316Ti Wires</Link></li>
+                        </ul>
+                    </div>
                 </article>
-                <article className="info-card">
-                    <h2>SEO note</h2>
-                    <p>More route depth means the site can target more specific product queries.</p>
+
+                <article className="feature-split" style={{ direction: 'rtl' }}>
+                    <div className="feature-split__media" style={{ direction: 'ltr' }}>
+                        <img src="/assets/home/product-1.webp" alt="Titanium Wires" loading="lazy" />
+                    </div>
+                    <div className="feature-split__content" style={{ direction: 'ltr' }}>
+                        <h2>Titanium Wires</h2>
+                        <p>
+                            At Nevio Steel India, we provide a complete range of Titanium Wires manufactured under stringent quality checks to deliver unmatched durability and consistency.
+                        </p>
+                        <ul className="feature-list">
+                            <li><Link to="/products/titanium-grade-2-wires">Titanium Gr 2 Wires</Link></li>
+                            <li><Link to="/products/titanium-grade-5-wires">Titanium Gr 5 Wires</Link></li>
+                            <li><Link to="/products/titanium-eli-f136-wires">Titanium ELI F136 Wires</Link></li>
+                        </ul>
+                    </div>
                 </article>
             </section>
         </div>

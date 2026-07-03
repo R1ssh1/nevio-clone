@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom'
 import { Seo } from '../components/Seo'
 import { pageMeta } from './pageMeta'
 import {
-    homepageAboutCopy,
     homepageBannerSlides,
     homepageIndustryIntro,
     homepageStats,
-    homepageWhyChooseUs,
     industryCards,
     productCards,
 } from '../data/site'
 import { AboutSection } from "../components/AboutSection";
+import { WhyChooseUsSection } from '../components/WhyChooseUsSection'
+import { CountUp } from '../components/CountUp'
 
 export function HomePage() {
     const bannerRef = useRef<HTMLDivElement | null>(null)
@@ -44,7 +44,7 @@ export function HomePage() {
 
         const timer = setInterval(() => {
             moveBanner(1)
-        }, 6000)
+        }, 3500)
 
         return () => clearInterval(timer)
     }, [moveBanner, paused])
@@ -72,6 +72,34 @@ export function HomePage() {
         sections.forEach((section) => observer.observe(section))
 
         return () => observer.disconnect()
+    }, [])
+
+    // Prevent the horizontal scroll container from capturing vertical wheel events
+    useEffect(() => {
+        const viewport = bannerRef.current
+        if (!viewport) return
+
+        const handleWheel = (e: WheelEvent) => {
+            // Only block if the user is scrolling more vertically than horizontally
+            if (Math.abs(e.deltaY) >= Math.abs(e.deltaX)) {
+                e.preventDefault()
+                window.scrollBy({ top: e.deltaY, behavior: 'auto' })
+            }
+        }
+
+        // Sync native horizontal scrolling to activeSlide state
+        const handleScroll = () => {
+            const width = viewport.clientWidth
+            const index = Math.round(viewport.scrollLeft / width)
+            setActiveSlide(index)
+        }
+
+        viewport.addEventListener('wheel', handleWheel, { passive: false })
+        viewport.addEventListener('scroll', handleScroll, { passive: true })
+        return () => {
+            viewport.removeEventListener('wheel', handleWheel)
+            viewport.removeEventListener('scroll', handleScroll)
+        }
     }, [])
 
     const handleBannerKeyDown = (event: KeyboardEvent<HTMLElement>) => {
@@ -183,21 +211,21 @@ export function HomePage() {
                 data-reveal="products"
             >
                 <div className="container section-heading">
-                    <p className="eyebrow colour:'blue'">Our Products</p>
+                    <p className="eyebrow">Our Products</p>
                     <h2>Specialist and India&apos;s trusted supplier and exporter of titanium and stainless steel.</h2>
                 </div>
 
                 <div className="container product-grid">
                     {productCards.map((card) => (
-                        <article className="product-card" key={card.title}>
-                            <Link to={card.href} className="product-card__media">
+                        <Link to={card.href} className="product-card" style={{ display: 'block', textDecoration: 'none', color: 'inherit' }} key={card.title}>
+                            <div className="product-card__media">
                                 <img src={card.image} alt={card.title} loading="lazy" />
-                            </Link>
+                            </div>
                             <div className="product-card__footer">
                                 <h3>{card.title}</h3>
                                 <span>View</span>
                             </div>
-                        </article>
+                        </Link>
                     ))}
                 </div>
             </section>
@@ -214,33 +242,15 @@ export function HomePage() {
                 </div>
             </section>
 
-            <section
-                className={`section-block container section-grid section-grid--why ${revealClass('why')}`}
-                data-reveal="why"
-            >
-                <div className="section-copy">
-                    <p className="eyebrow">Why Choose Us</p>
-                    <h2>
-                        Vedantara Metal and Alloys is one of the major stockists of titanium and stainless steel
-                        pipes and tubes.
-                    </h2>
-                </div>
-
-                <div className="why-grid">
-                    {homepageWhyChooseUs.map(({ title, text }) => (
-                        <article className="why-card" key={title}>
-                            <h3>{title}</h3>
-                            <p>{text}</p>
-                        </article>
-                    ))}
-                </div>
-            </section>
+            <WhyChooseUsSection />
 
             <section className={`section-block stats-band ${revealClass('stats')}`} data-reveal="stats">
                 <div className="container stats-grid">
                     {homepageStats.map((stat) => (
                         <article className="stat-card" key={stat.label}>
-                            <strong>{stat.value}</strong>
+                            <strong>
+                                <CountUp endString={stat.value} />
+                            </strong>
                             <span>{stat.label}</span>
                         </article>
                     ))}

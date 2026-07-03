@@ -21,14 +21,41 @@ export function SheetsCoilsPage() {
                     </>
                 }
             />
-            <section className="container page-content-grid page-content-grid--two">
-                <article className="info-card">
-                    <h2>Future content</h2>
-                    <p>Product specifications and applications will be added here later.</p>
+            <section className="container" style={{ marginTop: '4rem' }}>
+                <article className="feature-split">
+                    <div className="feature-split__media">
+                        <img src="/assets/home/product-5.webp" alt="Stainless Steel Sheets and Coils" loading="lazy" />
+                    </div>
+                    <div className="feature-split__content">
+                        <h2>Stainless Steel Sheets &amp; Coils</h2>
+                        <p>
+                            Stainless Steel remains one of the most versatile and widely used materials across industries due to its strength, corrosion resistance, and long service life.
+                        </p>
+                        <ul className="feature-list">
+                            <li><Link to="/products/stainless-steel-304-sheets-coils">Stainless Steel 304 Sheets &amp; Coils</Link></li>
+                            <li><Link to="/products/stainless-steel-304l-sheets-coils">Stainless Steel 304L Sheets &amp; Coils</Link></li>
+                            <li><Link to="/products/stainless-steel-316l-sheets-coils">Stainless Steel 316L Sheets &amp; Coils</Link></li>
+                            <li><Link to="/products/stainless-steel-316ti-sheets-coils">Stainless Steel 316Ti Sheets &amp; Coils</Link></li>
+                        </ul>
+                    </div>
                 </article>
-                <article className="info-card">
-                    <h2>SEO note</h2>
-                    <p>The route gives this product name its own page instead of hiding it in a list.</p>
+
+                <article className="feature-split" style={{ direction: 'rtl' }}>
+                    <div className="feature-split__media" style={{ direction: 'ltr' }}>
+                        <img src="/assets/home/product-1.webp" alt="Titanium Sheets and Coils" loading="lazy" />
+                    </div>
+                    <div className="feature-split__content" style={{ direction: 'ltr' }}>
+                        <h2>Titanium Sheets &amp; Coils</h2>
+                        <p>
+                            At Nevio Steel India, we provide a complete range of Titanium Sheets &amp; Coils manufactured under stringent quality checks to deliver unmatched durability and consistency.
+                        </p>
+                        <ul className="feature-list">
+                            <li><Link to="/products/titanium-grade-2-sheets-coils">Titanium Gr 2 Sheets &amp; Coils</Link></li>
+                            <li><Link to="/products/titanium-grade-5-sheets-coils">Titanium Gr 5 Sheets &amp; Coils</Link></li>
+                            <li><Link to="/products/titanium-eli-f136-sheets-coils">Titanium ELI F136 Sheets &amp; Coils</Link></li>
+                            <li><Link to="/products/titanium-grade-1-4-7-9-12-sheets-coils">Titanium Grade 1,4,7,9,12 Sheets &amp; Coils</Link></li>
+                        </ul>
+                    </div>
                 </article>
             </section>
         </div>
