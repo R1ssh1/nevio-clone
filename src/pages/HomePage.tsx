@@ -44,7 +44,7 @@ export function HomePage() {
 
         const timer = setInterval(() => {
             moveBanner(1)
-        }, 3500)
+        }, 4500)
 
         return () => clearInterval(timer)
     }, [moveBanner, paused])
@@ -244,16 +244,22 @@ export function HomePage() {
 
             <WhyChooseUsSection />
 
-            <section className={`section-block stats-band ${revealClass('stats')}`} data-reveal="stats">
-                <div className="container stats-grid">
-                    {homepageStats.map((stat) => (
-                        <article className="stat-card" key={stat.label}>
-                            <strong>
-                                <CountUp endString={stat.value} />
-                            </strong>
-                            <span>{stat.label}</span>
-                        </article>
-                    ))}
+            <section className="stats-band">
+                <div className="stats-band__bg">
+                    <img src="/assets/home/product-7.webp" alt="Background watermark" loading="lazy" />
+                </div>
+                <div className="stats-marquee">
+                    <div className="stats-marquee__track">
+                        {/* Duplicate the array up to 2 times for seamless wrapping */}
+                        {[...homepageStats, ...homepageStats].map((stat, idx) => (
+                            <article className="stat-card stat-card--marquee" key={`${stat.label}-${idx}`}>
+                                <strong>
+                                    <CountUp endString={stat.value} />
+                                </strong>
+                                <span>{stat.label}</span>
+                            </article>
+                        ))}
+                    </div>
                 </div>
             </section>
 

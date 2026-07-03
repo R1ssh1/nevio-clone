@@ -58,26 +58,44 @@ export const homepageWhyChooseUs = [
     {
         title: 'Quality Assurance',
         text: 'The quality assurance system is guided by principles that support our unique working culture which incorporates respect.',
+        metric: 100,
+        suffix: '%',
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="36" height="36"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>'
     },
     {
         title: 'Largest Inventory',
         text: 'We help customers develop their energy resources bringing world class capability and delivering it locally.',
+        metric: 10,
+        suffix: 'k+',
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="36" height="36"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>'
     },
     {
         title: 'Quick Delivery',
         text: 'We exercise stringent quality control measures for ensuring the accurate dimensions and mechanical properties of our products.',
+        metric: 24,
+        suffix: 'h',
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="36" height="36"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>'
     },
     {
         title: 'Customer Support',
         text: 'Build strong relationships with our customers - which we achieve, for example, by employing and training local workforces.',
+        metric: 24,
+        suffix: '/7',
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="36" height="36"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>'
     },
     {
         title: 'Third Party Inspection',
         text: 'Our team of experts maintain a vigil on the quality of the products. Every single piece is attached with test certificates and reports.',
+        metric: 100,
+        suffix: '%',
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="36" height="36"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>'
     },
     {
         title: 'Global Network',
         text: 'We supply our products to all over globe New Mexico, New York, Nepal, Bahrain, Kuwait, Oman, Qatar, UK, Indonesia, Kuwait, Mexico, Malaysia etc...',
+        metric: 50,
+        suffix: '+',
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="36" height="36"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>'
     },
 ]
 
@@ -124,12 +142,12 @@ export const industryCards = [
         image: '/assets/home/aerospace-industry.webp',
     },
     {
-        title: 'Cookware',
-        image: '/assets/home/chemical-industry.webp',
+        title: 'Power Industry',
+        image: '/assets/home/power-industry.webp',
     },
     {
-        title: 'Medical Industry',
-        image: '/assets/home/oil-gas-industry.webp',
+        title: 'Pharmaceutical Industry',
+        image: '/assets/home/pharmaceutical.webp',
     },
     {
         title: 'Aerospace Industry',
@@ -137,11 +155,11 @@ export const industryCards = [
     },
     {
         title: 'Chemical Industry',
-        image: '/assets/home/construction-industry.webp',
+        image: '/assets/home/chemical-industry.webp',
     },
     {
         title: 'Automotive Industry',
-        image: '/assets/home/construction-industry.webp',
+        image: '/assets/home/automotive-industry.webp',
     },
     {
         title: 'Construction Industry',

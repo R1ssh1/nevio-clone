@@ -17,27 +17,30 @@ export function CountUp({ endString }: { endString: string }) {
 
         const observer = new IntersectionObserver(
             ([entry]) => {
-                if (entry.isIntersecting && !animated.current) {
-                    animated.current = true;
+                if (entry.isIntersecting) {
+                    if (!animated.current) {
+                        animated.current = true;
 
-                    const duration = 3500;
-                    const startTime = performance.now();
+                        const duration = 2500;
+                        const startTime = performance.now();
 
-                    const update = (currentTime: number) => {
-                        const elapsed = currentTime - startTime;
-                        const progress = Math.min(elapsed / duration, 1);
+                        const update = (currentTime: number) => {
+                            const elapsed = currentTime - startTime;
+                            const progress = Math.min(elapsed / duration, 1);
 
-                        // Ease out expo
-                        const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
-                        setCount(Math.floor(easeProgress * endNum));
+                            const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+                            setCount(Math.floor(easeProgress * endNum));
 
-                        if (progress < 1) {
-                            animationFrame = requestAnimationFrame(update);
-                        }
-                    };
+                            if (progress < 1) {
+                                animationFrame = requestAnimationFrame(update);
+                            }
+                        };
 
-                    animationFrame = requestAnimationFrame(update);
-                    observer.disconnect();
+                        animationFrame = requestAnimationFrame(update);
+                    }
+                } else {
+                    // Reset animation state when leaving view
+                    animated.current = false;
                 }
             },
             { threshold: 0.1 }
