@@ -14,7 +14,7 @@ export function AboutPage() {
             <PageHero
                 eyebrow="About Us"
                 title="About Us"
-                description="At Nevio Steel India, we take pride in being one of the most reliable manufacturers, suppliers, and exporters of titanium and stainless steel in the global market. Headquartered in Mumbai, India, we are an ISO 13485-2016 certified company with a strong reputation for delivering quality products backed by professional service and technical excellence."
+                description="At Vedantara Metal & Alloys, we take pride in being one of the most reliable manufacturers, suppliers, and exporters of titanium and stainless steel in the global market. Headquartered in Mumbai, India, we are an ISO 13485-2016 certified company with a strong reputation for delivering quality products backed by professional service and technical excellence."
                 breadcrumbs={
                     <>
                         <Link to="/">Home</Link>
@@ -27,7 +27,7 @@ export function AboutPage() {
             <section className="container section-grid section-grid--about">
                 <div className="about-gallery">
                     <figure className="about-gallery__media about-gallery__media--tall">
-                        <img src="/assets/home/about-media-3.webp" alt="Nevio Steel India about visual" />
+                        <img src="/assets/home/about-media-3.webp" alt="Vedantara Metal and Alloys about visual" />
                     </figure>
                     <figure className="about-gallery__media about-gallery__media--stacked">
                         <img src="/assets/home/about-media-1.webp" alt="Manufacturing visual" />
@@ -45,7 +45,7 @@ export function AboutPage() {
                     <p className="eyebrow">About Us</p>
                     <h2>Globally trusted supplier of steel pipes &amp; tubes.</h2>
                     <p>
-                        At Nevio Steel India, we take pride in being one of the most reliable
+                        At Vedantara Metal & Alloys, we take pride in being one of the most reliable
                         manufacturers, suppliers, and exporters of Titanium and Stainless Steel in
                         the global market. Headquartered in Mumbai, India, we are an ISO 13485-2016
                         certified company with a strong reputation for delivering quality products

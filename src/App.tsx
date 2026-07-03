@@ -10,25 +10,33 @@ import { ProductsPage } from './pages/ProductsPage'
 import { SheetsCoilsPage } from './pages/SheetsCoilsPage'
 import { QualityPage } from './pages/QualityPage'
 import { WiresPage } from './pages/WiresPage'
+import Cursor from './components/Cursor'
+
 import './App.css'
 
 function App() {
   return (
-    <Layout>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about-us" element={<AboutPage />} />
-        <Route path="/products" element={<ProductsPage />} />
-        <Route path="/pipes-tubes" element={<PipesTubesPage />} />
-        <Route path="/round-bars" element={<RoundBarsPage />} />
-        <Route path="/sheets-coils" element={<SheetsCoilsPage />} />
-        <Route path="/wires" element={<WiresPage />} />
-        <Route path="/quality-policy" element={<QualityPage />} />
-        <Route path="/contact-us" element={<ContactPage />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
-      <Footer />
-    </Layout>
+    <>
+      {/* Custom cursor */}
+      <Cursor />
+
+      <Layout>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about-us" element={<AboutPage />} />
+          <Route path="/products" element={<ProductsPage />} />
+          <Route path="/pipes-tubes" element={<PipesTubesPage />} />
+          <Route path="/round-bars" element={<RoundBarsPage />} />
+          <Route path="/sheets-coils" element={<SheetsCoilsPage />} />
+          <Route path="/wires" element={<WiresPage />} />
+          <Route path="/quality-policy" element={<QualityPage />} />
+          <Route path="/contact-us" element={<ContactPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+
+        <Footer />
+      </Layout>
+    </>
   )
 }
 

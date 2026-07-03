@@ -5,6 +5,18 @@
 - The app already has shared layout, routed pages, homepage sections, SEO metadata, and a placeholder contact form.
 - The current work is focused on finalizing assets and polish.
 
+# Vedantara Branding Rules
+
+- Never use the word "Nevio" in UI text.
+- Always use "Vedantara Metal and Alloys Pvt Ltd".
+- Preserve the overall layout of the reference website while adapting all branding to Vedantara.
+- Keep the blue/silver color palette from the Vedantara logo.
+- Recreate layouts using React components rather than copying HTML verbatim.
+- Ensure every page is fully responsive.
+- Maintain semantic HTML and accessibility best practices.
+- Match spacing, typography, and proportions closely to the reference site.
+- Prefer CSS Grid/Flexbox over absolute positioning.
+
 ## Working Rules
 - Keep changes small and focused on the current step.
 - Preserve the existing React/Vite structure and naming style.

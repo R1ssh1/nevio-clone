@@ -17,13 +17,17 @@
 }
 
 html {
+  scroll-padding-top: 145px;
   scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   background: #f8fafc;
+
+  overflow-y: scroll;
 }
 
 button,
@@ -50,4 +54,43 @@ p {
 
 #root {
   min-height: 100vh;
+}
+
+.custom-cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+
+  border: 2px solid #11a8c8;
+
+  background: rgba(17, 168, 200, .12);
+
+  pointer-events: none;
+
+  z-index: 99999;
+
+  transform: translate(-50%, -50%);
+
+  transition:
+    width .25s,
+    height .25s,
+    background .25s,
+    border-color .25s,
+    transform .08s linear;
+
+  backdrop-filter: blur(0.7px);
+}
+
+.custom-cursor.active {
+  width: 56px;
+  height: 56px;
+
+  background: rgba(17, 169, 200, 0.281);
+
+  border-color: #0b2341;
 }

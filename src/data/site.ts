@@ -16,20 +16,20 @@ export const navigation = [
 ]
 
 export const contactDetails = {
-    address: 'Placeholder address, Mumbai, India',
-    email: 'hello@neviosteel.com',
-    phone: '+91 00000 00000',
+    address: 'Mumbai, Maharashtra, India',
+    email: 'info@vedantarametal.com',
+    phone: '+91 99999 99999',
 }
 
 export const homepageHeroDescription =
-    'Get premium titanium round bars in Grade 2, Grade 5, and ELIF136 - ISO 5832-3 from Nevio Steel India, ensuring superior performance, durability, and resistance to extreme conditions.'
+    'Get premium titanium round bars in Grade 2, Grade 5, and ELIF136 - ISO 5832-3 from Vedantara Metal & Alloys, ensuring superior performance, durability, and resistance to extreme conditions.'
 
 export const homepageBannerSlides = [
     {
-        eyebrow: 'Welcome To Nevio Steel India',
+        eyebrow: 'Welcome To Vedantara Metal & Alloys',
         title: 'We Are Best Suppliers of Titanium Products.',
         description:
-            'Get premium Titanium Round Bars in Grade 2, Grade 5 & ELIF136 - ISO 5832-3 from Nevio Steel India, ensuring superior performance, durability, and resistance to extreme conditions.',
+            'Get premium Titanium Round Bars in Grade 2, Grade 5 & ELIF136 - ISO 5832-3 from Vedantara Metal & Alloys, ensuring superior performance, durability, and resistance to extreme conditions.',
         primaryLabel: 'Know More',
         primaryPath: '/products',
         secondaryLabel: 'Contact Us',
@@ -38,10 +38,10 @@ export const homepageBannerSlides = [
         alt: 'Titanium product showcase',
     },
     {
-        eyebrow: 'Welcome To Nevio Steel India',
+        eyebrow: 'Welcome To Vedantara Metal & Alloys',
         title: 'We Are Best Suppliers of Stainless Steel Products.',
         description:
-            'Nevio Steel is a leading manufacturer, exporter and supplier of Stainless Steel Products, ensuring superior performance, durability, and resistance to extreme conditions.',
+            'Vedantara Metal & Alloys is a leading manufacturer, exporter and supplier of Stainless Steel Products, ensuring superior performance, durability, and resistance to extreme conditions.',
         primaryLabel: 'Know More',
         primaryPath: '/products',
         secondaryLabel: 'Contact Us',
@@ -52,7 +52,7 @@ export const homepageBannerSlides = [
 ]
 
 export const homepageAboutCopy =
-    'At Nevio Steel India, we take pride in being one of the most reliable manufacturers, suppliers, and exporters of titanium and stainless steel in the global market. Headquartered in Mumbai, India, we are an ISO 13485-2016 certified company with a strong reputation for delivering quality products backed by professional service and technical excellence.'
+    'At Vedantara Metal & Alloys, we take pride in being one of the most reliable manufacturers, suppliers, and exporters of titanium and stainless steel in the global market. Headquartered in Mumbai, India, we are an ISO 13485-2016 certified company with a strong reputation for delivering quality products backed by professional service and technical excellence.'
 
 export const homepageWhyChooseUs = [
     {
