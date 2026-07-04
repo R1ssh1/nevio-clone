@@ -4,63 +4,55 @@ import { Seo } from '../components/Seo'
 import { pageMeta } from './pageMeta'
 import { toSlug } from '../data/slug'
 
-const stainlessSteelWireGrades = [
-    'SS 304 / 304L Wires',
-    'SS 309 / 310 / 310S Wires',
-    'SS 316 / 316L / 316Ti Wires',
-    'SS 317 / 317L Wires',
-    'SS 321 Wires',
-    'SS 347 Wires',
-    'SS 410 / 430 Wires',
-    'SS 904L Wires',
+const stainlessSteelForgedGrades = [
+    'SS 304 / 304L Forged Fittings',
+    'SS 316 / 316L / 316Ti Forged Fittings',
+    'SS 317 / 317L Forged Fittings',
+    'SS 321 / 321H Forged Fittings',
+    'SS 347 / 347H Forged Fittings',
+    'SS 904L Forged Fittings',
 ]
 
-const titaniumWireGrades = [
-    'Titanium Grade 1 Wires',
-    'Titanium Grade 2 Wires',
-    'Titanium Grade 5 (Ti-6Al-4V) Wires',
-    'Titanium ELI F136 Wires',
-    'Titanium Grade 9 Wires',
+const titaniumForgedGrades = [
+    'Titanium Grade 1 Forged Fittings',
+    'Titanium Grade 2 Forged Fittings',
+    'Titanium Grade 5 (Ti-6Al-4V) Forged Fittings',
 ]
 
-const specialtyWires = [
-    'Duplex Steel S31803 / S32205 Wires',
-    'Super Duplex S32750 / S32760 Wires',
-    'Inconel 600 / 625 / 718 Wires',
-    'Incoloy 800 / 825 Wires',
-    'Monel 400 / K500 Wires',
-    'Nickel 200 / 201 Wires',
-    'Hastelloy Wires',
-    'Alloy 20 Wires',
-    'Copper Nickel 70/30 & 90/10 Wires',
-    'Alloy Steel Wires',
-    'Carbon Steel Wires',
+const specialtyForged = [
+    'Duplex Steel S31803 / S32205 Forged Fittings',
+    'Super Duplex S32750 / S32760 Forged Fittings',
+    'Inconel 600 / 625 / 718 Forged Fittings',
+    'Incoloy 800 / 825 Forged Fittings',
+    'Monel 400 / K500 Forged Fittings',
+    'Hastelloy Forged Fittings',
+    'Alloy 20 Forged Fittings',
+    'Alloy Steel Forged Fittings',
+    'Carbon Steel Forged Fittings',
 ]
 
 const specifications = [
-    { label: 'Standard', value: 'ASTM / ASME · DIN / EN / JIS / ISO' },
-    { label: 'Diameter Range', value: '0.1mm – 25mm' },
-    { label: 'Form', value: 'Coil, Spool, Straight Lengths, Cut Pieces' },
-    { label: 'Surface Condition', value: 'Bright Annealed, Pickled, Drawn, Lightly Oxidised' },
-    { label: 'Temper', value: 'Soft, Half Hard, Full Hard, Spring Temper' },
-    { label: 'Applications', value: 'Welding, Weaving, Surgical / Implant, Springs, Mesh, Rope, Cable' },
+    { label: 'Standard', value: 'ASTM / ASME A182 / SA182' },
+    { label: 'Size', value: '1/8" NB to 4" NB (Socketweld & Screwed-Threaded)' },
+    { label: 'Class', value: '2000 LBS, 3000 LBS, 6000 LBS, 9000 LBS' },
+    { label: 'Types', value: 'Elbow, Tee, Union, Cross, Coupling, Cap, Bushing, Plug, Swage Nipple, Welding Boss, Hexagon Nipple, Barrel Nipple, Welding Nipple, Parraler Nipple, Street Elbow, Hexagon Nut, Hose Nipple, Bend, Adapter, Insert, Weldolet, Elbowlet, Sockolet, Thredolet, Nipolet, Letrolet, etc.' },
 ]
 
-export function WiresPage() {
+export function ForgedFittingsPage() {
     return (
         <div className="page-stack">
-            <Seo title={pageMeta.wires.title} description={pageMeta.wires.description} path={pageMeta.wires.path} />
+            <Seo title={pageMeta.forgedFittings.title} description={pageMeta.forgedFittings.description} path={pageMeta.forgedFittings.path} />
             <PageHero
-                eyebrow="Wires"
-                title="Titanium and Stainless Steel Wire Products."
-                description="High-quality stainless steel, titanium, nickel alloy, and specialty wires for welding, medical, industrial, and structural applications."
+                eyebrow="Forged Fittings"
+                title="High-Pressure Forged Fittings."
+                description="Premium quality forged fittings in stainless steel, titanium, and nickel alloys for high-pressure applications."
                 breadcrumbs={
                     <>
                         <Link to="/">Home</Link>
                         <span>/</span>
                         <Link to="/products">Products</Link>
                         <span>/</span>
-                        <span>Wires</span>
+                        <span>Forged Fittings</span>
                     </>
                 }
             />
@@ -68,17 +60,16 @@ export function WiresPage() {
             <section className="container" style={{ marginTop: '4rem' }}>
                 <article className="feature-split">
                     <div className="feature-split__media">
-                        <img src="/assets/home/wires.webp" alt="Stainless Steel Wires" loading="lazy" />
+                        <img src="/assets/home/titanium-pipes-tubes.webp" alt="Stainless Steel Forged Fittings" loading="lazy" />
                     </div>
                     <div className="feature-split__content">
-                        <h2>Stainless Steel Wires</h2>
+                        <h2>Stainless Steel Forged Fittings</h2>
                         <p>
-                            We supply a comprehensive range of stainless steel wires suitable for welding, weaving, rope-making,
-                            spring fabrication, and general industrial use. Our wires are manufactured under strict quality control
-                            and conform to national and international standards.
+                            We supply a comprehensive range of stainless steel forged fittings suitable for high-pressure pipeline applications. 
+                            Our fittings are manufactured under strict quality control and conform to national and international standards.
                         </p>
                         <ul className="feature-list">
-                            {stainlessSteelWireGrades.map((g) => (
+                            {stainlessSteelForgedGrades.map((g) => (
                                 <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
                             ))}
                         </ul>
@@ -87,17 +78,16 @@ export function WiresPage() {
 
                 <article className="feature-split" style={{ direction: 'rtl' }}>
                     <div className="feature-split__media" style={{ direction: 'ltr' }}>
-                        <img src="/assets/home/product-1.webp" alt="Titanium Wires" loading="lazy" />
+                        <img src="/assets/home/titanium-pipes-tubes.webp" alt="Titanium Forged Fittings" loading="lazy" />
                     </div>
                     <div className="feature-split__content" style={{ direction: 'ltr' }}>
-                        <h2>Titanium Wires</h2>
+                        <h2>Titanium Forged Fittings</h2>
                         <p>
-                            Titanium wires from our inventory are manufactured to exacting standards and are widely used in
-                            aerospace welding, surgical implants, marine engineering, and chemical processing. Offered in multiple
-                            grades and tempers.
+                            Titanium forged fittings from our inventory are manufactured to exacting standards and are widely used in
+                            chemical processing and high-stress environments.
                         </p>
                         <ul className="feature-list">
-                            {titaniumWireGrades.map((g) => (
+                            {titaniumForgedGrades.map((g) => (
                                 <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
                             ))}
                         </ul>
@@ -108,10 +98,10 @@ export function WiresPage() {
             {/* Specialty alloys */}
             <section className="container" style={{ marginTop: '1rem', marginBottom: '4rem' }}>
                 <h2 style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2.2rem)', color: 'var(--ink)', marginBottom: '1.5rem' }}>
-                    Specialty Alloy Wires
+                    Specialty Alloy Forged Fittings
                 </h2>
                 <ul className="feature-list" style={{ gridTemplateColumns: 'repeat(3, minmax(0,1fr))' }}>
-                    {specialtyWires.map((g) => (
+                    {specialtyForged.map((g) => (
                         <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
                     ))}
                 </ul>
@@ -133,10 +123,6 @@ export function WiresPage() {
                             </tbody>
                         </table>
                     </div>
-                    <p className="spec-note">
-                        All wires are supplied with full Mill Test Certificates, Chemical &amp; Mechanical Reports,
-                        and Third Party Inspection Reports on request.
-                    </p>
                 </div>
             </section>
         </div>

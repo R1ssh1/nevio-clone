@@ -4,63 +4,56 @@ import { Seo } from '../components/Seo'
 import { pageMeta } from './pageMeta'
 import { toSlug } from '../data/slug'
 
-const stainlessSteelWireGrades = [
-    'SS 304 / 304L Wires',
-    'SS 309 / 310 / 310S Wires',
-    'SS 316 / 316L / 316Ti Wires',
-    'SS 317 / 317L Wires',
-    'SS 321 Wires',
-    'SS 347 Wires',
-    'SS 410 / 430 Wires',
-    'SS 904L Wires',
+const stainlessSteelFastenersGrades = [
+    'SS 304 / 304L Fasteners',
+    'SS 316 / 316L Fasteners',
+    'SS 310 / 310S Fasteners',
+    'SS 317 / 317L Fasteners',
+    'SS 321 / 347 Fasteners',
+    'SS 410 / 430 Fasteners',
+    'SS 904L Fasteners',
 ]
 
-const titaniumWireGrades = [
-    'Titanium Grade 1 Wires',
-    'Titanium Grade 2 Wires',
-    'Titanium Grade 5 (Ti-6Al-4V) Wires',
-    'Titanium ELI F136 Wires',
-    'Titanium Grade 9 Wires',
+const titaniumFastenersGrades = [
+    'Titanium Grade 1 Fasteners',
+    'Titanium Grade 2 Fasteners',
+    'Titanium Grade 5 (Ti-6Al-4V) Fasteners',
 ]
 
-const specialtyWires = [
-    'Duplex Steel S31803 / S32205 Wires',
-    'Super Duplex S32750 / S32760 Wires',
-    'Inconel 600 / 625 / 718 Wires',
-    'Incoloy 800 / 825 Wires',
-    'Monel 400 / K500 Wires',
-    'Nickel 200 / 201 Wires',
-    'Hastelloy Wires',
-    'Alloy 20 Wires',
-    'Copper Nickel 70/30 & 90/10 Wires',
-    'Alloy Steel Wires',
-    'Carbon Steel Wires',
+const specialtyFasteners = [
+    'Duplex Steel S31803 / S32205 Fasteners',
+    'Super Duplex S32750 / S32760 Fasteners',
+    'Inconel 600 / 625 / 718 Fasteners',
+    'Incoloy 800 / 825 Fasteners',
+    'Monel 400 / K500 Fasteners',
+    'Hastelloy Fasteners',
+    'Alloy 20 Fasteners',
+    'Alloy Steel Fasteners',
+    'Carbon Steel Fasteners',
 ]
 
 const specifications = [
-    { label: 'Standard', value: 'ASTM / ASME · DIN / EN / JIS / ISO' },
-    { label: 'Diameter Range', value: '0.1mm – 25mm' },
-    { label: 'Form', value: 'Coil, Spool, Straight Lengths, Cut Pieces' },
-    { label: 'Surface Condition', value: 'Bright Annealed, Pickled, Drawn, Lightly Oxidised' },
-    { label: 'Temper', value: 'Soft, Half Hard, Full Hard, Spring Temper' },
-    { label: 'Applications', value: 'Welding, Weaving, Surgical / Implant, Springs, Mesh, Rope, Cable' },
+    { label: 'Standard', value: 'DIN, ASTM, BS and all International Standards' },
+    { label: 'Length', value: '3 mm to 200 mm' },
+    { label: 'Size', value: 'M3 - M56 | 3/6" to 2" | Custom Sizes' },
+    { label: 'Types', value: 'Bolts, Nuts, Washers, Screws, Studs, Threaded Rods, etc.' },
 ]
 
-export function WiresPage() {
+export function FastenersPage() {
     return (
         <div className="page-stack">
-            <Seo title={pageMeta.wires.title} description={pageMeta.wires.description} path={pageMeta.wires.path} />
+            <Seo title={pageMeta.fasteners.title} description={pageMeta.fasteners.description} path={pageMeta.fasteners.path} />
             <PageHero
-                eyebrow="Wires"
-                title="Titanium and Stainless Steel Wire Products."
-                description="High-quality stainless steel, titanium, nickel alloy, and specialty wires for welding, medical, industrial, and structural applications."
+                eyebrow="Fasteners"
+                title="Industrial Fasteners in Stainless Steel & Titanium."
+                description="High-quality stainless steel, titanium, nickel alloy, and specialty fasteners for pipeline and industrial applications."
                 breadcrumbs={
                     <>
                         <Link to="/">Home</Link>
                         <span>/</span>
                         <Link to="/products">Products</Link>
                         <span>/</span>
-                        <span>Wires</span>
+                        <span>Fasteners</span>
                     </>
                 }
             />
@@ -68,17 +61,16 @@ export function WiresPage() {
             <section className="container" style={{ marginTop: '4rem' }}>
                 <article className="feature-split">
                     <div className="feature-split__media">
-                        <img src="/assets/home/wires.webp" alt="Stainless Steel Wires" loading="lazy" />
+                        <img src="/assets/home/product-7.webp" alt="Stainless Steel Fasteners" loading="lazy" />
                     </div>
                     <div className="feature-split__content">
-                        <h2>Stainless Steel Wires</h2>
+                        <h2>Stainless Steel Fasteners</h2>
                         <p>
-                            We supply a comprehensive range of stainless steel wires suitable for welding, weaving, rope-making,
-                            spring fabrication, and general industrial use. Our wires are manufactured under strict quality control
-                            and conform to national and international standards.
+                            We supply a comprehensive range of stainless steel fasteners suitable for various pipeline and industrial applications. 
+                            Our fasteners are manufactured under strict quality control and conform to national and international standards.
                         </p>
                         <ul className="feature-list">
-                            {stainlessSteelWireGrades.map((g) => (
+                            {stainlessSteelFastenersGrades.map((g) => (
                                 <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
                             ))}
                         </ul>
@@ -87,17 +79,16 @@ export function WiresPage() {
 
                 <article className="feature-split" style={{ direction: 'rtl' }}>
                     <div className="feature-split__media" style={{ direction: 'ltr' }}>
-                        <img src="/assets/home/product-1.webp" alt="Titanium Wires" loading="lazy" />
+                        <img src="/assets/home/product-7.webp" alt="Titanium Fasteners" loading="lazy" />
                     </div>
                     <div className="feature-split__content" style={{ direction: 'ltr' }}>
-                        <h2>Titanium Wires</h2>
+                        <h2>Titanium Fasteners</h2>
                         <p>
-                            Titanium wires from our inventory are manufactured to exacting standards and are widely used in
-                            aerospace welding, surgical implants, marine engineering, and chemical processing. Offered in multiple
-                            grades and tempers.
+                            Titanium fasteners from our inventory are manufactured to exacting standards and are widely used in
+                            marine engineering, chemical processing, and desalination plants. Offered in multiple grades.
                         </p>
                         <ul className="feature-list">
-                            {titaniumWireGrades.map((g) => (
+                            {titaniumFastenersGrades.map((g) => (
                                 <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
                             ))}
                         </ul>
@@ -108,10 +99,10 @@ export function WiresPage() {
             {/* Specialty alloys */}
             <section className="container" style={{ marginTop: '1rem', marginBottom: '4rem' }}>
                 <h2 style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2.2rem)', color: 'var(--ink)', marginBottom: '1.5rem' }}>
-                    Specialty Alloy Wires
+                    Specialty Alloy Fasteners
                 </h2>
                 <ul className="feature-list" style={{ gridTemplateColumns: 'repeat(3, minmax(0,1fr))' }}>
-                    {specialtyWires.map((g) => (
+                    {specialtyFasteners.map((g) => (
                         <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
                     ))}
                 </ul>
@@ -133,10 +124,6 @@ export function WiresPage() {
                             </tbody>
                         </table>
                     </div>
-                    <p className="spec-note">
-                        All wires are supplied with full Mill Test Certificates, Chemical &amp; Mechanical Reports,
-                        and Third Party Inspection Reports on request.
-                    </p>
                 </div>
             </section>
         </div>

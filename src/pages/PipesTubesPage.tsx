@@ -2,6 +2,57 @@ import { Link } from 'react-router-dom'
 import { PageHero } from '../components/PageHero'
 import { Seo } from '../components/Seo'
 import { pageMeta } from './pageMeta'
+import { toSlug } from '../data/slug'
+
+const stainlessSteelPipeGrades = [
+    'SS 304 / 304L / 304H Pipes & Tubes',
+    'SS 309 / 310 / 310S Pipes & Tubes',
+    'SS 316 / 316L / 316Ti Pipes & Tubes',
+    'SS 317 / 317L Pipes & Tubes',
+    'SS 321 / 321H Pipes & Tubes',
+    'SS 347 / 347H Pipes & Tubes',
+    'SS 410 Pipes & Tubes',
+    'SS 446 Pipes & Tubes',
+    'SS 904L Pipes & Tubes',
+]
+
+const titaniumPipeGrades = [
+    'Titanium Grade 1 Pipes & Tubes',
+    'Titanium Grade 2 Pipes & Tubes',
+    'Titanium Grade 5 (Ti-6Al-4V) Pipes & Tubes',
+    'Titanium Grade 9 Pipes & Tubes',
+]
+
+const specialtyPipes = [
+    'Duplex Steel S31803 / S32205 Pipes & Tubes',
+    'Super Duplex S32750 / S32760 Pipes & Tubes',
+    'Inconel 600 / 601 / 625 / 718 Pipes & Tubes',
+    'Incoloy 800 / 800HT / 825 Pipes & Tubes',
+    'Monel 400 / K500 Pipes & Tubes',
+    'Nickel 200 / 201 Pipes & Tubes',
+    'Hastelloy Pipes & Tubes',
+    'Alloy 20 Pipes & Tubes',
+    'Copper Nickel 70/30 & 90/10 Pipes & Tubes',
+    'Aluminium Alloy Pipes & Tubes',
+    'Alloy Steel P5 / P9 / P11 / P22 / P91 / P92 Pipes & Tubes',
+    'Carbon Steel Seamless & ERW Pipes',
+    'API 5L Line Pipes',
+    'SMO 254 / Alloy 28 / 253 MA Pipes & Tubes',
+]
+
+const specifications = [
+    { label: 'Pipe Standard', value: 'ASTM A312 / A358 · ASME SA312 / SA358' },
+    { label: 'Tube Standard', value: 'ASTM A213 / A269 / A249 / A511 / A554' },
+    { label: 'Pipe Size', value: '1/8″ NB to 24″ NB · 1/4″ OD to 24″ OD' },
+    { label: 'Tube Size', value: '1/2″ OD to 8″ OD' },
+    { label: 'Thickness / Schedule', value: '0.3mm – 50mm · SCH 5 to SCH XXS' },
+    { label: 'Type', value: 'Seamless / ERW / Welded / Fabricated' },
+    { label: 'Form', value: 'Round, Square, Rectangular, Oval, Hydraulic' },
+    { label: 'Length', value: 'Single Random, Double Random & Cut-to-Length' },
+    { label: 'End Finish', value: 'Plain End, Beveled End, Threaded' },
+    { label: 'Surface Finish', value: '2B, No.4, No.1, No.8 Mirror, Custom Finish' },
+    { label: 'Delivery Condition', value: 'Annealed & Pickled, Polished, Bright Annealed, Cold Drawn' },
+]
 
 export function PipesTubesPage() {
     return (
@@ -12,9 +63,9 @@ export function PipesTubesPage() {
                 path={pageMeta.pipesTubes.path}
             />
             <PageHero
-                eyebrow="Pipes &amp; Tubes"
-                title="Titanium and Stainless Steel Pipes and Tubes for Critical Applications."
-                description="Specialist & India's largest supplier and exporter of high-grade pipes and tubes."
+                eyebrow="Pipes & Tubes"
+                title="Titanium and Stainless Steel Pipes & Tubes for Critical Applications."
+                description="Specialist & India's largest supplier and exporter of high-grade pipes and tubes — stainless steel, titanium, duplex, nickel alloys and more."
                 breadcrumbs={
                     <>
                         <Link to="/">Home</Link>
@@ -26,41 +77,79 @@ export function PipesTubesPage() {
                 }
             />
 
+            {/* Intro split */}
             <section className="container" style={{ marginTop: '4rem' }}>
                 <article className="feature-split">
                     <div className="feature-split__media">
-                        <img src="/assets/home/product-6.webp" alt="Stainless Steel Pipes and Tubes bundle" loading="lazy" />
+                        <img src="/assets/home/pipes-tubes.webp" alt="Stainless Steel Pipes and Tubes bundle" loading="lazy" />
                     </div>
                     <div className="feature-split__content">
                         <h2>Stainless Steel Pipes &amp; Tubes</h2>
                         <p>
-                            Stainless Steel remains one of the most versatile and widely used materials across industries due to its strength, corrosion resistance, and long service life.
+                            We are a leading manufacturer, supplier, and exporter of stainless steel pipes and tubes in Mumbai, India.
+                            Crafted using high-quality raw materials under rigorous quality control and adhering to both National and
+                            International Industrial Standards, our pipes offer superior corrosion resistance, strength, and long service life.
                         </p>
                         <ul className="feature-list">
-                            <li><Link to="/products/stainless-steel-304-pipes-tubes">Stainless Steel 304 Pipes &amp; Tubes</Link></li>
-                            <li><Link to="/products/stainless-steel-304l-pipes-tubes">Stainless Steel 304L Pipes &amp; Tubes</Link></li>
-                            <li><Link to="/products/stainless-steel-316l-pipes-tubes">Stainless Steel 316L Pipes &amp; Tubes</Link></li>
-                            <li><Link to="/products/stainless-steel-316ti-pipes-tubes">Stainless Steel 316Ti Pipes &amp; Tubes</Link></li>
+                            {stainlessSteelPipeGrades.map((g) => (
+                                <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
+                            ))}
                         </ul>
                     </div>
                 </article>
 
                 <article className="feature-split" style={{ direction: 'rtl' }}>
                     <div className="feature-split__media" style={{ direction: 'ltr' }}>
-                        <img src="/assets/home/product-3.webp" alt="Titanium Pipes and Tubes rack" loading="lazy" />
+                        <img src="/assets/home/titanium-pipes-tubes.webp" alt="Titanium Pipes and Tubes rack" loading="lazy" />
                     </div>
                     <div className="feature-split__content" style={{ direction: 'ltr' }}>
                         <h2>Titanium Pipes &amp; Tubes</h2>
                         <p>
-                            At Nevio Steel India, we provide a complete range of Titanium Pipes &amp; Tubes, Sheets &amp; Coils, Round Bars, and Wires, manufactured under stringent quality checks to deliver unmatched durability and consistency.
+                            We provide a complete range of Titanium Pipes &amp; Tubes manufactured under stringent quality checks to
+                            deliver unmatched durability and corrosion resistance, especially for aerospace, marine, and medical applications.
                         </p>
                         <ul className="feature-list">
-                            <li><Link to="/products/titanium-grade-2-pipes-tubes">Titanium Gr 2 Pipes &amp; Tubes</Link></li>
-                            <li><Link to="/products/titanium-grade-5-pipes-tubes">Titanium Gr 5 Pipes &amp; Tubes</Link></li>
-                            <li><Link to="/products/titanium-eli-f136-pipes-tubes">Titanium ELI F136 Pipes &amp; Tubes</Link></li>
+                            {titaniumPipeGrades.map((g) => (
+                                <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
+                            ))}
                         </ul>
                     </div>
                 </article>
+            </section>
+
+            {/* Specialty alloys */}
+            <section className="container" style={{ marginTop: '1rem', marginBottom: '4rem' }}>
+                <h2 style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2.2rem)', color: 'var(--ink)', marginBottom: '1.5rem' }}>
+                    Specialty Alloy Pipes &amp; Tubes
+                </h2>
+                <ul className="feature-list" style={{ gridTemplateColumns: 'repeat(3, minmax(0,1fr))' }}>
+                    {specialtyPipes.map((g) => (
+                        <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
+                    ))}
+                </ul>
+            </section>
+
+            {/* Specifications table */}
+            <section className="product-spec-section">
+                <div className="container">
+                    <h2 className="product-spec-section__title">Technical Specifications</h2>
+                    <div className="spec-table-wrap">
+                        <table className="spec-table">
+                            <tbody>
+                                {specifications.map((row) => (
+                                    <tr key={row.label}>
+                                        <th>{row.label}</th>
+                                        <td>{row.value}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                    <p className="spec-note">
+                        Test certificates including Mill Test Certificates (EN 10204 3.1), Chemical &amp; Mechanical Reports,
+                        PMI Test, NABL Lab Reports, and Third Party Inspection Reports are provided with every order.
+                    </p>
+                </div>
             </section>
         </div>
     )

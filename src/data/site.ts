@@ -131,34 +131,34 @@ export const productCards = [
         image: '/assets/home/round-bars.webp',
     },
     {
+        title: 'Wires',
+        href: '/wires',
+        image: '/assets/home/wires.webp',
+    },
+    {
         title: 'Flanges',
-        href: '/products',
+        href: '/flanges',
         image: '/assets/home/product-6.webp',
     },
     {
         title: 'Forged Fittings',
-        href: '/products',
+        href: '/forged-fittings',
         image: '/assets/home/titanium-pipes-tubes.webp',
     },
     {
         title: 'Buttweld Fittings',
-        href: '/products',
+        href: '/buttweld-fittings',
         image: '/assets/home/stainless-steel-304-pipes-tubes.webp',
     },
     {
         title: 'Fasteners',
-        href: '/products',
+        href: '/fasteners',
         image: '/assets/home/product-7.webp',
     },
     {
         title: 'Hollow Sections',
-        href: '/products',
+        href: '/hollow-sections',
         image: '/assets/home/360_F_316400601_R5tlkEOW3sds6fnD2ZIwyPXaRQDSK5rb.jpg',
-    },
-    {
-        title: 'Wires',
-        href: '/wires',
-        image: '/assets/home/wires.webp',
     },
 ]
 

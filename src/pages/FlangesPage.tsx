@@ -4,63 +4,61 @@ import { Seo } from '../components/Seo'
 import { pageMeta } from './pageMeta'
 import { toSlug } from '../data/slug'
 
-const stainlessSteelWireGrades = [
-    'SS 304 / 304L Wires',
-    'SS 309 / 310 / 310S Wires',
-    'SS 316 / 316L / 316Ti Wires',
-    'SS 317 / 317L Wires',
-    'SS 321 Wires',
-    'SS 347 Wires',
-    'SS 410 / 430 Wires',
-    'SS 904L Wires',
+const stainlessSteelFlangeGrades = [
+    'SS 304 / 304L Flanges',
+    'SS 309 / 310 / 310S Flanges',
+    'SS 316 / 316L / 316Ti Flanges',
+    'SS 317 / 317L Flanges',
+    'SS 321 / 321H Flanges',
+    'SS 347 / 347H Flanges',
+    'SS 410 / 430 Flanges',
+    'SS 904L Flanges',
 ]
 
-const titaniumWireGrades = [
-    'Titanium Grade 1 Wires',
-    'Titanium Grade 2 Wires',
-    'Titanium Grade 5 (Ti-6Al-4V) Wires',
-    'Titanium ELI F136 Wires',
-    'Titanium Grade 9 Wires',
+const titaniumFlangeGrades = [
+    'Titanium Grade 1 Flanges',
+    'Titanium Grade 2 Flanges',
+    'Titanium Grade 5 (Ti-6Al-4V) Flanges',
+    'Titanium Grade 9 Flanges',
 ]
 
-const specialtyWires = [
-    'Duplex Steel S31803 / S32205 Wires',
-    'Super Duplex S32750 / S32760 Wires',
-    'Inconel 600 / 625 / 718 Wires',
-    'Incoloy 800 / 825 Wires',
-    'Monel 400 / K500 Wires',
-    'Nickel 200 / 201 Wires',
-    'Hastelloy Wires',
-    'Alloy 20 Wires',
-    'Copper Nickel 70/30 & 90/10 Wires',
-    'Alloy Steel Wires',
-    'Carbon Steel Wires',
+const specialtyFlanges = [
+    'Duplex Steel S31803 / S32205 Flanges',
+    'Super Duplex S32750 / S32760 Flanges',
+    'Inconel 600 / 625 / 718 Flanges',
+    'Incoloy 800 / 825 Flanges',
+    'Monel 400 / K500 Flanges',
+    'Nickel 200 / 201 Flanges',
+    'Hastelloy Flanges',
+    'Alloy 20 Flanges',
+    'Copper Nickel 70/30 & 90/10 Flanges',
+    'Alloy Steel Flanges',
+    'Carbon Steel Flanges',
 ]
 
 const specifications = [
     { label: 'Standard', value: 'ASTM / ASME · DIN / EN / JIS / ISO' },
-    { label: 'Diameter Range', value: '0.1mm – 25mm' },
-    { label: 'Form', value: 'Coil, Spool, Straight Lengths, Cut Pieces' },
-    { label: 'Surface Condition', value: 'Bright Annealed, Pickled, Drawn, Lightly Oxidised' },
-    { label: 'Temper', value: 'Soft, Half Hard, Full Hard, Spring Temper' },
-    { label: 'Applications', value: 'Welding, Weaving, Surgical / Implant, Springs, Mesh, Rope, Cable' },
+    { label: 'Size', value: '1/2" (15 NB) to 48" (1200NB)' },
+    { label: 'Class', value: '150 LBS, 300 LBS, 600 LBS, 900 LBS, 1500 LBS, 2500 LBS, DIN Standard ND-6,10, 16, 25, 40 Etc.' },
+    { label: 'Types', value: 'Slip On, Weld Neck, Blind, Socket Weld, Lap Joint, Spectacle, Ring Joint, Orifice, Long Weld Neck, Deck Flange, etc.' },
+    { label: 'Face Type', value: 'Flat Face (FF), Raised Face (RF), Ring Type Joint (RTJ)' },
 ]
 
-export function WiresPage() {
+export function FlangesPage() {
     return (
         <div className="page-stack">
-            <Seo title={pageMeta.wires.title} description={pageMeta.wires.description} path={pageMeta.wires.path} />
+            <Seo title={pageMeta.flanges.title} description={pageMeta.flanges.description} path={pageMeta.flanges.path} />
             <PageHero
-                eyebrow="Wires"
-                title="Titanium and Stainless Steel Wire Products."
-                description="High-quality stainless steel, titanium, nickel alloy, and specialty wires for welding, medical, industrial, and structural applications."
+                eyebrow="Flanges"
+                title="Industrial Flanges in Stainless Steel & Titanium."
+                description="High-quality stainless steel, titanium, nickel alloy, and specialty flanges for pipeline and industrial applications."
                 breadcrumbs={
                     <>
                         <Link to="/">Home</Link>
                         <span>/</span>
                         <Link to="/products">Products</Link>
                         <span>/</span>
-                        <span>Wires</span>
+                        <span>Flanges</span>
                     </>
                 }
             />
@@ -68,17 +66,16 @@ export function WiresPage() {
             <section className="container" style={{ marginTop: '4rem' }}>
                 <article className="feature-split">
                     <div className="feature-split__media">
-                        <img src="/assets/home/wires.webp" alt="Stainless Steel Wires" loading="lazy" />
+                        <img src="/assets/home/product-6.webp" alt="Stainless Steel Flanges" loading="lazy" />
                     </div>
                     <div className="feature-split__content">
-                        <h2>Stainless Steel Wires</h2>
+                        <h2>Stainless Steel Flanges</h2>
                         <p>
-                            We supply a comprehensive range of stainless steel wires suitable for welding, weaving, rope-making,
-                            spring fabrication, and general industrial use. Our wires are manufactured under strict quality control
-                            and conform to national and international standards.
+                            We supply a comprehensive range of stainless steel flanges suitable for various pipeline and industrial applications. 
+                            Our flanges are manufactured under strict quality control and conform to national and international standards.
                         </p>
                         <ul className="feature-list">
-                            {stainlessSteelWireGrades.map((g) => (
+                            {stainlessSteelFlangeGrades.map((g) => (
                                 <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
                             ))}
                         </ul>
@@ -87,17 +84,16 @@ export function WiresPage() {
 
                 <article className="feature-split" style={{ direction: 'rtl' }}>
                     <div className="feature-split__media" style={{ direction: 'ltr' }}>
-                        <img src="/assets/home/product-1.webp" alt="Titanium Wires" loading="lazy" />
+                        <img src="/assets/home/product-6.webp" alt="Titanium Flanges" loading="lazy" />
                     </div>
                     <div className="feature-split__content" style={{ direction: 'ltr' }}>
-                        <h2>Titanium Wires</h2>
+                        <h2>Titanium Flanges</h2>
                         <p>
-                            Titanium wires from our inventory are manufactured to exacting standards and are widely used in
-                            aerospace welding, surgical implants, marine engineering, and chemical processing. Offered in multiple
-                            grades and tempers.
+                            Titanium flanges from our inventory are manufactured to exacting standards and are widely used in
+                            marine engineering, chemical processing, and desalination plants. Offered in multiple grades.
                         </p>
                         <ul className="feature-list">
-                            {titaniumWireGrades.map((g) => (
+                            {titaniumFlangeGrades.map((g) => (
                                 <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
                             ))}
                         </ul>
@@ -108,10 +104,10 @@ export function WiresPage() {
             {/* Specialty alloys */}
             <section className="container" style={{ marginTop: '1rem', marginBottom: '4rem' }}>
                 <h2 style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2.2rem)', color: 'var(--ink)', marginBottom: '1.5rem' }}>
-                    Specialty Alloy Wires
+                    Specialty Alloy Flanges
                 </h2>
                 <ul className="feature-list" style={{ gridTemplateColumns: 'repeat(3, minmax(0,1fr))' }}>
-                    {specialtyWires.map((g) => (
+                    {specialtyFlanges.map((g) => (
                         <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
                     ))}
                 </ul>
@@ -134,7 +130,7 @@ export function WiresPage() {
                         </table>
                     </div>
                     <p className="spec-note">
-                        All wires are supplied with full Mill Test Certificates, Chemical &amp; Mechanical Reports,
+                        All flanges are supplied with full Mill Test Certificates, Chemical &amp; Mechanical Reports,
                         and Third Party Inspection Reports on request.
                     </p>
                 </div>

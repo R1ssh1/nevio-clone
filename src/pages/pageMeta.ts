@@ -41,6 +41,36 @@ export const pageMeta = {
             'Discover titanium and stainless steel wires for demanding industrial and engineering applications.',
         path: '/wires',
     },
+    flanges: {
+        title: 'Flanges | Vedantara Metal & Alloys',
+        description:
+            'High-quality stainless steel and titanium flanges for industrial piping systems.',
+        path: '/flanges',
+    },
+    forgedFittings: {
+        title: 'Forged Fittings | Vedantara Metal & Alloys',
+        description:
+            'Premium forged fittings in stainless steel and specialty alloys.',
+        path: '/forged-fittings',
+    },
+    buttweldFittings: {
+        title: 'Buttweld Fittings | Vedantara Metal & Alloys',
+        description:
+            'Durable buttweld fittings for seamless and welded pipe connections.',
+        path: '/buttweld-fittings',
+    },
+    fasteners: {
+        title: 'Fasteners | Vedantara Metal & Alloys',
+        description:
+            'Industrial-grade fasteners available in titanium, stainless steel, and duplex steel.',
+        path: '/fasteners',
+    },
+    hollowSections: {
+        title: 'Hollow Sections | Vedantara Metal & Alloys',
+        description:
+            'Square and rectangular hollow sections for structural and architectural applications.',
+        path: '/hollow-sections',
+    },
     quality: {
         title: 'Quality Policy | Vedantara Metal & Alloys',
         description:

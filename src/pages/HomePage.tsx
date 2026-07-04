@@ -210,13 +210,16 @@ export function HomePage() {
                 className={`section-block section-block--products ${revealClass('products')}`}
                 data-reveal="products"
             >
-                <div className="container section-heading">
-                    <p className="eyebrow">Our Products</p>
+                <div className="container section-heading section-heading--products-home">
+                    <div className="section-heading__row">
+                        <p className="eyebrow">Our Products</p>
+                        <Link to="/products" className="view-more-link">View More &rsaquo;</Link>
+                    </div>
                     <h2>Specialist and India&apos;s trusted supplier and exporter of titanium and stainless steel.</h2>
                 </div>
 
                 <div className="container product-grid">
-                    {productCards.map((card) => (
+                    {productCards.slice(0, 4).map((card) => (
                         <Link to={card.href} className="product-card" style={{ display: 'block', textDecoration: 'none', color: 'inherit' }} key={card.title}>
                             <div className="product-card__media">
                                 <img src={card.image} alt={card.title} loading="lazy" />
@@ -229,6 +232,7 @@ export function HomePage() {
                     ))}
                 </div>
             </section>
+
 
             <section className={`section-block quote-band ${revealClass('quote')}`} data-reveal="quote">
                 <div className="container quote-band__inner">
