@@ -21,15 +21,14 @@ export function Layout({ children }: LayoutProps) {
 
         updateHeaderHeight()
 
-        const resizeObserver = new ResizeObserver(updateHeaderHeight)
-        resizeObserver.observe(header)
         window.addEventListener('resize', updateHeaderHeight)
 
         return () => {
-            resizeObserver.disconnect()
             window.removeEventListener('resize', updateHeaderHeight)
         }
     }, [])
+
+    // Cursor logic removed — handled by Cursor.tsx inside App.tsx!
 
     return (
         <div className="site-shell">

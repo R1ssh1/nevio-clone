@@ -1,44 +1,28 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState, type KeyboardEvent } from 'react'
 import { Link } from 'react-router-dom'
 import { Seo } from '../components/Seo'
 import { pageMeta } from './pageMeta'
 import {
-    homepageAboutCopy,
     homepageBannerSlides,
     homepageIndustryIntro,
     homepageStats,
-    homepageWhyChooseUs,
     industryCards,
     productCards,
 } from '../data/site'
+import { AboutSection } from "../components/AboutSection";
+import { WhyChooseUsSection } from '../components/WhyChooseUsSection'
+import { CountUp } from '../components/CountUp'
 
 export function HomePage() {
     const bannerRef = useRef<HTMLDivElement | null>(null)
     const [activeSlide, setActiveSlide] = useState(0)
+    const [paused, setPaused] = useState(false)
+    const [visibleSections, setVisibleSections] = useState<Set<string>>(() => new Set(['hero']))
 
     const slideCount = homepageBannerSlides.length
-
     const slideOffsets = useMemo(() => homepageBannerSlides.map((_, index) => index), [])
 
-    useEffect(() => {
-        const track = bannerRef.current
-
-        if (!track) {
-            return
-        }
-
-        const updateActiveSlide = () => {
-            const nextIndex = Math.round(track.scrollLeft / track.clientWidth)
-            setActiveSlide(Math.max(0, Math.min(nextIndex, slideCount - 1)))
-        }
-
-        updateActiveSlide()
-        track.addEventListener('scroll', updateActiveSlide, { passive: true })
-
-        return () => track.removeEventListener('scroll', updateActiveSlide)
-    }, [slideCount])
-
-    const scrollToSlide = (index: number) => {
+    const scrollToSlide = useCallback((index: number) => {
         const track = bannerRef.current
 
         if (!track) {
@@ -48,11 +32,90 @@ export function HomePage() {
         const nextIndex = Math.max(0, Math.min(index, slideCount - 1))
         track.scrollTo({ left: nextIndex * track.clientWidth, behavior: 'smooth' })
         setActiveSlide(nextIndex)
+    }, [slideCount])
+
+    const moveBanner = useCallback((direction: -1 | 1) => {
+        const nextIndex = (activeSlide + direction + slideCount) % slideCount
+        scrollToSlide(nextIndex)
+    }, [activeSlide, scrollToSlide, slideCount])
+
+    useEffect(() => {
+        if (paused) return
+
+        const timer = setInterval(() => {
+            moveBanner(1)
+        }, 4500)
+
+        return () => clearInterval(timer)
+    }, [moveBanner, paused])
+
+    useEffect(() => {
+        const sections = Array.from(document.querySelectorAll<HTMLElement>('[data-reveal]'))
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return
+
+                    const key = entry.target.getAttribute('data-reveal')
+                    if (!key) return
+
+                    setVisibleSections((current) => {
+                        const next = new Set(current)
+                        next.add(key)
+                        return next
+                    })
+                })
+            },
+            { threshold: 0.16 },
+        )
+
+        sections.forEach((section) => observer.observe(section))
+
+        return () => observer.disconnect()
+    }, [])
+
+    // Prevent the horizontal scroll container from capturing vertical wheel events
+    useEffect(() => {
+        const viewport = bannerRef.current
+        if (!viewport) return
+
+        const handleWheel = (e: WheelEvent) => {
+            // Only block if the user is scrolling more vertically than horizontally
+            if (Math.abs(e.deltaY) >= Math.abs(e.deltaX)) {
+                e.preventDefault()
+                window.scrollBy({ top: e.deltaY, behavior: 'auto' })
+            }
+        }
+
+        // Sync native horizontal scrolling to activeSlide state
+        const handleScroll = () => {
+            const width = viewport.clientWidth
+            const index = Math.round(viewport.scrollLeft / width)
+            setActiveSlide(index)
+        }
+
+        viewport.addEventListener('wheel', handleWheel, { passive: false })
+        viewport.addEventListener('scroll', handleScroll, { passive: true })
+        return () => {
+            viewport.removeEventListener('wheel', handleWheel)
+            viewport.removeEventListener('scroll', handleScroll)
+        }
+    }, [])
+
+    const handleBannerKeyDown = (event: KeyboardEvent<HTMLElement>) => {
+        if (event.key === 'ArrowLeft') {
+            event.preventDefault()
+            moveBanner(-1)
+        }
+
+        if (event.key === 'ArrowRight') {
+            event.preventDefault()
+            moveBanner(1)
+        }
     }
 
-    const moveBanner = (direction: -1 | 1) => {
-        scrollToSlide(activeSlide + direction)
-    }
+    const revealClass = (key: string) =>
+        `reveal-section ${visibleSections.has(key) ? 'is-visible' : ''}`
 
     return (
         <div className="home-page">
@@ -61,15 +124,23 @@ export function HomePage() {
                 description={pageMeta.home.description}
                 path={pageMeta.home.path}
             />
-            <section className="hero-banner" aria-label="Homepage banner">
+            <section
+                className="hero-banner"
+                aria-label="Homepage banner"
+                onMouseEnter={() => setPaused(true)}
+                onMouseLeave={() => setPaused(false)}
+                onFocus={() => setPaused(true)}
+                onBlur={() => setPaused(false)}
+                onKeyDown={handleBannerKeyDown}
+                tabIndex={0}
+            >
                 <button
                     className="hero-banner__arrow hero-banner__arrow--prev"
                     type="button"
                     onClick={() => moveBanner(-1)}
                     aria-label="Previous banner slide"
-                    disabled={activeSlide === 0}
                 >
-                    <span aria-hidden="true">‹</span>
+                    <span aria-hidden="true">&lsaquo;</span>
                 </button>
 
                 <div className="hero-banner__viewport" ref={bannerRef}>
@@ -89,10 +160,10 @@ export function HomePage() {
                                 <h1>{slide.title}</h1>
                                 <p className="hero-banner__text">{slide.description}</p>
                                 <div className="hero-actions">
-                                    <Link className="secondary-button secondary-button--dark" to={slide.primaryPath}>
+                                    <Link className="primary-button" to={slide.primaryPath}>
                                         {slide.primaryLabel}
                                     </Link>
-                                    <Link className="primary-button" to={slide.secondaryPath}>
+                                    <Link className="primary-button primary-button--ghost" to={slide.secondaryPath}>
                                         {slide.secondaryLabel}
                                     </Link>
                                 </div>
@@ -106,17 +177,19 @@ export function HomePage() {
                     type="button"
                     onClick={() => moveBanner(1)}
                     aria-label="Next banner slide"
-                    disabled={activeSlide === slideCount - 1}
                 >
-                    <span aria-hidden="true">›</span>
+                    <span aria-hidden="true">&rsaquo;</span>
                 </button>
 
                 <div className="hero-banner__pagination" aria-label="Banner slides">
                     <span className="hero-banner__fraction">
-                        <strong>{String(activeSlide + 1).padStart(2, '0')}</strong>
+                        <strong>{activeSlide + 1}</strong>
                         <span>/</span>
-                        <span>{String(slideCount).padStart(2, '0')}</span>
+                        <span>{slideCount}</span>
                     </span>
+                    <div className="hero-banner__progress" aria-hidden="true">
+                        <span style={{ width: `${((activeSlide + 1) / slideCount) * 100}%` }} />
+                    </div>
                     <div className="hero-banner__dots">
                         {slideOffsets.map((index) => (
                             <button
@@ -131,105 +204,75 @@ export function HomePage() {
                 </div>
             </section>
 
-            <section className="section-block container section-grid section-grid--about">
-                <div className="about-gallery">
-                    <figure className="about-gallery__media about-gallery__media--tall">
-                        <img src="/assets/home/about-media-3.webp" alt="Nevio Steel India about visual" />
-                    </figure>
-                    <figure className="about-gallery__media about-gallery__media--stacked">
-                        <img src="/assets/home/about-media-1.webp" alt="Manufacturing visual" />
-                    </figure>
-                    <figure className="about-gallery__media about-gallery__media--stacked about-gallery__media--accent">
-                        <img src="/assets/home/about-media-2.webp" alt="Steel product visual" />
-                    </figure>
-                    <div className="about-gallery__badge">
-                        <strong>25</strong>
-                        <span>Years of experience</span>
+            <AboutSection />
+
+            <section
+                className={`section-block section-block--products ${revealClass('products')}`}
+                data-reveal="products"
+            >
+                <div className="container section-heading section-heading--products-home">
+                    <div className="section-heading__row">
+                        <p className="eyebrow">Our Products</p>
+                        <Link to="/products" className="view-more-link">View More &rsaquo;</Link>
                     </div>
-                </div>
-
-                <div className="section-copy">
-                    <p className="eyebrow">About Us</p>
-                    <h2>Globally trusted supplier of steel pipes and tubes.</h2>
-                    <p>{homepageAboutCopy}</p>
-                    <ul className="feature-list">
-                        <li>High-quality materials</li>
-                        <li>Worldwide shipping</li>
-                        <li>Latest technology equipment</li>
-                        <li>Assured quality</li>
-                    </ul>
-                    <Link className="primary-link" to="/about-us">
-                        More About Us
-                    </Link>
-                </div>
-            </section>
-
-            <section className="section-block section-block--products">
-                <div className="container section-heading">
-                    <p className="eyebrow">Our Products</p>
-                    <h2>Specialist &amp; India’s largest supplier and exporter of titanium &amp; stainless steel.</h2>
+                    <h2>Specialist and India&apos;s trusted supplier and exporter of titanium and stainless steel.</h2>
                 </div>
 
                 <div className="container product-grid">
-                    {productCards.map((card) => (
-                        <article className="product-card" key={card.title}>
-                            <Link to={card.href} className="product-card__media">
+                    {productCards.slice(0, 4).map((card) => (
+                        <Link to={card.href} className="product-card" style={{ display: 'block', textDecoration: 'none', color: 'inherit' }} key={card.title}>
+                            <div className="product-card__media">
                                 <img src={card.image} alt={card.title} loading="lazy" />
-                            </Link>
+                            </div>
                             <div className="product-card__footer">
                                 <h3>{card.title}</h3>
                                 <span>View</span>
                             </div>
-                        </article>
+                        </Link>
                     ))}
                 </div>
             </section>
 
-            <section className="section-block quote-band">
+
+            <section className={`section-block quote-band ${revealClass('quote')}`} data-reveal="quote">
                 <div className="container quote-band__inner">
                     <h2>
                         High-quality titanium and stainless steel round bars, sheets, and plates
                         available in superior special steel grades for diverse application.
                     </h2>
-                    <Link className="primary-button primary-button--light" to="/contact-us">
+                    <Link className="primary-button primary-button--light" to="/contact-us?subject=Request%20for%20Quotation">
                         Get In Touch
                     </Link>
                 </div>
             </section>
 
-            <section className="section-block container section-grid section-grid--why">
-                <div className="section-copy">
-                    <p className="eyebrow">Why Choose Us</p>
-                    <h2>
-                        Nevio Steel India one of the huge stockist of titanium and stainless steel
-                        pipes and tubes.
-                    </h2>
-                </div>
+            <WhyChooseUsSection />
 
-                <div className="why-grid">
-                    {homepageWhyChooseUs.map(({ title, text }) => (
-                        <article className="why-card" key={title}>
-                            <h3>{title}</h3>
-                            <p>{text}</p>
-                        </article>
-                    ))}
+            <section className="stats-band">
+                <div className="stats-band__bg">
+                    <img src="/assets/home/product-7.webp" alt="Background watermark" loading="lazy" />
                 </div>
-            </section>
-
-            <section className="section-block stats-band">
-                <div className="container stats-grid">
-                    {homepageStats.map((stat) => (
-                        <article className="stat-card" key={stat.label}>
-                            <strong>{stat.value}</strong>
-                            <span>{stat.label}</span>
-                        </article>
-                    ))}
+                <div className="stats-marquee">
+                    <div className="stats-marquee__track">
+                        {/* Duplicate the array up to 2 times for seamless wrapping */}
+                        {[...homepageStats, ...homepageStats].map((stat, idx) => (
+                            <article className="stat-card stat-card--marquee" key={`${stat.label}-${idx}`}>
+                                <strong>
+                                    <CountUp endString={stat.value} />
+                                </strong>
+                                <span>{stat.label}</span>
+                            </article>
+                        ))}
+                    </div>
                 </div>
             </section>
 
-            <section className="section-block section-block--industry">
+            <section
+                className={`section-block section-block--industry ${revealClass('industry')}`}
+                data-reveal="industry"
+            >
                 <div className="container section-heading section-heading--centered">
-                    <p className="eyebrow">Nevio Steel India</p>
+                    <p className="eyebrow">Vedantara Metal and Alloys</p>
                     <p className="section-intro">{homepageIndustryIntro}</p>
                 </div>
 
