@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { PageHero } from '../components/PageHero'
 import { Seo } from '../components/Seo'
 import { pageMeta } from './pageMeta'
+import { products } from '../data/products'
 import { toSlug } from '../data/slug'
 
 const stainlessSteelWireGrades = [
@@ -46,6 +47,8 @@ const specifications = [
     { label: 'Applications', value: 'Welding, Weaving, Surgical / Implant, Springs, Mesh, Rope, Cable' },
 ]
 
+const info = products.find(p => p.slug === '/products/wires')!
+
 export function WiresPage() {
     return (
         <div className="page-stack">
@@ -72,14 +75,10 @@ export function WiresPage() {
                     </div>
                     <div className="feature-split__content">
                         <h2>Stainless Steel Wires</h2>
-                        <p>
-                            We supply a comprehensive range of stainless steel wires suitable for welding, weaving, rope-making,
-                            spring fabrication, and general industrial use. Our wires are manufactured under strict quality control
-                            and conform to national and international standards.
-                        </p>
+                        <p>{info.description1}</p>
                         <ul className="feature-list">
                             {stainlessSteelWireGrades.map((g) => (
-                                <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
+                                <li key={g}><Link to={`/products/wires/${toSlug(g)}`}>{g}</Link></li>
                             ))}
                         </ul>
                     </div>
@@ -91,28 +90,37 @@ export function WiresPage() {
                     </div>
                     <div className="feature-split__content" style={{ direction: 'ltr' }}>
                         <h2>Titanium Wires</h2>
-                        <p>
-                            Titanium wires from our inventory are manufactured to exacting standards and are widely used in
-                            aerospace welding, surgical implants, marine engineering, and chemical processing. Offered in multiple
-                            grades and tempers.
-                        </p>
+                        <p>{info.description2}</p>
                         <ul className="feature-list">
                             {titaniumWireGrades.map((g) => (
-                                <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
+                                <li key={g}><Link to={`/products/wires/${toSlug(g)}`}>{g}</Link></li>
                             ))}
                         </ul>
                     </div>
                 </article>
             </section>
 
+            <section className="container" style={{ marginTop: '1rem' }}>
+                <div className="prod-desc-band">
+                    <div className="prod-desc-band__text">
+                        <h3>Manufacturing Capability</h3>
+                        <p>{info.description3}</p>
+                    </div>
+                    <div className="prod-desc-band__text">
+                        <h3>Quality Assurance &amp; Delivery</h3>
+                        <p>{info.description4}</p>
+                    </div>
+                </div>
+            </section>
+
             {/* Specialty alloys */}
-            <section className="container" style={{ marginTop: '1rem', marginBottom: '4rem' }}>
+            <section className="container" style={{ marginTop: '2rem', marginBottom: '4rem' }}>
                 <h2 style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2.2rem)', color: 'var(--ink)', marginBottom: '1.5rem' }}>
                     Specialty Alloy Wires
                 </h2>
                 <ul className="feature-list" style={{ gridTemplateColumns: 'repeat(3, minmax(0,1fr))' }}>
                     {specialtyWires.map((g) => (
-                        <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
+                        <li key={g}><Link to={`/products/wires/${toSlug(g)}`}>{g}</Link></li>
                     ))}
                 </ul>
             </section>

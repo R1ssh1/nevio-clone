@@ -36,16 +36,34 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about-us" element={<AboutPage />} />
           <Route path="/products" element={<ProductsPage />} />
-          <Route path="/products/:id" element={<ProductDetailPage />} />
-          <Route path="/pipes-tubes" element={<PipesTubesPage />} />
-          <Route path="/round-bars" element={<RoundBarsPage />} />
-          <Route path="/sheets-coils" element={<SheetsCoilsPage />} />
-          <Route path="/wires" element={<WiresPage />} />
-          <Route path="/flanges" element={<FlangesPage />} />
-          <Route path="/forged-fittings" element={<ForgedFittingsPage />} />
-          <Route path="/buttweld-fittings" element={<ButtweldFittingsPage />} />
-          <Route path="/fasteners" element={<FastenersPage />} />
-          <Route path="/hollow-sections" element={<HollowSectionsPage />} />
+
+          <Route path="/products/pipes-tubes" element={<PipesTubesPage />} />
+          <Route path="/products/pipes-tubes/:id" element={<ProductDetailPage />} />
+          
+          <Route path="/products/round-bars" element={<RoundBarsPage />} />
+          <Route path="/products/round-bars/:id" element={<ProductDetailPage />} />
+          
+          <Route path="/products/sheets-coils" element={<SheetsCoilsPage />} />
+          <Route path="/products/sheets-coils/:id" element={<ProductDetailPage />} />
+          
+          <Route path="/products/wires" element={<WiresPage />} />
+          <Route path="/products/wires/:id" element={<ProductDetailPage />} />
+          
+          <Route path="/products/flanges" element={<FlangesPage />} />
+          <Route path="/products/flanges/:id" element={<ProductDetailPage />} />
+          
+          <Route path="/products/forged-fittings" element={<ForgedFittingsPage />} />
+          <Route path="/products/forged-fittings/:id" element={<ProductDetailPage />} />
+          
+          <Route path="/products/buttweld-fittings" element={<ButtweldFittingsPage />} />
+          <Route path="/products/buttweld-fittings/:id" element={<ProductDetailPage />} />
+          
+          <Route path="/products/fasteners" element={<FastenersPage />} />
+          <Route path="/products/fasteners/:id" element={<ProductDetailPage />} />
+          
+          <Route path="/products/hollow-sections" element={<HollowSectionsPage />} />
+          <Route path="/products/hollow-sections/:id" element={<ProductDetailPage />} />
+
           <Route path="/quality-policy" element={<QualityPage />} />
           <Route path="/contact-us" element={<ContactPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />

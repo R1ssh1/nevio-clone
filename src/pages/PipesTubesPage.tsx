@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { PageHero } from '../components/PageHero'
 import { Seo } from '../components/Seo'
 import { pageMeta } from './pageMeta'
+import { products } from '../data/products'
 import { toSlug } from '../data/slug'
 
 const stainlessSteelPipeGrades = [
@@ -54,6 +55,8 @@ const specifications = [
     { label: 'Delivery Condition', value: 'Annealed & Pickled, Polished, Bright Annealed, Cold Drawn' },
 ]
 
+const info = products.find(p => p.slug === '/products/pipes-tubes')!
+
 export function PipesTubesPage() {
     return (
         <div className="page-stack">
@@ -77,7 +80,7 @@ export function PipesTubesPage() {
                 }
             />
 
-            {/* Intro split */}
+            {/* ── Stainless Steel Pipes: image left ── */}
             <section className="container" style={{ marginTop: '4rem' }}>
                 <article className="feature-split">
                     <div className="feature-split__media">
@@ -85,46 +88,54 @@ export function PipesTubesPage() {
                     </div>
                     <div className="feature-split__content">
                         <h2>Stainless Steel Pipes &amp; Tubes</h2>
-                        <p>
-                            We are a leading manufacturer, supplier, and exporter of stainless steel pipes and tubes in Mumbai, India.
-                            Crafted using high-quality raw materials under rigorous quality control and adhering to both National and
-                            International Industrial Standards, our pipes offer superior corrosion resistance, strength, and long service life.
-                        </p>
+                        <p>{info.description1}</p>
                         <ul className="feature-list">
                             {stainlessSteelPipeGrades.map((g) => (
-                                <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
+                                <li key={g}><Link to={`/products/pipes-tubes/${toSlug(g)}`}>{g}</Link></li>
                             ))}
                         </ul>
                     </div>
                 </article>
 
+                {/* ── Applications & Quality ── */}
                 <article className="feature-split" style={{ direction: 'rtl' }}>
                     <div className="feature-split__media" style={{ direction: 'ltr' }}>
                         <img src="/assets/home/titanium-pipes-tubes.webp" alt="Titanium Pipes and Tubes rack" loading="lazy" />
                     </div>
                     <div className="feature-split__content" style={{ direction: 'ltr' }}>
                         <h2>Titanium Pipes &amp; Tubes</h2>
-                        <p>
-                            We provide a complete range of Titanium Pipes &amp; Tubes manufactured under stringent quality checks to
-                            deliver unmatched durability and corrosion resistance, especially for aerospace, marine, and medical applications.
-                        </p>
+                        <p>{info.description2}</p>
                         <ul className="feature-list">
                             {titaniumPipeGrades.map((g) => (
-                                <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
+                                <li key={g}><Link to={`/products/pipes-tubes/${toSlug(g)}`}>{g}</Link></li>
                             ))}
                         </ul>
                     </div>
                 </article>
             </section>
 
-            {/* Specialty alloys */}
-            <section className="container" style={{ marginTop: '1rem', marginBottom: '4rem' }}>
+            {/* ── Manufacturing Capability ── */}
+            <section className="container" style={{ marginTop: '1rem' }}>
+                <div className="prod-desc-band">
+                    <div className="prod-desc-band__text">
+                        <h3>Manufacturing Capability</h3>
+                        <p>{info.description3}</p>
+                    </div>
+                    <div className="prod-desc-band__text">
+                        <h3>Quality Assurance &amp; Delivery</h3>
+                        <p>{info.description4}</p>
+                    </div>
+                </div>
+            </section>
+
+            {/* ── Specialty alloys ── */}
+            <section className="container" style={{ marginTop: '2rem', marginBottom: '4rem' }}>
                 <h2 style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2.2rem)', color: 'var(--ink)', marginBottom: '1.5rem' }}>
                     Specialty Alloy Pipes &amp; Tubes
                 </h2>
                 <ul className="feature-list" style={{ gridTemplateColumns: 'repeat(3, minmax(0,1fr))' }}>
                     {specialtyPipes.map((g) => (
-                        <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
+                        <li key={g}><Link to={`/products/pipes-tubes/${toSlug(g)}`}>{g}</Link></li>
                     ))}
                 </ul>
             </section>

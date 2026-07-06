@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { PageHero } from '../components/PageHero'
 import { Seo } from '../components/Seo'
 import { pageMeta } from './pageMeta'
+import { products } from '../data/products'
 import { toSlug } from '../data/slug'
 
 const stainlessSteelSheetGrades = [
@@ -48,13 +49,15 @@ const specifications = [
     { label: 'Surface Finish', value: 'HR, CR, 2B, 2D, BA, No.1, No.4, No.8, 8K Mirror, Chequered, Hair Line, Sand Blast, Brush, Etching, Satin' },
 ]
 
+const info = products.find(p => p.slug === '/products/sheets-coils')!
+
 export function SheetsCoilsPage() {
     return (
         <div className="page-stack">
             <Seo title={pageMeta.sheetsCoils.title} description={pageMeta.sheetsCoils.description} path={pageMeta.sheetsCoils.path} />
             <PageHero
                 eyebrow="Plates & Sheets"
-                title="Titanium and Stainless Steel Plates & Sheets for Every Application."
+                title="Titanium and Stainless Steel Plates &amp; Sheets for Every Application."
                 description="Manufacturer, exporter and supplier of a wide range of high-quality plates, sheets and coils — stainless steel, titanium, duplex, nickel, aluminium and more."
                 breadcrumbs={
                     <>
@@ -74,14 +77,10 @@ export function SheetsCoilsPage() {
                     </div>
                     <div className="feature-split__content">
                         <h2>Stainless Steel Plates &amp; Sheets</h2>
-                        <p>
-                            We manufacture and supply a comprehensive range of stainless steel sheets and plates in Mumbai, India.
-                            Produced using high-quality raw materials with strict quality control, these products adhere to National
-                            and International Industrial Standards. Available in a wide range of grades, finishes, and custom dimensions.
-                        </p>
+                        <p>{info.description1}</p>
                         <ul className="feature-list">
                             {stainlessSteelSheetGrades.map((g) => (
-                                <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
+                                <li key={g}><Link to={`/products/sheets-coils/${toSlug(g)}`}>{g}</Link></li>
                             ))}
                         </ul>
                     </div>
@@ -93,33 +92,40 @@ export function SheetsCoilsPage() {
                     </div>
                     <div className="feature-split__content" style={{ direction: 'ltr' }}>
                         <h2>Titanium Plates &amp; Sheets</h2>
-                        <p>
-                            Our titanium sheets and plates are manufactured under stringent quality checks, offering exceptional
-                            strength-to-weight ratio, bio-compatibility, and corrosion resistance. Ideal for aerospace, marine,
-                            medical, and chemical processing industries.
-                        </p>
+                        <p>{info.description2}</p>
                         <ul className="feature-list">
                             {titaniumSheetGrades.map((g) => (
-                                <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
+                                <li key={g}><Link to={`/products/sheets-coils/${toSlug(g)}`}>{g}</Link></li>
                             ))}
                         </ul>
                     </div>
                 </article>
             </section>
 
-            {/* Specialty alloys */}
-            <section className="container" style={{ marginTop: '1rem', marginBottom: '4rem' }}>
+            <section className="container" style={{ marginTop: '1rem' }}>
+                <div className="prod-desc-band">
+                    <div className="prod-desc-band__text">
+                        <h3>Manufacturing Capability</h3>
+                        <p>{info.description3}</p>
+                    </div>
+                    <div className="prod-desc-band__text">
+                        <h3>Quality Assurance &amp; Delivery</h3>
+                        <p>{info.description4}</p>
+                    </div>
+                </div>
+            </section>
+
+            <section className="container" style={{ marginTop: '2rem', marginBottom: '4rem' }}>
                 <h2 style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2.2rem)', color: 'var(--ink)', marginBottom: '1.5rem' }}>
                     Specialty Alloy Plates &amp; Sheets
                 </h2>
                 <ul className="feature-list" style={{ gridTemplateColumns: 'repeat(3, minmax(0,1fr))' }}>
                     {specialtySheets.map((g) => (
-                        <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
+                        <li key={g}><Link to={`/products/sheets-coils/${toSlug(g)}`}>{g}</Link></li>
                     ))}
                 </ul>
             </section>
 
-            {/* Specifications */}
             <section className="product-spec-section">
                 <div className="container">
                     <h2 className="product-spec-section__title">Technical Specifications</h2>

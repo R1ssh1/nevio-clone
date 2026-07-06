@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { PageHero } from '../components/PageHero'
 import { Seo } from '../components/Seo'
 import { pageMeta } from './pageMeta'
+import { products } from '../data/products'
 import { toSlug } from '../data/slug'
 
 const stainlessSteelButtweldGrades = [
@@ -40,6 +41,8 @@ const specifications = [
     { label: 'Types', value: 'Elbow (45 deg, 90 deg, 180 deg), Tee, Cross, Reducer (Concentric, Eccentric), Stubend, Cap, Nipple etc.' },
 ]
 
+const info = products.find(p => p.slug === '/products/buttweld-fittings')!
+
 export function ButtweldFittingsPage() {
     return (
         <div className="page-stack">
@@ -66,13 +69,10 @@ export function ButtweldFittingsPage() {
                     </div>
                     <div className="feature-split__content">
                         <h2>Stainless Steel Buttweld Fittings</h2>
-                        <p>
-                            We supply a comprehensive range of stainless steel buttweld fittings suitable for various pipeline and industrial applications. 
-                            Our fittings are manufactured under strict quality control and conform to national and international standards.
-                        </p>
+                        <p>{info.description1}</p>
                         <ul className="feature-list">
                             {stainlessSteelButtweldGrades.map((g) => (
-                                <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
+                                <li key={g}><Link to={`/products/buttweld-fittings/${toSlug(g)}`}>{g}</Link></li>
                             ))}
                         </ul>
                     </div>
@@ -80,36 +80,44 @@ export function ButtweldFittingsPage() {
 
                 <article className="feature-split" style={{ direction: 'rtl' }}>
                     <div className="feature-split__media" style={{ direction: 'ltr' }}>
-                        <img src="/assets/home/stainless-steel-304-pipes-tubes.webp" alt="Titanium Buttweld Fittings" loading="lazy" />
+                        <img src="/assets/home/product-3.webp" alt="Titanium Buttweld Fittings" loading="lazy" />
                     </div>
                     <div className="feature-split__content" style={{ direction: 'ltr' }}>
                         <h2>Titanium Buttweld Fittings</h2>
-                        <p>
-                            Titanium buttweld fittings from our inventory are manufactured to exacting standards and are widely used in
-                            marine engineering, chemical processing, and desalination plants. Offered in multiple grades.
-                        </p>
+                        <p>{info.description2}</p>
                         <ul className="feature-list">
                             {titaniumButtweldGrades.map((g) => (
-                                <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
+                                <li key={g}><Link to={`/products/buttweld-fittings/${toSlug(g)}`}>{g}</Link></li>
                             ))}
                         </ul>
                     </div>
                 </article>
             </section>
 
-            {/* Specialty alloys */}
-            <section className="container" style={{ marginTop: '1rem', marginBottom: '4rem' }}>
+            <section className="container" style={{ marginTop: '1rem' }}>
+                <div className="prod-desc-band">
+                    <div className="prod-desc-band__text">
+                        <h3>Manufacturing Capability</h3>
+                        <p>{info.description3}</p>
+                    </div>
+                    <div className="prod-desc-band__text">
+                        <h3>Quality Assurance &amp; Delivery</h3>
+                        <p>{info.description4}</p>
+                    </div>
+                </div>
+            </section>
+
+            <section className="container" style={{ marginTop: '2rem', marginBottom: '4rem' }}>
                 <h2 style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2.2rem)', color: 'var(--ink)', marginBottom: '1.5rem' }}>
                     Specialty Alloy Buttweld Fittings
                 </h2>
                 <ul className="feature-list" style={{ gridTemplateColumns: 'repeat(3, minmax(0,1fr))' }}>
                     {specialtyButtweld.map((g) => (
-                        <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
+                        <li key={g}><Link to={`/products/buttweld-fittings/${toSlug(g)}`}>{g}</Link></li>
                     ))}
                 </ul>
             </section>
 
-            {/* Specifications */}
             <section className="product-spec-section">
                 <div className="container">
                     <h2 className="product-spec-section__title">Technical Specifications</h2>
@@ -125,6 +133,10 @@ export function ButtweldFittingsPage() {
                             </tbody>
                         </table>
                     </div>
+                    <p className="spec-note">
+                        All buttweld fittings are supplied with full Mill Test Certificates, Chemical &amp; Mechanical Reports,
+                        dimensional inspection reports, and Third Party Inspection Reports on request.
+                    </p>
                 </div>
             </section>
         </div>

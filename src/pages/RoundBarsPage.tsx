@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { PageHero } from '../components/PageHero'
 import { Seo } from '../components/Seo'
 import { pageMeta } from './pageMeta'
+import { products } from '../data/products'
 import { toSlug } from '../data/slug'
 
 const stainlessSteelBarGrades = [
@@ -54,13 +55,15 @@ const specifications = [
     { label: 'Finish', value: 'Hot Rolled, Cold Drawn, Peeled, Polished, Centreless Ground' },
 ]
 
+const info = products.find(p => p.slug === '/products/round-bars')!
+
 export function RoundBarsPage() {
     return (
         <div className="page-stack">
             <Seo title={pageMeta.roundBars.title} description={pageMeta.roundBars.description} path={pageMeta.roundBars.path} />
             <PageHero
                 eyebrow="Round Bars"
-                title="Titanium and Stainless Steel Round Bars & Rods."
+                title="Titanium and Stainless Steel Round Bars &amp; Rods."
                 description="Renowned supplier of a wide range of round bars, rods, and other bar forms in stainless steel, titanium, duplex, nickel alloys, and more."
                 breadcrumbs={
                     <>
@@ -80,14 +83,10 @@ export function RoundBarsPage() {
                     </div>
                     <div className="feature-split__content">
                         <h2>Stainless Steel Round Bars</h2>
-                        <p>
-                            We supply a comprehensive range of stainless steel round bars and rods manufactured to stringent quality
-                            standards. Our bars are available in a wide variety of grades, surface finishes, and custom dimensions
-                            to meet the demands of industries ranging from oil &amp; gas to medical.
-                        </p>
+                        <p>{info.description1}</p>
                         <ul className="feature-list">
                             {stainlessSteelBarGrades.map((g) => (
-                                <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
+                                <li key={g}><Link to={`/products/round-bars/${toSlug(g)}`}>{g}</Link></li>
                             ))}
                         </ul>
                     </div>
@@ -99,33 +98,40 @@ export function RoundBarsPage() {
                     </div>
                     <div className="feature-split__content" style={{ direction: 'ltr' }}>
                         <h2>Titanium Round Bars</h2>
-                        <p>
-                            Our titanium round bars are manufactured under stringent quality checks to deliver unmatched durability,
-                            lightweight strength, and corrosion resistance. Widely used in aerospace, medical implants, marine, and
-                            industrial applications.
-                        </p>
+                        <p>{info.description2}</p>
                         <ul className="feature-list">
                             {titaniumBarGrades.map((g) => (
-                                <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
+                                <li key={g}><Link to={`/products/round-bars/${toSlug(g)}`}>{g}</Link></li>
                             ))}
                         </ul>
                     </div>
                 </article>
             </section>
 
-            {/* Specialty alloys */}
-            <section className="container" style={{ marginTop: '1rem', marginBottom: '4rem' }}>
+            <section className="container" style={{ marginTop: '1rem' }}>
+                <div className="prod-desc-band">
+                    <div className="prod-desc-band__text">
+                        <h3>Manufacturing Capability</h3>
+                        <p>{info.description3}</p>
+                    </div>
+                    <div className="prod-desc-band__text">
+                        <h3>Quality Assurance &amp; Delivery</h3>
+                        <p>{info.description4}</p>
+                    </div>
+                </div>
+            </section>
+
+            <section className="container" style={{ marginTop: '2rem', marginBottom: '4rem' }}>
                 <h2 style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2.2rem)', color: 'var(--ink)', marginBottom: '1.5rem' }}>
                     Specialty Alloy Round Bars
                 </h2>
                 <ul className="feature-list" style={{ gridTemplateColumns: 'repeat(3, minmax(0,1fr))' }}>
                     {specialtyBars.map((g) => (
-                        <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
+                        <li key={g}><Link to={`/products/round-bars/${toSlug(g)}`}>{g}</Link></li>
                     ))}
                 </ul>
             </section>
 
-            {/* Specifications */}
             <section className="product-spec-section">
                 <div className="container">
                     <h2 className="product-spec-section__title">Technical Specifications</h2>

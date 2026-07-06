@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { PageHero } from '../components/PageHero'
 import { Seo } from '../components/Seo'
 import { pageMeta } from './pageMeta'
+import { products } from '../data/products'
 import { toSlug } from '../data/slug'
 
 const stainlessSteelForgedGrades = [
@@ -35,8 +36,10 @@ const specifications = [
     { label: 'Standard', value: 'ASTM / ASME A182 / SA182' },
     { label: 'Size', value: '1/8" NB to 4" NB (Socketweld & Screwed-Threaded)' },
     { label: 'Class', value: '2000 LBS, 3000 LBS, 6000 LBS, 9000 LBS' },
-    { label: 'Types', value: 'Elbow, Tee, Union, Cross, Coupling, Cap, Bushing, Plug, Swage Nipple, Welding Boss, Hexagon Nipple, Barrel Nipple, Welding Nipple, Parraler Nipple, Street Elbow, Hexagon Nut, Hose Nipple, Bend, Adapter, Insert, Weldolet, Elbowlet, Sockolet, Thredolet, Nipolet, Letrolet, etc.' },
+    { label: 'Types', value: 'Elbow, Tee, Union, Cross, Coupling, Cap, Bushing, Plug, Swage Nipple, Welding Boss, Hexagon Nipple, Barrel Nipple, Welding Nipple, Street Elbow, Hexagon Nut, Hose Nipple, Bend, Adapter, Weldolet, Elbowlet, Sockolet, Thredolet, Nipolet, Letrolet, etc.' },
 ]
+
+const info = products.find(p => p.slug === '/products/forged-fittings')!
 
 export function ForgedFittingsPage() {
     return (
@@ -64,13 +67,10 @@ export function ForgedFittingsPage() {
                     </div>
                     <div className="feature-split__content">
                         <h2>Stainless Steel Forged Fittings</h2>
-                        <p>
-                            We supply a comprehensive range of stainless steel forged fittings suitable for high-pressure pipeline applications. 
-                            Our fittings are manufactured under strict quality control and conform to national and international standards.
-                        </p>
+                        <p>{info.description1}</p>
                         <ul className="feature-list">
                             {stainlessSteelForgedGrades.map((g) => (
-                                <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
+                                <li key={g}><Link to={`/products/forged-fittings/${toSlug(g)}`}>{g}</Link></li>
                             ))}
                         </ul>
                     </div>
@@ -78,36 +78,44 @@ export function ForgedFittingsPage() {
 
                 <article className="feature-split" style={{ direction: 'rtl' }}>
                     <div className="feature-split__media" style={{ direction: 'ltr' }}>
-                        <img src="/assets/home/titanium-pipes-tubes.webp" alt="Titanium Forged Fittings" loading="lazy" />
+                        <img src="/assets/home/product-4.webp" alt="Titanium Forged Fittings" loading="lazy" />
                     </div>
                     <div className="feature-split__content" style={{ direction: 'ltr' }}>
                         <h2>Titanium Forged Fittings</h2>
-                        <p>
-                            Titanium forged fittings from our inventory are manufactured to exacting standards and are widely used in
-                            chemical processing and high-stress environments.
-                        </p>
+                        <p>{info.description2}</p>
                         <ul className="feature-list">
                             {titaniumForgedGrades.map((g) => (
-                                <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
+                                <li key={g}><Link to={`/products/forged-fittings/${toSlug(g)}`}>{g}</Link></li>
                             ))}
                         </ul>
                     </div>
                 </article>
             </section>
 
-            {/* Specialty alloys */}
-            <section className="container" style={{ marginTop: '1rem', marginBottom: '4rem' }}>
+            <section className="container" style={{ marginTop: '1rem' }}>
+                <div className="prod-desc-band">
+                    <div className="prod-desc-band__text">
+                        <h3>Manufacturing Capability</h3>
+                        <p>{info.description3}</p>
+                    </div>
+                    <div className="prod-desc-band__text">
+                        <h3>Quality Assurance &amp; Delivery</h3>
+                        <p>{info.description4}</p>
+                    </div>
+                </div>
+            </section>
+
+            <section className="container" style={{ marginTop: '2rem', marginBottom: '4rem' }}>
                 <h2 style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2.2rem)', color: 'var(--ink)', marginBottom: '1.5rem' }}>
                     Specialty Alloy Forged Fittings
                 </h2>
                 <ul className="feature-list" style={{ gridTemplateColumns: 'repeat(3, minmax(0,1fr))' }}>
                     {specialtyForged.map((g) => (
-                        <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
+                        <li key={g}><Link to={`/products/forged-fittings/${toSlug(g)}`}>{g}</Link></li>
                     ))}
                 </ul>
             </section>
 
-            {/* Specifications */}
             <section className="product-spec-section">
                 <div className="container">
                     <h2 className="product-spec-section__title">Technical Specifications</h2>
@@ -123,6 +131,10 @@ export function ForgedFittingsPage() {
                             </tbody>
                         </table>
                     </div>
+                    <p className="spec-note">
+                        All forged fittings are supplied with full Mill Test Certificates, Chemical &amp; Mechanical Reports,
+                        dimensional inspection reports, and Third Party Inspection Reports on request.
+                    </p>
                 </div>
             </section>
         </div>

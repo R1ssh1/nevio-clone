@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { PageHero } from '../components/PageHero'
 import { Seo } from '../components/Seo'
 import { pageMeta } from './pageMeta'
+import { products } from '../data/products'
 import { toSlug } from '../data/slug'
 
 const stainlessSteelHollowGrades = [
@@ -29,13 +30,15 @@ const specifications = [
     { label: 'Length', value: 'Single Random, Double Random & Cut-to-Length' },
 ]
 
+const info = products.find(p => p.slug === '/products/hollow-sections')!
+
 export function HollowSectionsPage() {
     return (
         <div className="page-stack">
             <Seo title={pageMeta.hollowSections.title} description={pageMeta.hollowSections.description} path={pageMeta.hollowSections.path} />
             <PageHero
                 eyebrow="Hollow Sections"
-                title="Square & Rectangular Hollow Sections."
+                title="Square &amp; Rectangular Hollow Sections."
                 description="High-quality stainless steel and specialty alloy hollow sections for structural and architectural applications."
                 breadcrumbs={
                     <>
@@ -55,33 +58,46 @@ export function HollowSectionsPage() {
                     </div>
                     <div className="feature-split__content">
                         <h2>Stainless Steel Hollow Sections</h2>
-                        <p>
-                            We supply a comprehensive range of stainless steel square and rectangular hollow sections suitable for structural, engineering, and architectural applications. 
-                            Our hollow sections are manufactured under strict quality control and conform to national and international standards.
-                        </p>
+                        <p>{info.description1}</p>
                         <ul className="feature-list">
                             {stainlessSteelHollowGrades.map((g) => (
-                                <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
+                                <li key={g}><Link to={`/products/hollow-sections/${toSlug(g)}`}>{g}</Link></li>
+                            ))}
+                        </ul>
+                    </div>
+                </article>
+
+                <article className="feature-split" style={{ direction: 'rtl' }}>
+                    <div className="feature-split__media" style={{ direction: 'ltr' }}>
+                        <img src="/assets/home/product-6.webp" alt="Titanium Hollow Sections" loading="lazy" />
+                    </div>
+                    <div className="feature-split__content" style={{ direction: 'ltr' }}>
+                        <h2>Specialty Hollow Sections</h2>
+                        <p>{info.description2}</p>
+                        <ul className="feature-list">
+                            {specialtyHollow.map((g) => (
+                                <li key={g}><Link to={`/products/hollow-sections/${toSlug(g)}`}>{g}</Link></li>
                             ))}
                         </ul>
                     </div>
                 </article>
             </section>
 
-            {/* Specialty alloys */}
-            <section className="container" style={{ marginTop: '1rem', marginBottom: '4rem' }}>
-                <h2 style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2.2rem)', color: 'var(--ink)', marginBottom: '1.5rem' }}>
-                    Specialty Alloy Hollow Sections
-                </h2>
-                <ul className="feature-list" style={{ gridTemplateColumns: 'repeat(3, minmax(0,1fr))' }}>
-                    {specialtyHollow.map((g) => (
-                        <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
-                    ))}
-                </ul>
+            <section className="container" style={{ marginTop: '1rem' }}>
+                <div className="prod-desc-band">
+                    <div className="prod-desc-band__text">
+                        <h3>Manufacturing Capability</h3>
+                        <p>{info.description3}</p>
+                    </div>
+                    <div className="prod-desc-band__text">
+                        <h3>Quality Assurance &amp; Delivery</h3>
+                        <p>{info.description4}</p>
+                    </div>
+                </div>
             </section>
 
             {/* Specifications */}
-            <section className="product-spec-section">
+            <section className="product-spec-section" style={{ marginTop: '4rem' }}>
                 <div className="container">
                     <h2 className="product-spec-section__title">Technical Specifications</h2>
                     <div className="spec-table-wrap">

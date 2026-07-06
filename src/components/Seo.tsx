@@ -51,6 +51,28 @@ export function Seo({ title, description, path }: SeoProps) {
         }
 
         canonical.setAttribute('href', path ? `${window.location.origin}${path}` : window.location.href)
+
+        let script = document.head.querySelector<HTMLScriptElement>('script[type="application/ld+json"]')
+        if (!script) {
+            script = document.createElement('script')
+            script.type = 'application/ld+json'
+            document.head.appendChild(script)
+        }
+        
+        const schema = {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Vedantara Metal and Alloys Pvt Ltd",
+            "url": window.location.origin,
+            "logo": `${window.location.origin}/images/logo-transparent.webp`,
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+91-98765-43210",
+                "contactType": "customer service"
+            }
+        };
+        script.text = JSON.stringify(schema);
+
     }, [description, path, title])
 
     return null

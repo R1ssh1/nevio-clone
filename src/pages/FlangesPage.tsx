@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { PageHero } from '../components/PageHero'
 import { Seo } from '../components/Seo'
 import { pageMeta } from './pageMeta'
+import { products } from '../data/products'
 import { toSlug } from '../data/slug'
 
 const stainlessSteelFlangeGrades = [
@@ -44,13 +45,15 @@ const specifications = [
     { label: 'Face Type', value: 'Flat Face (FF), Raised Face (RF), Ring Type Joint (RTJ)' },
 ]
 
+const info = products.find(p => p.slug === '/products/flanges')!
+
 export function FlangesPage() {
     return (
         <div className="page-stack">
             <Seo title={pageMeta.flanges.title} description={pageMeta.flanges.description} path={pageMeta.flanges.path} />
             <PageHero
                 eyebrow="Flanges"
-                title="Industrial Flanges in Stainless Steel & Titanium."
+                title="Industrial Flanges in Stainless Steel &amp; Titanium."
                 description="High-quality stainless steel, titanium, nickel alloy, and specialty flanges for pipeline and industrial applications."
                 breadcrumbs={
                     <>
@@ -70,13 +73,10 @@ export function FlangesPage() {
                     </div>
                     <div className="feature-split__content">
                         <h2>Stainless Steel Flanges</h2>
-                        <p>
-                            We supply a comprehensive range of stainless steel flanges suitable for various pipeline and industrial applications. 
-                            Our flanges are manufactured under strict quality control and conform to national and international standards.
-                        </p>
+                        <p>{info.description1}</p>
                         <ul className="feature-list">
                             {stainlessSteelFlangeGrades.map((g) => (
-                                <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
+                                <li key={g}><Link to={`/products/flanges/${toSlug(g)}`}>{g}</Link></li>
                             ))}
                         </ul>
                     </div>
@@ -84,36 +84,44 @@ export function FlangesPage() {
 
                 <article className="feature-split" style={{ direction: 'rtl' }}>
                     <div className="feature-split__media" style={{ direction: 'ltr' }}>
-                        <img src="/assets/home/product-6.webp" alt="Titanium Flanges" loading="lazy" />
+                        <img src="/assets/home/product-7.webp" alt="Titanium Flanges" loading="lazy" />
                     </div>
                     <div className="feature-split__content" style={{ direction: 'ltr' }}>
                         <h2>Titanium Flanges</h2>
-                        <p>
-                            Titanium flanges from our inventory are manufactured to exacting standards and are widely used in
-                            marine engineering, chemical processing, and desalination plants. Offered in multiple grades.
-                        </p>
+                        <p>{info.description2}</p>
                         <ul className="feature-list">
                             {titaniumFlangeGrades.map((g) => (
-                                <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
+                                <li key={g}><Link to={`/products/flanges/${toSlug(g)}`}>{g}</Link></li>
                             ))}
                         </ul>
                     </div>
                 </article>
             </section>
 
-            {/* Specialty alloys */}
-            <section className="container" style={{ marginTop: '1rem', marginBottom: '4rem' }}>
+            <section className="container" style={{ marginTop: '1rem' }}>
+                <div className="prod-desc-band">
+                    <div className="prod-desc-band__text">
+                        <h3>Manufacturing Capability</h3>
+                        <p>{info.description3}</p>
+                    </div>
+                    <div className="prod-desc-band__text">
+                        <h3>Quality Assurance &amp; Delivery</h3>
+                        <p>{info.description4}</p>
+                    </div>
+                </div>
+            </section>
+
+            <section className="container" style={{ marginTop: '2rem', marginBottom: '4rem' }}>
                 <h2 style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2.2rem)', color: 'var(--ink)', marginBottom: '1.5rem' }}>
                     Specialty Alloy Flanges
                 </h2>
                 <ul className="feature-list" style={{ gridTemplateColumns: 'repeat(3, minmax(0,1fr))' }}>
                     {specialtyFlanges.map((g) => (
-                        <li key={g}><Link to={`/products/${toSlug(g)}`}>{g}</Link></li>
+                        <li key={g}><Link to={`/products/flanges/${toSlug(g)}`}>{g}</Link></li>
                     ))}
                 </ul>
             </section>
 
-            {/* Specifications */}
             <section className="product-spec-section">
                 <div className="container">
                     <h2 className="product-spec-section__title">Technical Specifications</h2>
