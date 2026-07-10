@@ -17,7 +17,6 @@ import { CountUp } from '../components/CountUp'
 export function HomePage() {
     const bannerRef = useRef<HTMLDivElement | null>(null)
     const [activeSlide, setActiveSlide] = useState(0)
-    const [paused, setPaused] = useState(false)
     const [visibleSections, setVisibleSections] = useState<Set<string>>(() => new Set(['hero']))
 
     const slideCount = homepageBannerSlides.length
@@ -41,14 +40,12 @@ export function HomePage() {
     }, [activeSlide, scrollToSlide, slideCount])
 
     useEffect(() => {
-        if (paused) return
-
         const timer = setInterval(() => {
             moveBanner(1)
-        }, 4500)
+        }, 5000)
 
         return () => clearInterval(timer)
-    }, [moveBanner, paused])
+    }, [moveBanner])
 
     useEffect(() => {
         const sections = Array.from(document.querySelectorAll<HTMLElement>('[data-reveal]'))
@@ -128,10 +125,6 @@ export function HomePage() {
             <section
                 className="hero-banner"
                 aria-label="Homepage banner"
-                onMouseEnter={() => setPaused(true)}
-                onMouseLeave={() => setPaused(false)}
-                onFocus={() => setPaused(true)}
-                onBlur={() => setPaused(false)}
                 onKeyDown={handleBannerKeyDown}
                 tabIndex={0}
             >

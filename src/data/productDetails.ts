@@ -11957,7 +11957,7 @@ export const dynamicProducts: DynamicProduct[] = [
         ]
       }
     ],
-    "image": "/images/products/alloy-20-forged-fittings.jpg",
+    "image": "/images/products/alloy-20-forged-fittings.webp",
     "images": [
       "/assets/products/alloy-20-forged-fittings.jpg",
       "/assets/products/alloy-20-forged-fittings-2.jpg",
@@ -11999,7 +11999,7 @@ export const dynamicProducts: DynamicProduct[] = [
       "Vedantara Metal & Alloys is one of the leading manufacturer, supplier and stockiest of products such as Stainless Steel, Aluminium Alloy, Copper Nickel Alloy, Carbon Steel, High Nickel Alloy, Alloy Steel and some of the specialized products."
     ],
     "tables": [],
-    "image": "/assets/products/alloy-steel-forged-fittings.jpg",
+    "image": "/images/products/alloy-steel-forged-fitting.jpg",
     "images": [
       "/assets/products/alloy-steel-forged-fittings.jpg",
       "/assets/products/alloy-steel-forged-fittings-2.jpg",
@@ -12183,7 +12183,7 @@ export const dynamicProducts: DynamicProduct[] = [
         ]
       }
     ],
-    "image": "/images/products/copper-nickel-alloy-70-30-forged-fittings.jpg",
+    "image": "/images/products/copper-nickel-alloy-70-30-forged-fittings.webp",
     "images": [
       "/assets/products/copper-nickel-70-30-forged-fittings.jpg",
       "/assets/products/copper-nickel-70-30-forged-fittings-1.jpg",

@@ -6,12 +6,14 @@ import { products } from '../data/products'
 export function Header() {
     const [scrolled, setScrolled] = useState(false)
     const [dropdownOpen, setDropdownOpen] = useState(false)
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const dropdownRef = useRef<HTMLDivElement>(null)
     const location = useLocation()
 
     // Close dropdown whenever the route changes (e.g. user clicks Products link)
     useEffect(() => {
         setDropdownOpen(false)
+        setMobileMenuOpen(false)
     }, [location.pathname])
 
     useEffect(() => {
@@ -91,7 +93,22 @@ export function Header() {
                     />
                 </NavLink>
 
-                <div className="header-actions">
+                <button
+                    className="mobile-menu-toggle"
+                    type="button"
+                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                    aria-label="Toggle navigation"
+                >
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        {mobileMenuOpen ? (
+                            <path fillRule="evenodd" d="M18.36 19.78L12 13.41l-6.36 6.37-1.42-1.42L10.59 12 4.22 5.64l1.42-1.42L12 10.59l6.36-6.37 1.42 1.42L13.41 12l6.37 6.36z" clipRule="evenodd" />
+                        ) : (
+                            <path fillRule="evenodd" d="M3 5h18v2H3V5zm0 6h18v2H3v-2zm0 6h18v2H3v-2z" clipRule="evenodd" />
+                        )}
+                    </svg>
+                </button>
+
+                <div className={`header-actions ${mobileMenuOpen ? 'is-open' : ''}`}>
                     <nav className="nav" aria-label="Primary">
                         {navigation.map((item) => {
                             if (item.label === 'Products') {
@@ -113,6 +130,13 @@ export function Header() {
                                             }
                                             aria-haspopup="true"
                                             aria-expanded={dropdownOpen}
+                                            onClick={(e) => {
+                                                // On mobile, click toggles dropdown instead of navigating immediately
+                                                if (window.innerWidth <= 768) {
+                                                    e.preventDefault();
+                                                    setDropdownOpen(!dropdownOpen);
+                                                }
+                                            }}
                                         >
                                             Products
                                             <span className="dropdown-arrow" aria-hidden="true">▾</span>
