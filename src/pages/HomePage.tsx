@@ -41,14 +41,12 @@ export function HomePage() {
     }, [activeSlide, scrollToSlide, slideCount])
 
     useEffect(() => {
-        if (paused) return
-
         const timer = setInterval(() => {
             moveBanner(1)
         }, 4500)
 
         return () => clearInterval(timer)
-    }, [moveBanner, paused])
+    }, [moveBanner])
 
     useEffect(() => {
         const sections = Array.from(document.querySelectorAll<HTMLElement>('[data-reveal]'))
@@ -138,7 +136,7 @@ export function HomePage() {
                 <button
                     className="hero-banner__arrow hero-banner__arrow--prev"
                     type="button"
-                    onClick={() => moveBanner(-1)}
+                    onClick={() => { moveBanner(-1); setPaused(false); }}
                     aria-label="Previous banner slide"
                 >
                     <span aria-hidden="true">&lsaquo;</span>
@@ -176,7 +174,7 @@ export function HomePage() {
                 <button
                     className="hero-banner__arrow hero-banner__arrow--next"
                     type="button"
-                    onClick={() => moveBanner(1)}
+                    onClick={() => { moveBanner(1); setPaused(false); }}
                     aria-label="Next banner slide"
                 >
                     <span aria-hidden="true">&rsaquo;</span>
@@ -197,7 +195,7 @@ export function HomePage() {
                                 key={index}
                                 className={index === activeSlide ? 'hero-banner__dot is-active' : 'hero-banner__dot'}
                                 type="button"
-                                onClick={() => scrollToSlide(index)}
+                                onClick={() => { scrollToSlide(index); setPaused(false); }}
                                 aria-label={`Go to banner slide ${index + 1}`}
                             />
                         ))}
