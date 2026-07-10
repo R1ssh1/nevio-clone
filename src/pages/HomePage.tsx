@@ -17,7 +17,6 @@ import { CountUp } from '../components/CountUp'
 export function HomePage() {
     const bannerRef = useRef<HTMLDivElement | null>(null)
     const [activeSlide, setActiveSlide] = useState(0)
-    const [paused, setPaused] = useState(false)
     const [visibleSections, setVisibleSections] = useState<Set<string>>(() => new Set(['hero']))
 
     const slideCount = homepageBannerSlides.length
@@ -43,7 +42,7 @@ export function HomePage() {
     useEffect(() => {
         const timer = setInterval(() => {
             moveBanner(1)
-        }, 4500)
+        }, 5000)
 
         return () => clearInterval(timer)
     }, [moveBanner])
@@ -126,17 +125,13 @@ export function HomePage() {
             <section
                 className="hero-banner"
                 aria-label="Homepage banner"
-                onMouseEnter={() => setPaused(true)}
-                onMouseLeave={() => setPaused(false)}
-                onFocus={() => setPaused(true)}
-                onBlur={() => setPaused(false)}
                 onKeyDown={handleBannerKeyDown}
                 tabIndex={0}
             >
                 <button
                     className="hero-banner__arrow hero-banner__arrow--prev"
                     type="button"
-                    onClick={() => { moveBanner(-1); setPaused(false); }}
+                    onClick={() => moveBanner(-1)}
                     aria-label="Previous banner slide"
                 >
                     <span aria-hidden="true">&lsaquo;</span>
@@ -174,7 +169,7 @@ export function HomePage() {
                 <button
                     className="hero-banner__arrow hero-banner__arrow--next"
                     type="button"
-                    onClick={() => { moveBanner(1); setPaused(false); }}
+                    onClick={() => moveBanner(1)}
                     aria-label="Next banner slide"
                 >
                     <span aria-hidden="true">&rsaquo;</span>
@@ -195,7 +190,7 @@ export function HomePage() {
                                 key={index}
                                 className={index === activeSlide ? 'hero-banner__dot is-active' : 'hero-banner__dot'}
                                 type="button"
-                                onClick={() => { scrollToSlide(index); setPaused(false); }}
+                                onClick={() => scrollToSlide(index)}
                                 aria-label={`Go to banner slide ${index + 1}`}
                             />
                         ))}
