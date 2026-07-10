@@ -58,106 +58,93 @@ export function ContactPage() {
                 description="Looking for industrial metal products or a custom quotation? Fill out the form below and our team will get back to you shortly."
             />
 
-            <section className="container contact-grid">
-                {/* ── Dark contact info panel ── */}
-                <aside className="contact-dark-card">
-                    <div className="contact-dark-card__header">
-                        <h2>Let's Talk</h2>
-                        <p>Reach out to our team — we respond within one business day.</p>
+            <section className="contact-layout">
+                <div className="container contact-grid">
+                    {/* ── 2×2 Contact Info Cards ── */}
+                    <div className="contact-info-grid">
+                        <div className="contact-info-card">
+                            <span className="contact-info-card__icon"><IconLocation /></span>
+                            <h3>Our Office</h3>
+                            <p>
+                                48/50 Hafeez Bldg, Office No 8,<br />
+                                Cawasji Patel Tank Road,<br />
+                                Mumbai – 400004
+                            </p>
+                        </div>
+
+                        <div className="contact-info-card">
+                            <span className="contact-info-card__icon"><IconGlobe /></span>
+                            <h3>International</h3>
+                            <p className="contact-info-card__contact">Naresh Mali</p>
+                            <a href="tel:+919967078222" className="contact-info-card__link">+91 99670 78222</a>
+                            <a href="mailto:info@vedantarametal.com" className="contact-info-card__link">info@vedantarametal.com</a>
+                        </div>
+
+                        <div className="contact-info-card">
+                            <span className="contact-info-card__icon"><IconMail /></span>
+                            <h3>General</h3>
+                            <a href="mailto:info@vedantarametal.com" className="contact-info-card__link">info@vedantarametal.com</a>
+                        </div>
+
+                        <div className="contact-info-card">
+                            <span className="contact-info-card__icon"><IconPhone /></span>
+                            <h3>Domestic</h3>
+                            <p className="contact-info-card__contact">Shravan Kumar</p>
+                            <a href="tel:+919920850631" className="contact-info-card__link">+91 99208 50631</a>
+                            <a href="mailto:sales@vedantarametal.com" className="contact-info-card__link">sales@vedantarametal.com</a>
+                        </div>
                     </div>
 
-                    <ul className="contact-items">
-                        <li className="contact-item">
-                            <span className="contact-item__icon"><IconLocation /></span>
-                            <div className="contact-item__body">
-                                <span className="contact-item__label">Head Office</span>
-                                <span className="contact-item__value">
-                                    48/50 Hafeez Bldg, Office No 8,<br />
-                                    Cawasji Patel Tank Road,<br />
-                                    Mumbai – 400004
-                                </span>
+                    {/* ── Contact Form Panel ── */}
+                    <div className="contact-form-panel">
+                        <h2>Contact Us</h2>
+                        {state.succeeded ? (
+                            <div className="contact-success">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--navy)' }}>
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="9 12 11 14 15 10" />
+                                </svg>
+                                <h2>Inquiry Sent!</h2>
+                                <p>Thank you for reaching out. Our team will get back to you within one business day.</p>
                             </div>
-                        </li>
+                        ) : (
+                            <form className="contact-form" onSubmit={handleSubmit}>
+                                <label>
+                                    Full Name
+                                    <input type="text" name="name" placeholder="Your Name" required />
+                                </label>
 
-                        <li className="contact-item">
-                            <span className="contact-item__icon"><IconGlobe /></span>
-                            <div className="contact-item__body">
-                                <span className="contact-item__label">International Sales — Naresh Mali</span>
-                                <a href="tel:+919967078222" className="contact-item__link">+91 99670 78222</a>
-                                <a href="mailto:info@vedantarametal.com" className="contact-item__link">info@vedantarametal.com</a>
-                            </div>
-                        </li>
+                                <label>
+                                    Email Address
+                                    <input type="email" name="email" placeholder="you@example.com" required />
+                                    <ValidationError prefix="Email" field="email" errors={state.errors} />
+                                </label>
 
-                        <li className="contact-item">
-                            <span className="contact-item__icon"><IconPhone /></span>
-                            <div className="contact-item__body">
-                                <span className="contact-item__label">Domestic Sales — Shravan Kumar</span>
-                                <a href="tel:+919920850631" className="contact-item__link">+91 99208 50631</a>
-                                <a href="mailto:sales@vedantarametal.com" className="contact-item__link">sales@vedantarametal.com</a>
-                            </div>
-                        </li>
+                                <label>
+                                    Phone Number
+                                    <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" />
+                                </label>
 
-                        <li className="contact-item">
-                            <span className="contact-item__icon"><IconMail /></span>
-                            <div className="contact-item__body">
-                                <span className="contact-item__label">General Enquiries</span>
-                                <a href="mailto:info@vedantarametal.com" className="contact-item__link">info@vedantarametal.com</a>
-                            </div>
-                        </li>
-                    </ul>
+                                <label>
+                                    Subject
+                                    <input type="text" name="subject" placeholder="Subject" defaultValue={searchParams.get("subject") ?? ""} />
+                                </label>
 
-                    <a href="tel:+919920850631" className="contact-dark-card__cta">
-                        <IconPhone />
-                        Call Us 24 × 7 · +91 99208 50631
-                    </a>
-                </aside>
+                                <label>
+                                    Message
+                                    <textarea rows={5} name="message" placeholder="Tell us about your requirement..." required />
+                                    <ValidationError prefix="Message" field="message" errors={state.errors} />
+                                </label>
 
-                {/* ── Contact Form ── */}
-                {state.succeeded ? (
-                    <div className="contact-form contact-success">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--navy)' }}>
-                            <circle cx="12" cy="12" r="10" />
-                            <polyline points="9 12 11 14 15 10" />
-                        </svg>
-                        <h2>Inquiry Sent!</h2>
-                        <p>Thank you for reaching out. Our team will get back to you within one business day.</p>
+                                <button type="submit" className="primary-button" disabled={state.submitting}>
+                                    {state.submitting ? "Sending..." : "Send Inquiry"}
+                                </button>
+
+                                <ValidationError errors={state.errors} />
+                            </form>
+                        )}
                     </div>
-                ) : (
-                    <form className="contact-form" onSubmit={handleSubmit}>
-                        <label>
-                            Full Name
-                            <input type="text" name="name" placeholder="Your Name" required />
-                        </label>
-
-                        <label>
-                            Email Address
-                            <input type="email" name="email" placeholder="you@example.com" required />
-                            <ValidationError prefix="Email" field="email" errors={state.errors} />
-                        </label>
-
-                        <label>
-                            Phone Number
-                            <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" />
-                        </label>
-
-                        <label>
-                            Subject
-                            <input type="text" name="subject" placeholder="Subject" defaultValue={searchParams.get("subject") ?? ""} />
-                        </label>
-
-                        <label>
-                            Message
-                            <textarea rows={5} name="message" placeholder="Tell us about your requirement..." required />
-                            <ValidationError prefix="Message" field="message" errors={state.errors} />
-                        </label>
-
-                        <button type="submit" className="primary-button" disabled={state.submitting}>
-                            {state.submitting ? "Sending..." : "Send Inquiry"}
-                        </button>
-
-                        <ValidationError errors={state.errors} />
-                    </form>
-                )}
+                </div>
             </section>
 
             <section className="container" style={{ marginBottom: '4rem' }}>
