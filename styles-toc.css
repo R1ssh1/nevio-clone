@@ -1,0 +1,64 @@
+
+/* Table of Contents Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+.toc-box {
+  margin: 2rem 0;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  max-width: 800px;
+}
+
+.toc-header {
+  background-color: rgba(0, 150, 255, 0.05);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 20px;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--navy);
+  text-align: center;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.toc-list {
+  list-style: none;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.toc-list li a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  transition: color 0.2s ease;
+  display: block;
+}
+
+.toc-list li a:hover {
+  color: var(--navy);
+  text-decoration: underline;
+}
+
+.product-detail-section {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.product-detail-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--navy);
+}
+
+.seo-text {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.6;
+}

@@ -71,6 +71,12 @@ export const pageMeta = {
             'Square and rectangular hollow sections for structural and architectural applications.',
         path: '/products/hollow-sections',
     },
+    specializedProducts: {
+        title: 'Specialized Steel Products Supplier, Exporter & Stockist in Mumbai | Vedantara Metal & Alloys',
+        description:
+            'Vedantara Metal & Alloys — leading manufacturer, exporter, and supplier of Abrasion Resistant Plates, Corten Steel, Boiler Steel, Armour Steel, and Quenched & Tempered Steel in Mumbai, India.',
+        path: '/products/specialized-products',
+    },
     quality: {
         title: 'Quality Policy | Vedantara Metal & Alloys',
         description:

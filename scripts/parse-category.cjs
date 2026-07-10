@@ -1,0 +1,10 @@
+const fs = require('fs');
+const cheerio = require('cheerio');
+const html = fs.readFileSync('reference/Champak/Pipes&Tubes/Pipes and Tubes, Seamless, Welded Pipe Manufacturer and Exporter.html', 'utf-8');
+const $ = cheerio.load(html);
+console.log('Title:', $('title').text());
+console.log('H1:', $('h1').text());
+console.log('H2s:', $('h2').map((i, el) => $(el).text()).get());
+console.log('Paragraphs:', $('p').map((i, el) => $(el).text()).get().slice(0, 5));
+const links = $('a').map((i, el) => ({ text: $(el).text().trim(), href: $(el).attr('href') })).get();
+console.log('Links:', links.filter(l => l.text.length > 5).slice(0, 30));

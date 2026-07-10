@@ -11,6 +11,7 @@ import {
 } from '../data/site'
 import { AboutSection } from "../components/AboutSection";
 import { WhyChooseUsSection } from '../components/WhyChooseUsSection'
+import { ClientsSection } from '../components/ClientsSection'
 import { CountUp } from '../components/CountUp'
 
 export function HomePage() {
@@ -247,6 +248,8 @@ export function HomePage() {
             </section>
 
             <WhyChooseUsSection />
+
+            <ClientsSection />
 
             <section className="stats-band">
                 <div className="stats-band__bg">
