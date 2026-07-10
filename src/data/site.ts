@@ -12,8 +12,7 @@ export const navigation = [
             { label: 'Forged Fittings', path: '/products/forged-fittings' },
             { label: 'Buttweld Fittings', path: '/products/buttweld-fittings' },
             { label: 'Fasteners', path: '/products/fasteners' },
-            { label: 'Hollow Sections', path: '/products/hollow-sections' },
-            { label: 'Wires', path: '/products/wires' },
+            { label: 'Specialized Products', path: '/products/specialized-products' },
         ],
     },
     { label: 'Quality', path: '/quality-policy' },
@@ -21,9 +20,21 @@ export const navigation = [
 ]
 
 export const contactDetails = {
-    address: 'Mumbai, Maharashtra, India',
+    address: '48/50 Hafeez Bldg, Office No 8, Cawasji Patel Tank Road, Mumbai – 400004',
     email: 'info@vedantarametal.com',
-    phone: '+91 99999 99999',
+    phone: '+91 99208 50631',
+
+    internationalSales: {
+        name: 'Naresh Mali',
+        phone: '+91 99670 78222',
+        email: 'info@vedantarametal.com',
+    },
+    domesticSales: {
+        name: 'Shravan Kumar',
+        phone: '+91 99208 50631',
+        email: 'sales@vedantarametal.com',
+    },
+    emergency: '+91 99208 50631',
 }
 
 export const homepageHeroDescription =
@@ -131,11 +142,6 @@ export const productCards = [
         image: '/assets/home/round-bars.webp',
     },
     {
-        title: 'Wires',
-        href: '/products/wires',
-        image: '/assets/home/wires.webp',
-    },
-    {
         title: 'Flanges',
         href: '/products/flanges',
         image: '/assets/products/flanges.webp',
@@ -156,9 +162,9 @@ export const productCards = [
         image: '/assets/products/fasteners.webp',
     },
     {
-        title: 'Hollow Sections',
-        href: '/products/hollow-sections',  
-        image: '/assets/products/hollow-sections.webp',
+        title: 'Specialized Products',
+        href: '/products/specialized-products',
+        image: '/assets/products/boiler.jpeg',
     },
 ]
 

@@ -117,7 +117,104 @@ const testingItems = [
     { icon: <SvgSpectro />, label: 'Chemical Analysis (Spectro)', abbr: 'CA' },
 ]
 
-const tpiAgencies = ['TUV', 'DNV', 'SGS', 'Lloyds', 'ABS', 'Bureau Veritas']
+const tpiCards = [
+    {
+        abbr: 'DNV',
+        name: 'Det Norske Veritas',
+        country: 'Norway',
+        desc: 'International classification society providing risk management & quality assurance services worldwide.',
+    },
+    {
+        abbr: 'BV',
+        name: 'Bureau Veritas',
+        country: 'France',
+        desc: 'International inspection, testing & certification organisation with 200+ years of expertise.',
+    },
+    {
+        abbr: 'NPCIL',
+        name: 'Nuclear Power Corp. of India',
+        country: 'India',
+        desc: 'Government of India enterprise responsible for design, construction & operation of nuclear power.',
+    },
+    {
+        abbr: 'TÜV',
+        name: 'TÜV India',
+        country: 'Germany / India',
+        desc: 'Global testing, inspection & certification authority trusted across 140+ countries.',
+    },
+    {
+        abbr: 'PDIL',
+        name: 'PDIL',
+        country: 'India',
+        desc: 'Projects & Development India Ltd — premier engineering consultancy for fertiliser & chemical plants.',
+    },
+    {
+        abbr: 'LR',
+        name: "Lloyd's Register",
+        country: 'United Kingdom',
+        desc: 'Technical assurance & safety services for aerospace, marine & industrial sectors.',
+    },
+    {
+        abbr: 'SGS',
+        name: 'SGS Group',
+        country: 'Switzerland',
+        desc: "World's leading inspection, verification, testing & certification company.",
+    },
+    {
+        abbr: 'TATA',
+        name: 'Tata Projects',
+        country: 'India',
+        desc: 'One of India\'s fastest growing infrastructure companies, executing complex industrial projects.',
+    },
+    {
+        abbr: 'BHEL',
+        name: 'Bharat Heavy Electricals',
+        country: 'India',
+        desc: 'India\'s largest power equipment manufacturer and a premier engineering enterprise.',
+    },
+    {
+        abbr: 'L&T',
+        name: 'Larsen & Toubro Ltd.',
+        country: 'India',
+        desc: 'India\'s leading technology, engineering, construction & manufacturing conglomerate.',
+    },
+    {
+        abbr: 'HEG',
+        name: 'HEG Ltd.',
+        country: 'India',
+        desc: 'One of the largest graphite electrode manufacturers globally, recognised for quality.',
+    },
+    {
+        abbr: 'TÜV SÜD',
+        name: 'TÜV SÜD',
+        country: 'Germany',
+        desc: 'International certification body providing technical safety & quality assurance services.',
+    },
+    {
+        abbr: 'VELOSI',
+        name: 'Velosi',
+        country: 'Global',
+        desc: 'International inspection, testing & expediting services for oil, gas & industrial sectors.',
+    },
+    {
+        abbr: 'IQC',
+        name: 'IQC',
+        country: 'Global',
+        desc: 'Independent quality & compliance inspections for manufacturing and industrial projects.',
+    },
+    {
+        abbr: 'GL',
+        name: 'Germanischer Lloyd',
+        country: 'Germany',
+        desc: 'Classification society providing technical rules & standards for marine & offshore industries.',
+    },
+    {
+        abbr: 'BECHTEL',
+        name: 'Bechtel',
+        country: 'United States',
+        desc: 'One of the world\'s largest engineering, construction & project management companies.',
+    },
+]
 
 const objectives = [
     {
@@ -267,7 +364,7 @@ export function QualityPage() {
             {/* ── 3. Third Party Inspection ── */}
             <section className="section-block qp-tpi-section">
                 <div className="container">
-                    <div ref={tpiRef} className="qp-reveal qp-tpi-inner">
+                    <div ref={tpiRef} className="qp-reveal qp-tpi-inner qp-tpi-inner--carousel">
                         <div className="qp-tpi-text">
                             <p className="eyebrow">Independent Verification</p>
                             <h2>Third Party Inspection</h2>
@@ -277,14 +374,24 @@ export function QualityPage() {
                                 can arrange for 3.2 certification upon request.
                             </p>
                         </div>
-                        <div className="qp-tpi-agencies">
-                            {tpiAgencies.map((name) => (
-                                <div key={name} className="qp-agency-chip">
-                                    <span className="qp-agency-dot" />
-                                    {name}
+                    </div>
+                </div>
+
+                {/* ── Auto-scrolling TPI Carousel ── */}
+                <div className="qp-tpi-carousel-wrap">
+                    <div className="qp-tpi-track">
+                        {[...tpiCards, ...tpiCards].map((card, idx) => (
+                            <div className="qp-tpi-card" key={`${card.name}-${idx}`}>
+                                <div className="qp-tpi-card__front">
+                                    <div className="qp-tpi-card__abbr">{card.abbr}</div>
+                                    <div className="qp-tpi-card__name">{card.name}</div>
                                 </div>
-                            ))}
-                        </div>
+                                <div className="qp-tpi-card__back">
+                                    <div className="qp-tpi-card__country">{card.country}</div>
+                                    <div className="qp-tpi-card__desc">{card.desc}</div>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>

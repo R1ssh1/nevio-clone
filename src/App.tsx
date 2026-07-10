@@ -17,6 +17,7 @@ import { ForgedFittingsPage } from './pages/ForgedFittingsPage'
 import { ButtweldFittingsPage } from './pages/ButtweldFittingsPage'
 import { FastenersPage } from './pages/FastenersPage'
 import { HollowSectionsPage } from './pages/HollowSectionsPage'
+import { SpecializedProductsPage } from './pages/SpecializedProductsPage'
 
 import { ProductDetailPage } from './pages/ProductDetailPage'
 import Cursor from './components/Cursor'
@@ -61,11 +62,18 @@ function App() {
           <Route path="/products/fasteners" element={<FastenersPage />} />
           <Route path="/products/fasteners/:id" element={<ProductDetailPage />} />
           
+          {/* Hollow Sections — page kept for backward compat, removed from nav */}
           <Route path="/products/hollow-sections" element={<HollowSectionsPage />} />
           <Route path="/products/hollow-sections/:id" element={<ProductDetailPage />} />
 
+          {/* Specialized Products */}
+          <Route path="/products/specialized-products" element={<SpecializedProductsPage />} />
+          <Route path="/products/specialized-products/:id" element={<ProductDetailPage />} />
+
           <Route path="/quality-policy" element={<QualityPage />} />
           <Route path="/contact-us" element={<ContactPage />} />
+          {/* Catch-all: handles any /products/:category/:slug combination (incl. SEO-enriched slugs) */}
+          <Route path="/products/:category/:id" element={<ProductDetailPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
 

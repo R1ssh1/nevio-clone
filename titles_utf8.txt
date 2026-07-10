@@ -1,0 +1,238 @@
+--- buttweld.json ---
+SS 304/304L/304H Buttweld Fittings
+SS 309/310/310S Buttweld Fittings
+SS 316/316L/316Ti Buttweld Fittings
+SS 317/317L Buttweld Fittings
+SS 321/321H Buttweld Fittings
+SS 347/347H Buttweld Fittings
+SS 904L Buttweld Fittings
+Duplex Steel S31803/S32205 Buttweld Fittings
+Super Duplex S32750/S32760 Buttweld Fittings
+Inconel 600/601/625/718 Buttweld Fittings
+Incoloy 800/800HT/825 Buttweld Fittings
+Monel 400/K500 Buttweld Fittings
+Nickel 200/201 Buttweld Fittings
+Hastelloy C22/C276 Buttweld Fittings
+Carbon Steel Buttweld Fittings
+Alloy Steel Buttweld Fittings
+Alloy 20 Buttweld Fittings
+Copper Nickel 70/30 Buttweld Fittings
+Copper Nickel 90/10 Buttweld Fittings
+Titanium Gr 1/2/5/9 Buttweld Fittings
+--- fasteners.json ---
+Stainless Steel Fasteners
+Carbon Steel Fasteners
+Alloy Steel Fasteners
+Nickel 200/201 Fasteners
+Duplex S31803/S32205 Fasteners
+UNS S32750/S32760 Fasteners
+Copper Nickel 70/30 Fasteners
+Copper Nickel 90/10 Fasteners
+Monel 400/K500 Fasteners
+Hastelloy C22/C276 Fasteners
+Inconel 600/601/625/718 Fasteners
+Incoloy 800/800HT/825 Fasteners
+Alloy 20 Fasteners
+Titanium Alloy Fasteners
+--- flanges.json ---
+SS 304/304L/304H Flanges
+SS 309/310/310S Flanges
+SS 316/316L/316Ti Flanges
+SS 317/317L Flanges
+SS 321/321H Flanges
+SS 347/347H Flanges
+SS 904L Flanges
+Duplex Steel S31803/S32205 Flanges
+Super Duplex Steel Flanges
+Inconel 600/601/625/718 Flanges
+Incoloy 800/825 Flanges
+Monel 400/K500 Flanges
+Nickel 200/201 Flanges
+Hastelloy C22 / C276 Flanges
+Carbon Steel Flanges
+Alloy Steel Flanges
+Alloy Steel F1 Flanges
+Alloy Steel F5 Flanges
+Alloy Steel F9 Flanges
+Alloy Steel F11 Flanges
+Alloy Steel F12 Flanges
+Alloy Steel F22 Flanges
+Alloy Steel F91 Flanges
+Alloy Steel F92 Flanges
+Alloy 20 Flanges
+Copper Nickel 70-30 Flanges
+Copper Nickel 90-10 Flanges
+Titanium Gr 1 Flanges
+Titanium Gr 2 Flanges
+Titanium Gr 5 Flanges
+Titanium Gr 9 Flanges
+--- forged.json ---
+SS 304/304L/304H Forged Fittings
+SS 309/310/310S Forged Fittings
+SS 316/316L/316Ti Forged Fittings
+SS 317/317L Forged Fittings
+SS 321/321H Forged Fittings
+SS 347/347H Forged Fittings
+SS 904L Forged Fittings
+Duplex Steel S31803/S32205 Forged Fittings
+Super Duplex S32750/S32760 Forged Fittings
+Inconel 600/601/625/718 Forged Fittings
+Incoloy Forged Fittings
+Monel Alloy Forged Fittings
+Nickel 200/201 Forged Fittings
+Hastelloy C22/C276 Forged Fittings
+Carbon Steel Forged Fittings
+Alloy Steel Forged Fittings
+Alloy 20 Forged Fittings
+Copper Nickel 70/30 Forged Fittings
+Copper Nickel 90/10 Forged Fittings
+Titanium Gr 1 Forged Fittings
+Titanium Gr 2 Forged Fittings
+Titanium Gr 5 Forged Fittings
+Titanium Gr 9 Forged Fittings
+--- seamless.json ---
+SS 304/304L/304H Pipes & Tubes
+SS 309/310/310S Pipes & Tubes
+SS 316/316L/316Ti Pipes & Tubes
+SS 317/317L Pipes & Tubes
+SS 321/321H Pipes & Tubes
+SS 347/347H Pipes & Tubes
+SS 410 Pipes & Tubes
+SS 446 Pipes & Tubes
+SS 904L Pipes & Tubes
+Duplex Steel S31803 / S32205 Pipes & Tubes
+Super Duplex S32750 / S32760 Pipes & Tubes
+Inconel 600/601/625/718 Pipes & Tubes
+Incoloy 800/800HT/825 Pipes & Tubes
+Monel 400/K500 Pipes & Tubes
+Nickel 200/201 Pipes & Tubes
+Hastelloy C22/C276 Pipes & Tubes
+Alloy 20 Pipes & Tubes
+Alloy Steel P5 Pipes & Tubes
+Alloy Steel P9 Pipes & Tubes
+Alloy Steel P11 Pipes & Tubes
+Alloy Steel P12 Pipes & Tubes
+Alloy Steel P22 Pipes & Tubes
+Alloy Steel P91 Pipes & Tubes
+Alloy Steel P92 Pipes & Tubes
+Titanium Gr 1 Pipes & Tubes
+Titanium Gr 2 Pipes & Tubes
+Titanium Gr 5 Pipes & Tubes
+Titanium Gr 9 Pipes & Tubes
+Seamless & ERW Pipes & Tubes
+SAW/LSAW/HSAW Pipes & Tubes
+API 5L Line Pipes & Tubes
+SMO 254 Pipes and Tubes
+Alloy 28 Pipes and Tubes
+253 MA [S30815] Pipes
+Copper Nickel 70/30 Pipes & Tubes
+Copper Nickel 90/10 Pipes & Tubes
+Aluminium Alloy Pipes
+Alloy Steel Welded Pipe
+A691 1.25 1-14 cr Welded Pipe
+A691 2.25 2-14 cr Welded Pipe
+A691 5 Cr Welded Pipe
+A691 9 Cr Welded Pipe
+A691 91 Cr Welded Pipe
+--- sheets.json ---
+SS 253MA Sheets & Plates
+SS 304/304L/304H Sheets & Plates
+SS 309/310/310S Sheets & Plates
+SS 316/316L/316Ti Sheets & Plates
+Stainless Steel 317/317L Sheets and Plates
+SS 321/321H Sheets & Plates
+SS 347/347H Sheets & Plates
+SS 409 Sheets & Plates
+SS 410 Sheets & Plates
+SS 420 Sheets & Plates
+SS 430 Sheets & Plates
+SS 446 Sheets & Plates
+SS 904L Sheets & Plates
+Duplex Steel S31803/S32205 Sheets & Plates
+Super Duplex S32750/S32760 Sheets & Plates
+Inconel 600/601/625/718 Sheets and Plates
+Incoloy Sheets & Plates
+Monel Alloy Sheets & Plates
+Nickel & Nickel Alloys Sheets & Plates
+Hastelloy C22/C276 Sheets and Plates
+Alloy 20 Sheets and Plates
+Titanium Gr 1 Sheets & Plates
+Titanium Gr 2 Sheets & Plates
+Titanium Gr 5 Sheets & Plates
+Titanium Gr 9 Sheets & Plates
+Aluminium Alloy 5052 Sheets & Plates
+Aluminium Alloy 5083 Sheets & Plates
+Aluminium Alloy 5086 Sheets & Plates
+Aluminium Alloy 5454 Sheets & Plates
+Aluminium Alloy 6061 Sheets & Plates
+Cupro Nickel 70/30 Sheets & Plates
+Cupro Nickel 90/10 Sheets & Plates
+API Sheets & Plates
+High Strength & Tensile Sheets & Plates
+Mild Steel Sheets & Plates
+S500MC Hot Rolled High Tensile Sheets
+S550MC Hot rolled High Tensile Sheets
+Alloy Steel 5 Sheets & Plates
+Alloy Steel 9 Sheets & Plates
+Alloy Steel 11 Sheets & Plates
+Alloy Steel 12 Sheets & Plates
+Alloy Steel 22 Sheets & Plates
+Alloy Steel 91 Sheets & Plates
+SMO 254 Sheets & Plates
+Alloy 28 Sheets & Plates
+409L Sheets & Plates
+409M Sheets & Plates
+--- round.json ---
+SS 304/304L/304H Round Bars
+SS 309/310/310S Round Bars
+SS 316/316L/316Ti Round Bars
+SS 317/317L Round Bars
+SS 321/321H Round Bars
+SS 347/347H Round Bars
+SS 410 Round Bars
+SS 420 Round Bars
+SS 430 Round Bars
+SS 431 Round Bars
+SS 440 A Round Bars
+SS 440 B Round Bars
+SS 440 C Round Bars
+SS 446 Round Bars
+SS 904L Round Bars
+Stainless Steel 15-5PH Round Bar & Rods
+SS 17-4PH Round Bars
+Duplex Steel S31803/S32205 Round Bar & Rods
+Super Duplex Steel Round Bars
+Inconel Round Bars
+Incoloy 800/800H/800HT/825 Round Bar & Rods
+Monel 400/K500 Round Bar & Rods
+Nickel & Nickel Alloys Round Bars
+Hastelloy C22/C276 Round Bar & Rods
+Alloy Steel F1 Round Bar & Rods
+Alloy Steel F1 Round Bars
+Alloy Steel F5 Round Bars
+Alloy Steel F9 Round Bars
+Alloy Steel F11 Round Bars
+Alloy Steel F12 Round Bars
+Alloy Steel F22 Round Bars
+Alloy Steel F91 Round Bars
+Alloy Steel F92 Round Bars
+Alloy 20 Round Bar & Rods
+Brass Round Bar
+Tantalum Round Bar
+Copper Nickel 70/30 Round Bars
+Copper Nickel 90/10 Round Bars
+Mild Steel Round Bars
+High Strength & High Tensile Steel Round Bars
+Titanium Gr 1 Round Bars
+Titanium Gr 2 Round Bars
+Titanium Gr 5 Round Bars
+Titanium Gr 9 Round Bars
+Stainless Steel 316LVM Round Bar & Rods
+Beryllium Copper Round Bars
+Carbon Steel A36 Round Bars
+Carbon Steel S355J2+N Round Bars
+Carbon Steel ST 52 Round Bars
+Carbon Steel EN 353 Round Bars
+EN 353 Round Bars
+--- reactangular.json ---
+Rectangular / Square Hollow Section Pipes

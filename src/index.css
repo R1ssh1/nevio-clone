@@ -122,3 +122,99 @@ p {
   opacity: 0;
   animation: fadeIn 0.45s ease forwards;
 }
+/* Vedantara Style Tables */
+.vedantara-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #c0c0c0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  background: #fff;
+  margin-bottom: 2rem;
+}
+
+.vedantara-table thead th {
+  background: var(--navy);
+  color: #fff;
+  padding: 16px 20px;
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 2px solid #c0c0c0;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+}
+
+.vedantara-table thead th:last-child {
+  border-right: none;
+}
+
+.vedantara-table tbody td {
+  padding: 14px 20px;
+  border-bottom: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+  color: var(--navy);
+  font-size: 0.95rem;
+}
+
+.vedantara-table tbody td:last-child {
+  border-right: none;
+}
+
+.vedantara-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.vedantara-table tbody tr:nth-child(even) {
+  background: #f8f9fa;
+}
+
+.vedantara-table tbody tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+.vedantara-table tbody tr:hover {
+  background: #eef2f5;
+}
+
+/* Table Split Layout */
+.table-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 900px) {
+  .table-split {
+    grid-template-columns: 350px 1fr;
+    gap: 3rem;
+  }
+  .table-split.reverse {
+    grid-template-columns: 1fr 350px;
+  }
+}
+
+.table-split__media {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  position: sticky;
+  top: 120px;
+}
+
+.table-split__media img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+}
+
+.table-split__content {
+  min-width: 0;
+}
