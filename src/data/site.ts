@@ -42,7 +42,7 @@ export const homepageHeroDescription =
 
 export const homepageBannerSlides = [
     {
-        eyebrow: 'Welcome To Vedantara Metal & Alloys',
+        eyebrow: 'Welcome To Vedantara Metal & Alloys Pvt Ltd',
         title: 'We Are Best Suppliers of Titanium Products.',
         description:
             'Get premium Titanium Round Bars in Grade 2, Grade 5 & ELIF136 - ISO 5832-3 from Vedantara Metal & Alloys, ensuring superior performance, durability, and resistance to extreme conditions.',
@@ -54,7 +54,7 @@ export const homepageBannerSlides = [
         alt: 'Titanium product showcase',
     },
     {
-        eyebrow: 'Welcome To Vedantara Metal & Alloys',
+        eyebrow: 'Welcome To Vedantara Metal & Alloys Pvt Ltd',
         title: 'We Are Best Suppliers of Stainless Steel Products.',
         description:
             'Vedantara Metal & Alloys is a leading manufacturer, exporter and supplier of Stainless Steel Products, ensuring superior performance, durability, and resistance to extreme conditions.',
