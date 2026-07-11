@@ -265,7 +265,7 @@ export function QualityPage() {
             <PageHero
                 eyebrow="Quality Policy"
                 title="Quality Beyond Boundaries."
-                description="At Nevio Steel India, we are dedicated to delivering world-class Titanium and Stainless Steel products, manufactured with precision and tested to the highest standards."
+                description="At Vedantara Metal and Alloys Pvt Ltd, we are dedicated to delivering world-class Carbon Steel, Stainless Steel, Steel Alloy products, manufactured with precision and tested to the highest standards."
                 breadcrumbs={
                     <>
                         <Link to="/">Home</Link>
