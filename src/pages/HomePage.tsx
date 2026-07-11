@@ -268,7 +268,7 @@ export function HomePage() {
                 data-reveal="industry"
             >
                 <div className="container section-heading section-heading--centered">
-                    <p className="eyebrow">Vedantara Metal and Alloys</p>
+                    <p className="eyebrow">Vedantara Metal and Alloys Private Limited</p>
                     <p className="section-intro">{homepageIndustryIntro}</p>
                 </div>
 
