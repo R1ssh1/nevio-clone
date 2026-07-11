@@ -14,7 +14,7 @@ export function PipesTubesPage() {
             seoPath={pageMeta.pipesTubes.path}
             eyebrow="Pipes & Tubes"
             heroTitle="Carbon Steel, Stainless Steel, and Alloy Steel Pipes & Tubes for Critical Applications."
-            heroDescription="Specialist & India's largest supplier and exporter of high-grade pipes and tubes — stainless steel, titanium, duplex, nickel alloys and more."
+            heroDescription="Specialist & India's largest supplier and exporter of high-grade pipes and tubes — stainless steel, carbon steel, duplex, nickel alloys and more."
             breadcrumbLabel="Pipes & Tubes"
             cat={cat}
             info={info}
