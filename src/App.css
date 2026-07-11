@@ -396,7 +396,7 @@ main {
 .hero-banner__slide--active::before {
   animation: bannerMediaZoom 8s ease-in-out both;
 }
-
+/*
 .hero-banner__slide::after {
   content: "";
   position: absolute;
@@ -406,7 +406,7 @@ main {
     linear-gradient(112deg, rgba(0, 0, 0, 0.96) 0%, rgba(0, 0, 0, 0.82) 30%, rgba(0, 0, 0, 0.42) 58%, rgba(0, 0, 0, 0.1) 100%),
     linear-gradient(90deg, rgba(0, 0, 0, 0.7), transparent 58%);
 }
-
+*/
 .hero-banner::before,
 .hero-banner::after {
   content: "";
