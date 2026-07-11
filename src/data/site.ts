@@ -30,7 +30,7 @@ export const contactDetails = {
         email: 'info@vedantarametal.com',
     },
     domesticSales: {
-        name: 'Shravan Kumar',
+        name: 'Shrawan Kumar',
         phone: '+91 99208 50631',
         email: 'sales@vedantarametal.com',
     },
