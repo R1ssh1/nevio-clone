@@ -89,7 +89,7 @@ export function ContactPage() {
                         <div className="contact-info-card">
                             <span className="contact-info-card__icon"><IconPhone /></span>
                             <h3>Domestic</h3>
-                            <p className="contact-info-card__contact">Shravan Kumar</p>
+                            <p className="contact-info-card__contact">Shrawan Kumar</p>
                             <a href="tel:+919920850631" className="contact-info-card__link">+91 99208 50631</a>
                             <a href="mailto:sales@vedantarametal.com" className="contact-info-card__link">sales@vedantarametal.com</a>
                         </div>
