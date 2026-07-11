@@ -13,7 +13,7 @@ export function PipesTubesPage() {
             seoDescription={pageMeta.pipesTubes.description}
             seoPath={pageMeta.pipesTubes.path}
             eyebrow="Pipes & Tubes"
-            heroTitle="Titanium and Stainless Steel Pipes & Tubes for Critical Applications."
+            heroTitle="Carbon Steel, Stainless Steel, and Alloy Steel Pipes & Tubes for Critical Applications."
             heroDescription="Specialist & India's largest supplier and exporter of high-grade pipes and tubes — stainless steel, titanium, duplex, nickel alloys and more."
             breadcrumbLabel="Pipes & Tubes"
             cat={cat}
