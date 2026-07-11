@@ -54,7 +54,7 @@ export const homepageBannerSlides = [
         alt: 'Titanium product showcase',
     },
     {
-        eyebrow: 'Welcome To Vedantara Metal & Alloys',
+        eyebrow: 'Welcome To Vedantara Metal & Alloys Pvt Ltd',
         title: 'We Are Best Suppliers of Stainless Steel Products.',
         description:
             'Vedantara Metal & Alloys is a leading manufacturer, exporter and supplier of Stainless Steel Products, ensuring superior performance, durability, and resistance to extreme conditions.',
