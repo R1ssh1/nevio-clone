@@ -16,7 +16,7 @@ export function Footer() {
             <div className="container footer-grid">
                 <section className="footer-brand">
                     <img src="/images/file_00000000d13c72088eac6db44f7182b5.png" alt="Vedantara Metal and Alloys Pvt Ltd" style={{ borderRadius: '8px' }} />
-                    <p>Titanium and stainless steel supply across industrial and export markets.</p>
+                    <p>Carbon Steel, Stainless Steel and Alloy Steel supply across industrial and export markets.</p>
                     <div style={{ display: 'flex', gap: '12px', marginTop: '1.5rem' }}>
                         <a href="https://linkedin.com" target="_blank" rel="noreferrer" style={{ width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#0077b5', borderRadius: '50%', color: '#fff', textDecoration: 'none', fontWeight: 'bold' }}>in</a>
                         <a href="https://twitter.com" target="_blank" rel="noreferrer" style={{ width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#000000', borderRadius: '50%', color: '#fff', textDecoration: 'none', fontWeight: 'bold' }}>𝕏</a>
