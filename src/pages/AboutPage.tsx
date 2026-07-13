@@ -3,6 +3,7 @@ import { PageHero } from '../components/PageHero'
 import { Seo } from '../components/Seo'
 import { AboutSection } from '../components/AboutSection'
 import { WhyChooseUsSection } from '../components/WhyChooseUsSection'
+import { VisionMissionSection } from '../components/VisionMissionSection'
 import { pageMeta } from './pageMeta'
 
 export function AboutPage() {
@@ -30,6 +31,8 @@ export function AboutPage() {
             <AboutSection />
 
             <WhyChooseUsSection />
+
+            <VisionMissionSection />
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { PageHero } from '../components/PageHero'
+import { TransparencySection } from '../components/TransparencySection'
 import { Seo } from '../components/Seo'
 import { pageMeta } from './pageMeta'
 
@@ -336,6 +337,8 @@ export function QualityPage() {
                     </div>
                 </div>
             </section>
+
+            <TransparencySection />
 
             {/* ── 2. Testing Facilities ── */}
             <section className="section-block qp-testing-section">
