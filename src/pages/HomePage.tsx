@@ -73,30 +73,19 @@ export function HomePage() {
         return () => observer.disconnect()
     }, [])
 
-    // Prevent the horizontal scroll container from capturing vertical wheel events
+    // Sync native horizontal scrolling to activeSlide state
     useEffect(() => {
         const viewport = bannerRef.current
         if (!viewport) return
 
-        const handleWheel = (e: WheelEvent) => {
-            // Only block if the user is scrolling more vertically than horizontally
-            if (Math.abs(e.deltaY) >= Math.abs(e.deltaX)) {
-                e.preventDefault()
-                window.scrollBy({ top: e.deltaY, behavior: 'auto' })
-            }
-        }
-
-        // Sync native horizontal scrolling to activeSlide state
         const handleScroll = () => {
             const width = viewport.clientWidth
             const index = Math.round(viewport.scrollLeft / width)
             setActiveSlide(index)
         }
 
-        viewport.addEventListener('wheel', handleWheel, { passive: false })
         viewport.addEventListener('scroll', handleScroll, { passive: true })
         return () => {
-            viewport.removeEventListener('wheel', handleWheel)
             viewport.removeEventListener('scroll', handleScroll)
         }
     }, [])
