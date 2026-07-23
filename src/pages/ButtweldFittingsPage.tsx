@@ -13,8 +13,8 @@ export function ButtweldFittingsPage() {
             seoDescription={pageMeta.buttweldFittings.description}
             seoPath={pageMeta.buttweldFittings.path}
             eyebrow="Buttweld Fittings"
-            heroTitle="Industrial Buttweld Fittings."
-            heroDescription="High-quality stainless steel, titanium, nickel alloy, and specialty buttweld fittings for pipeline and industrial applications. ASME B16.9 compliant."
+            heroTitle="Carbon Steel, Stainless Steel, and Alloy Steel Buttweld Fittings for Industrial Applications."
+            heroDescription="High-quality stainless steel, alloy steel, nickel alloy, and specialty buttweld fittings for pipeline and industrial applications. ASME B16.9 compliant."
             breadcrumbLabel="Buttweld Fittings"
             cat={cat}
             info={info}

@@ -13,8 +13,8 @@ export function ForgedFittingsPage() {
             seoDescription={pageMeta.forgedFittings.description}
             seoPath={pageMeta.forgedFittings.path}
             eyebrow="Forged Fittings"
-            heroTitle="Stainless Steel, Titanium & Alloy Forged Fittings."
-            heroDescription="Premium forged fittings in stainless steel, titanium, duplex, and specialty alloys. ASME B16.11 / MSS SP-83 compliant."
+            heroTitle="Stainless Steel, Carbon Steel & Alloy Steel Fittings."
+            heroDescription="Premium forged fittings in stainless steel, carbon steel, duplex, and specialty alloy steel. ASME B16.11 / MSS SP-83 compliant."
             breadcrumbLabel="Forged Fittings"
             cat={cat}
             info={info}

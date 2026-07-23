@@ -13,7 +13,7 @@ export function SheetsCoilsPage() {
             seoDescription={pageMeta.sheetsCoils.description}
             seoPath={pageMeta.sheetsCoils.path}
             eyebrow="Plates & Sheets"
-            heroTitle="Stainless Steel, Titanium & Alloy Plates & Sheets."
+            heroTitle="Stainless Steel, Carbon Steel & Alloy Steel Plates & Sheets."
             heroDescription="Specialist & India's largest supplier and exporter of plates and sheets — stainless steel, titanium, duplex, aluminium alloys and more."
             breadcrumbLabel="Plates & Sheets"
             cat={cat}

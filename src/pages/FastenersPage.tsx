@@ -14,7 +14,7 @@ export function FastenersPage() {
             seoPath={pageMeta.fasteners.path}
             eyebrow="Fasteners"
             heroTitle="Industrial Fasteners — Bolts, Nuts, Studs & More."
-            heroDescription="Industrial-grade fasteners in titanium, stainless steel, duplex steel, and specialty alloys. ASTM / ASME / DIN compliant."
+            heroDescription="Industrial-grade fasteners in carbon steel, stainless steel, duplex steel, and specialty alloys. ASTM / ASME / DIN compliant."
             breadcrumbLabel="Fasteners"
             cat={cat}
             info={info}

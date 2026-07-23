@@ -87,7 +87,7 @@ export function Header() {
                     }}
                 >
                     <img
-                        src="/images/logo.webp"
+                        src="/images/file_00000000d13c72088eac6db44f7182b5.png"
                         alt="Vedantara Metal and Alloys Pvt Ltd"
                         className="brand-wordmark"
                     />

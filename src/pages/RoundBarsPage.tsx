@@ -13,8 +13,8 @@ export function RoundBarsPage() {
             seoDescription={pageMeta.roundBars.description}
             seoPath={pageMeta.roundBars.path}
             eyebrow="Round Bars"
-            heroTitle="Stainless Steel, Titanium & Alloy Round Bars."
-            heroDescription="Specialist & India's largest supplier and exporter of round bars and rods — stainless steel, titanium, duplex, nickel alloys and more."
+            heroTitle="Stainless Steel, Carbon Steel & Alloy Steel Round Bars."
+            heroDescription="Specialist & India's largest supplier and exporter of round bars and rods — stainless steel, carbon steel, duplex, nickel alloys and more."
             breadcrumbLabel="Round Bars"
             cat={cat}
             info={info}
