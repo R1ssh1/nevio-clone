@@ -58,7 +58,7 @@ export function VisionMissionSection() {
                             <div className="vm-card__text">
                                 <h3>Our Vision</h3>
                                 <p>
-                                    To be a globally recognized leader in titanium and stainless steel solutions,
+                                    To be a globally recognized leader in industrial metal and stainless steel solutions,
                                     driving innovation and sustainability in every product we deliver across industries worldwide.
                                 </p>
                             </div>

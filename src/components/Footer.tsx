@@ -16,7 +16,7 @@ export function Footer() {
             <div className="container footer-grid">
                 <section className="footer-brand">
                     <img src="/images/logo.webp" alt="Vedantara Metal and Alloys Pvt Ltd" style={{ borderRadius: '8px' }} />
-                    <p>Titanium and stainless steel supply across industrial and export markets.</p>
+                    <p>Industrial metal and stainless steel supply across industrial and export markets.</p>
                     <div style={{ display: 'flex', gap: '12px', marginTop: '1.5rem' }}>
                         <a href="https://linkedin.com" target="_blank" rel="noreferrer" style={{ width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#0077b5', borderRadius: '50%', color: '#fff', textDecoration: 'none', fontWeight: 'bold' }}>in</a>
                         <a href="https://twitter.com" target="_blank" rel="noreferrer" style={{ width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#000000', borderRadius: '50%', color: '#fff', textDecoration: 'none', fontWeight: 'bold' }}>𝕏</a>
@@ -52,12 +52,12 @@ export function Footer() {
                 </section>
 
                 <section>
-                    <h3>Titanium</h3>
+                    <h3>Industrial Metal</h3>
                     <ul className="footer-links">
-                        <li><Link to="/products/pipes-tubes">› Titanium Pipes &amp; Tubes</Link></li>
-                        <li><Link to="/products/round-bars">› Titanium Round Bars</Link></li>
-                        <li><Link to="/products/sheets-coils">› Titanium Sheets &amp; Coils</Link></li>
-                        <li><Link to="/products/wires">› Titanium Wires</Link></li>
+                        <li><Link to="/products/pipes-tubes">› Industrial Metal Pipes &amp; Tubes</Link></li>
+                        <li><Link to="/products/round-bars">› Industrial Metal Round Bars</Link></li>
+                        <li><Link to="/products/sheets-coils">› Industrial Metal Sheets &amp; Coils</Link></li>
+                        <li><Link to="/products/wires">› Industrial Metal Wires</Link></li>
                     </ul>
                 </section>
 
