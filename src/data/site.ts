@@ -38,20 +38,20 @@ export const contactDetails = {
 }
 
 export const homepageHeroDescription =
-    'Get premium titanium round bars in Grade 2, Grade 5, and ELIF136 - ISO 5832-3 from Vedantara Metal & Alloys, ensuring superior performance, durability, and resistance to extreme conditions.'
+    'Get premium industrial metal round bars in Grade 2, Grade 5, and ELIF136 - ISO 5832-3 from Vedantara Metal & Alloys, ensuring superior performance, durability, and resistance to extreme conditions.'
 
 export const homepageBannerSlides = [
     {
         eyebrow: 'Welcome To Vedantara Metal & Alloys Pvt Ltd',
-        title: 'We Are Best Suppliers of Titanium Products.',
+        title: 'We Are Best Suppliers of Industrial Metal Products.',
         description:
-            'Get premium Titanium Round Bars in Grade 2, Grade 5 & ELIF136 - ISO 5832-3 from Vedantara Metal & Alloys, ensuring superior performance, durability, and resistance to extreme conditions.',
+            'Get premium Industrial Metal Round Bars in Grade 2, Grade 5 & ELIF136 - ISO 5832-3 from Vedantara Metal & Alloys, ensuring superior performance, durability, and resistance to extreme conditions.',
         primaryLabel: 'Know More',
         primaryPath: '/products',
         secondaryLabel: 'Contact Us',
         secondaryPath: '/contact-us',
         image: '/assets/home/titanium-pipes-tubes.webp',
-        alt: 'Titanium product showcase',
+        alt: 'Industrial metal product showcase',
     },
     {
         eyebrow: 'Welcome To Vedantara Metal & Alloys Pvt Ltd',
@@ -68,7 +68,7 @@ export const homepageBannerSlides = [
 ]
 
 export const homepageAboutCopy =
-    'At Vedantara Metal & Alloys, we take pride in being one of the most reliable manufacturers, suppliers, and exporters of titanium and stainless steel in the global market. Headquartered in Mumbai, India, we are an ISO 13485-2016 certified company with a strong reputation for delivering quality products backed by professional service and technical excellence.'
+    'At Vedantara Metal & Alloys, we take pride in being one of the most reliable manufacturers, suppliers, and exporters of industrial metal and stainless steel in the global market. Headquartered in Mumbai, India, we are an ISO 13485-2016 certified company with a strong reputation for delivering quality products backed by professional service and technical excellence.'
 
 export const homepageWhyChooseUs = [
     {
@@ -116,7 +116,7 @@ export const homepageWhyChooseUs = [
 ]
 
 export const homepageIndustryIntro =
-    'We deliver high-performance titanium and stainless steel products that meet the demanding needs of various industries across the globe. Our materials are trusted for their strength, durability, and reliability in critical applications.'
+    'We deliver high-performance industrial metal and stainless steel products that meet the demanding needs of various industries across the globe. Our materials are trusted for their strength, durability, and reliability in critical applications.'
 
 export const homepageStats = [
     { value: '400+', label: 'Drilling Fields' },

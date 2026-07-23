@@ -52,12 +52,12 @@ export function Footer() {
                 </section>
 
                 <section>
-                    <h3>Titanium</h3>
+                    <h3>Industrial Metal</h3>
                     <ul className="footer-links">
-                        <li><Link to="/products/pipes-tubes">› Titanium Pipes &amp; Tubes</Link></li>
-                        <li><Link to="/products/round-bars">› Titanium Round Bars</Link></li>
-                        <li><Link to="/products/sheets-coils">› Titanium Sheets &amp; Coils</Link></li>
-                        <li><Link to="/products/wires">› Titanium Wires</Link></li>
+                        <li><Link to="/products/pipes-tubes">› Industrial Metal Pipes &amp; Tubes</Link></li>
+                        <li><Link to="/products/round-bars">› Industrial Metal Round Bars</Link></li>
+                        <li><Link to="/products/sheets-coils">› Industrial Metal Sheets &amp; Coils</Link></li>
+                        <li><Link to="/products/wires">› Industrial Metal Wires</Link></li>
                     </ul>
                 </section>
 

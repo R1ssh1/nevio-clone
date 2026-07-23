@@ -72,13 +72,13 @@ export function AboutSection() {
                     <p className="section-eyebrow">About Us</p>
 
                     <h2>
-                        Globally Trusted Supplier Of Titanium &amp;
+                        Globally Trusted Supplier Of Industrial Metal &amp;
                         Stainless Steel Products
                     </h2>
 
                     <p>
                         At Vedantara Metal &amp; Alloys, we take pride in being one of India's
-                        leading manufacturers, suppliers and exporters of Titanium and
+                        leading manufacturers, suppliers and exporters of Industrial Metal and
                         Stainless Steel products.
                     </p>
 

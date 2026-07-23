@@ -77,18 +77,18 @@ export function WhyChooseUsSection() {
                 <div className="why-hero-card">
                     <div className="why-hero-card__bg">
                         {/* Rendering a nice placeholder manufacturing image native to your assets */}
-                        <img src="/assets/home/product-6.webp" alt="Titanium and Stainless Steel Pipes" loading="lazy" />
+                        <img src="/assets/home/product-6.webp" alt="Industrial Metal and Stainless Steel Pipes" loading="lazy" />
                     </div>
 
                     <p className="eyebrow why-hero-card__eyebrow">Why Choose Us</p>
 
                     <div className="why-hero-card__content">
                         <h2>
-                            Vedantara Metal and Alloys is one of the major stockists of titanium and stainless steel
+                            Vedantara Metal and Alloys is one of the major stockists of industrial metal and stainless steel
                             pipes and tubes.
                         </h2>
                         <p>
-                            We supply premium-grade stainless steel, titanium, duplex and nickel alloy products to
+                            We supply premium-grade stainless steel, industrial metal, duplex and nickel alloy products to
                             industries across India, delivering consistent quality, competitive pricing and dependable
                             service.
                         </p>
