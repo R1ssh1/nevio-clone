@@ -1587,18 +1587,6 @@ main {
   opacity: 0.65;
 }
 
-.stats-band::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg,
-      rgba(3, 27, 57, 0.6) 0%,
-      rgba(3, 27, 57, 0.3) 50%,
-      rgba(3, 27, 57, 0.6) 100%);
-  z-index: 1;
-  pointer-events: none;
-}
-
 .stats-marquee {
   position: relative;
   z-index: 2;
@@ -1668,26 +1656,6 @@ main {
   overflow: hidden;
 }
 
-.clients-carousel-wrap::before,
-.clients-carousel-wrap::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 140px;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.clients-carousel-wrap::before {
-  left: 0;
-  background: linear-gradient(to right, #0a1e3d, transparent);
-}
-
-.clients-carousel-wrap::after {
-  right: 0;
-  background: linear-gradient(to left, #061223, transparent);
-}
 
 .clients-track {
   display: flex;
