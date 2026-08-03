@@ -1619,7 +1619,7 @@ main {
    OUR CLIENTS SECTION
 =================================================== */
 .clients-section {
-  background: linear-gradient(170deg, #000000 0%, #00122c 60%, #061223 100%);
+  background: #ffffff;
   padding: 5rem 0 0;
   overflow: hidden;
 }
@@ -1632,19 +1632,19 @@ main {
 .clients-heading h2 {
   font-size: clamp(2rem, 3.5vw, 3rem);
   font-weight: 800;
-  color: #fff;
+  color: #0d1b2a;
   margin: 0.5rem 0 1rem;
   line-height: 1.15;
 }
 
 .clients-heading .eyebrow {
-  color: rgba(255, 255, 255, 0.5);
-  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--accent, #1565c0);
+  border-color: rgba(0, 0, 0, 0.15);
 }
 
 .clients-subtext {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(0, 0, 0, 0.6);
   max-width: 36ch;
   margin: 0 auto;
   line-height: 1.65;
@@ -1686,8 +1686,8 @@ main {
   width: 180px;
   height: 90px;
   flex-shrink: 0;
-  background: rgb(255, 255, 255);
-  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  background: #ffffff;
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
   padding: 0.8rem 1.4rem;
   transition: background 280ms ease;
 }
