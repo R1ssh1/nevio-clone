@@ -1,5 +1,21 @@
 * {
   box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #154fcc #fff;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #154fcc;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
 }
 
 :root {
@@ -19,14 +35,12 @@
 html {
   scroll-padding-top: 145px;
   scroll-behavior: smooth;
-  /* scroll-snap-type removed — it caused header flash and hero banner snap interference */
 }
 
 body {
   margin: 0;
   min-width: 320px;
   background: #f8fafc;
-
   overflow-y: scroll;
 }
 
