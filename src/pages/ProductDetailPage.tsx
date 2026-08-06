@@ -93,7 +93,7 @@ function buildContentBlocks(
   tables: ProductTable[]
 ): { blocks: ContentBlock[]; seoKeywords: string } {
   const SEO_DUMP_THRESHOLD = 25;
-  const BOILERPLATE_PREFIX = 'Vedantara Metal & Alloys is one of the leading manufacturer, supplier and stockiest';
+  const BOILERPLATE_PREFIX = 'Vedantara Metal & Alloys Pvt Ltd is one of the leading manufacturer, supplier and stockiest';
 
   let seoKeywords = '';
   const items = description.filter(item => {
@@ -293,8 +293,8 @@ export function ProductDetailPage() {
   const { blocks: contentBlocks, seoKeywords } = buildContentBlocks(product.description, product.tables ?? []);
 
   // SEO-enriched page title
-  const seoTitle = `${product.productName} Supplier, Exporter, Stockist in Mumbai | Vedantara Metal & Alloys`;
-  const seoDesc = `Buy ${product.productName} from Vedantara Metal & Alloys — leading Manufacturer, Supplier, Exporter & Stockist in Mumbai, India. Best price, fast delivery, complete documentation.`;
+  const seoTitle = `${product.productName} Supplier, Exporter, Stockist in Mumbai | Vedantara Metal & Alloys Pvt Ltd`;
+  const seoDesc = `Buy ${product.productName} from Vedantara Metal & Alloys Pvt Ltd — leading Manufacturer, Supplier, Exporter & Stockist in Mumbai, India. Best price, fast delivery, complete documentation.`;
 
   return (
     <div className="page-stack">
@@ -377,7 +377,7 @@ export function ProductDetailPage() {
                 <div className="product-enquiry-band__text">
                   <h3>Get the Latest Price List for {product.productName}</h3>
                   <p>
-                    Vedantara Metal &amp; Alloys is one of India's leading manufacturers and
+                    Vedantara Metal &amp; Alloys Pvt Ltd is one of India's leading manufacturers and
                     suppliers. Contact us for immediate pricing and stock availability.
                   </p>
                 </div>

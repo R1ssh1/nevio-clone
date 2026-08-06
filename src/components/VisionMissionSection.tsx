@@ -38,7 +38,7 @@ export function VisionMissionSection() {
         <section ref={sectionRef} className={`section-block vm-section ${isVisible ? 'vm-section--visible' : ''}`}>
             <div className="container vm-grid">
                 <div className="vm-visual">
-                    <img src="/assets/home/about-media-1.webp" alt="Vedantara Metal & Alloys" loading="lazy" />
+                    <img src="/assets/home/about-media-1.webp" alt="Vedantara Metal & Alloys Pvt Ltd" loading="lazy" />
                     <div className="vm-visual-overlay" />
                     <div className="vm-visual-badge">
                         <strong>Driven by</strong>

@@ -77,7 +77,7 @@ export function AboutSection() {
                     </h2>
 
                     <p>
-                        At Vedantara Metal &amp; Alloys, we take pride in being one of India's
+                        At Vedantara Metal &amp; Alloys Pvt Ltd, we take pride in being one of India's
                         leading manufacturers, suppliers and exporters of Industrial Metal and
                         Stainless Steel products.
                     </p>
