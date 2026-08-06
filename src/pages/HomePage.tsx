@@ -199,7 +199,7 @@ export function HomePage() {
                         <p className="eyebrow">Our Products</p>
                         <Link to="/products" className="view-more-link">View More &rsaquo;</Link>
                     </div>
-                    <h2>Specialist and India&apos;s trusted supplier and exporter of titanium and stainless steel.</h2>
+                    <h2>Specialist and India&apos;s trusted supplier and exporter of stainless steel, carbon steel and alloy steel.</h2>
                 </div>
 
                 <div className="container product-grid">
@@ -221,7 +221,7 @@ export function HomePage() {
             <section className={`section-block quote-band ${revealClass('quote')}`} data-reveal="quote">
                 <div className="container quote-band__inner">
                     <h2>
-                        High-quality titanium and stainless steel round bars, sheets, and plates
+                        High-quality stainless steel, carbon steel and alloy steel round bars, sheets, and plates
                         available in superior special steel grades for diverse application.
                     </h2>
                     <Link className="primary-button primary-button--light" to="/contact-us?subject=Request%20for%20Quotation">

@@ -38,14 +38,14 @@ export const contactDetails = {
 }
 
 export const homepageHeroDescription =
-    'Get premium industrial metal round bars in Grade 2, Grade 5, and ELIF136 - ISO 5832-3 from Vedantara Metal & Alloys Pvt Ltd, ensuring superior performance, durability, and resistance to extreme conditions.'
+    'We are the best supplier of industrial metal products. Vedantara Metal & Alloys Pvt Ltd delivers stainless steel, carbon steel and alloy steel products with superior performance, durability, and reliability across global markets.'
 
 export const homepageBannerSlides = [
     {
         eyebrow: 'Welcome To Vedantara Metal & Alloys Pvt Ltd',
         title: 'We Are Best Suppliers of Industrial Metal Products.',
         description:
-            'Get premium Industrial Metal Round Bars in Grade 2, Grade 5 & ELIF136 - ISO 5832-3 from Vedantara Metal & Alloys Pvt Ltd, ensuring superior performance, durability, and resistance to extreme conditions.',
+            'We are the best supplier of industrial metal products — stainless steel, carbon steel and alloy steel — engineered for superior performance, durability, and reliability across global markets.',
         primaryLabel: 'Know More',
         primaryPath: '/products',
         secondaryLabel: 'Contact Us',
