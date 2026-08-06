@@ -1,6 +1,6 @@
 # Vedantara Product Pages — AI Agent Fix Instructions
 
-> **Context:** This is a React/Vite project for Vedantara Metal & Alloys (a Mumbai industrial metals supplier). The data layer (`productDetails.ts`) is being updated separately in ~30 min with encoding fixes. These instructions focus on the layout, rendering, and CSS gaps that make product pages look broken or incomplete right now.
+> **Context:** This is a React/Vite project for Vedantara Metal & Alloys Pvt Ltd (a Mumbai industrial metals supplier). The data layer (`productDetails.ts`) is being updated separately in ~30 min with encoding fixes. These instructions focus on the layout, rendering, and CSS gaps that make product pages look broken or incomplete right now.
 
 ---
 
@@ -72,7 +72,7 @@ Every product's `description` array contains a mix of content types that **must 
 | **Spec block** | Contains `Specifications :` or `Standard :` or `Dimensions :` or multiple ` : ` separators | `<div class="spec-inline-block">` with formatted key: value pairs |
 | **Application note** | Starts with "Our … are used in" or "Application Industries" or similar | `<p>` with a preceding `<h4>` label |
 | **Keyword dump (last 2)** | Very long (>600 chars), >20 commas, or consists entirely of lowercase SEO terms | **Omit entirely** — do not render |
-| **Boilerplate closer** | Starts with "Vedantara Metal & Alloys is one of the leading manufacturer, supplier and stockiest" | **Omit entirely** |
+| **Boilerplate closer** | Starts with "Vedantara Metal & Alloys Pvt Ltd is one of the leading manufacturer, supplier and stockiest" | **Omit entirely** |
 
 **Practical rule:** Skip the last 2 items in every description array (they are always SEO keyword dumps). Skip any item that is >800 chars with >20 commas. Render everything else.
 
@@ -163,7 +163,7 @@ function classifyDescItem(text: string): Omit<DescBlock, 'kind' extends 'toc' ? 
   // Skip SEO dumps and boilerplate closers
   const commas = (text.match(/,/g) || []).length;
   if (commas > 20 && text.length > 600) return null;
-  if (text.startsWith('Vedantara Metal & Alloys is one of the leading manufacturer, supplier and stockiest')) return null;
+  if (text.startsWith('Vedantara Metal & Alloys Pvt Ltd is one of the leading manufacturer, supplier and stockiest')) return null;
 
   // Spec block: contains " : " multiple times (Specifications, Dimensions, etc.)
   const colonPairs = (text.match(/ : /g) || []).length;
@@ -371,8 +371,8 @@ export function ProductDetailPage() {
   return (
     <div className="page-stack">
       <Seo
-        title={`${product.productName} | Vedantara Metal & Alloys`}
-        description={`Premium ${product.productName} manufactured and supplied globally by Vedantara Metal & Alloys.`}
+        title={`${product.productName} | Vedantara Metal & Alloys Pvt Ltd`}
+        description={`Premium ${product.productName} manufactured and supplied globally by Vedantara Metal & Alloys Pvt Ltd.`}
         path={location.pathname}
       />
       <PageHero

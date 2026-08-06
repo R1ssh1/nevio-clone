@@ -17,7 +17,7 @@ export function AboutPage() {
             <PageHero
                 eyebrow="About Us"
                 title="About Us"
-                description="At Vedantara Metal & Alloys, we take pride in being one of the most reliable manufacturers, suppliers, and exporters of titanium and stainless steel in the global market."
+                description="At Vedantara Metal & Alloys Pvt Ltd, we take pride in being one of the most reliable manufacturers, suppliers, and exporters of titanium and stainless steel in the global market."
                 breadcrumbs={
                     <>
                         <Link to="/">Home</Link>

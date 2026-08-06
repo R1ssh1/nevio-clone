@@ -157,7 +157,7 @@ export function ContactPage() {
                         allowFullScreen={true}
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
-                        title="Vedantara Metal &amp; Alloys Location"
+                        title="Vedantara Metal &amp; Alloys Pvt Ltd Location"
                     ></iframe>
                 </div>
             </section>

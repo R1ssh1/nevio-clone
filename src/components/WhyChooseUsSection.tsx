@@ -84,7 +84,7 @@ export function WhyChooseUsSection() {
 
                     <div className="why-hero-card__content">
                         <h2>
-                            Vedantara Metal and Alloys is one of the major stockists of industrial metal and stainless steel
+                            Vedantara Metal and Alloys Pvt Ltd is one of the major stockists of industrial metal and stainless steel
                             pipes and tubes.
                         </h2>
                         <p>

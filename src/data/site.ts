@@ -38,14 +38,14 @@ export const contactDetails = {
 }
 
 export const homepageHeroDescription =
-    'Get premium industrial metal round bars in Grade 2, Grade 5, and ELIF136 - ISO 5832-3 from Vedantara Metal & Alloys, ensuring superior performance, durability, and resistance to extreme conditions.'
+    'Get premium industrial metal round bars in Grade 2, Grade 5, and ELIF136 - ISO 5832-3 from Vedantara Metal & Alloys Pvt Ltd, ensuring superior performance, durability, and resistance to extreme conditions.'
 
 export const homepageBannerSlides = [
     {
         eyebrow: 'Welcome To Vedantara Metal & Alloys Pvt Ltd',
         title: 'We Are Best Suppliers of Industrial Metal Products.',
         description:
-            'Get premium Industrial Metal Round Bars in Grade 2, Grade 5 & ELIF136 - ISO 5832-3 from Vedantara Metal & Alloys, ensuring superior performance, durability, and resistance to extreme conditions.',
+            'Get premium Industrial Metal Round Bars in Grade 2, Grade 5 & ELIF136 - ISO 5832-3 from Vedantara Metal & Alloys Pvt Ltd, ensuring superior performance, durability, and resistance to extreme conditions.',
         primaryLabel: 'Know More',
         primaryPath: '/products',
         secondaryLabel: 'Contact Us',
@@ -57,7 +57,7 @@ export const homepageBannerSlides = [
         eyebrow: 'Welcome To Vedantara Metal & Alloys Pvt Ltd',
         title: 'We Are Best Suppliers of Stainless Steel Products.',
         description:
-            'Vedantara Metal & Alloys is a leading manufacturer, exporter and supplier of Stainless Steel Products, ensuring superior performance, durability, and resistance to extreme conditions.',
+            'Vedantara Metal & Alloys Pvt Ltd is a leading manufacturer, exporter and supplier of Stainless Steel Products, ensuring superior performance, durability, and resistance to extreme conditions.',
         primaryLabel: 'Know More',
         primaryPath: '/products',
         secondaryLabel: 'Contact Us',
@@ -68,7 +68,7 @@ export const homepageBannerSlides = [
 ]
 
 export const homepageAboutCopy =
-    'At Vedantara Metal & Alloys, we take pride in being one of the most reliable manufacturers, suppliers, and exporters of industrial metal and stainless steel in the global market. Headquartered in Mumbai, India, we are an ISO 13485-2016 certified company with a strong reputation for delivering quality products backed by professional service and technical excellence.'
+    'At Vedantara Metal & Alloys Pvt Ltd, we take pride in being one of the most reliable manufacturers, suppliers, and exporters of industrial metal and stainless steel in the global market. Headquartered in Mumbai, India, we are an ISO 13485-2016 certified company with a strong reputation for delivering quality products backed by professional service and technical excellence.'
 
 export const homepageWhyChooseUs = [
     {

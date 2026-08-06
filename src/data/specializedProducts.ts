@@ -5,7 +5,7 @@ export const specializedCategory: DynamicCategory = {
   title: 'Specialized Products',
   slug: 'specialized-products',
   description: [
-    'Vedantara Metal & Alloys is a leading manufacturer, exporter, and supplier of Specialized Steel Products in Mumbai, India. Our range includes Abrasion Resistant Plates, Corten Steel, Boiler Steel, Quenched & Tempered Steel, Armour Steel, Manganese Steel, and more — all manufactured to exacting international standards.',
+    'Vedantara Metal & Alloys Pvt Ltd is a leading manufacturer, exporter, and supplier of Specialized Steel Products in Mumbai, India. Our range includes Abrasion Resistant Plates, Corten Steel, Boiler Steel, Quenched & Tempered Steel, Armour Steel, Manganese Steel, and more — all manufactured to exacting international standards.',
     'These specialized steel products are engineered for extreme conditions — delivering superior hardness, wear resistance, impact strength, and structural integrity across mining, construction, shipbuilding, defense, earth-moving equipment, and pressure vessel fabrication.',
   ],
   subcategories: [
