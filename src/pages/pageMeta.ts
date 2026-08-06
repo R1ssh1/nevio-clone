@@ -2,13 +2,13 @@ export const pageMeta = {
     home: {
         title: 'Vedantara Metal & Alloys Pvt Ltd | Home',
         description:
-            'Vedantara Metal & Alloys Pvt Ltd is a reliable manufacturer, supplier, and exporter of titanium and stainless steel products based in Mumbai, India.',
+            'Vedantara Metal & Alloys Pvt Ltd is a reliable manufacturer, supplier, and exporter of stainless steel, carbon steel and alloy steel products based in Mumbai, India.',
         path: '/',
     },
     about: {
         title: 'Vedantara Metal & Alloys Pvt Ltd | About Us',
         description:
-            'Learn about Vedantara Metal & Alloys Pvt Ltd, a trusted manufacturer, supplier, and exporter of titanium and stainless steel products based in Mumbai, India.',
+            'Learn about Vedantara Metal & Alloys Pvt Ltd, a trusted manufacturer, supplier, and exporter of stainless steel, carbon steel and alloy steel products based in Mumbai, India.',
         path: '/about-us',
     },
     products: {
@@ -18,7 +18,7 @@ export const pageMeta = {
         path: '/products',
     },
     pipesTubes: {
-        title: 'Stainless Steel & Titanium Pipes & Tubes Manufacturers, Suppliers, Exporters',
+        title: 'Stainless Steel, Carbon Steel & Alloy Steel Pipes & Tubes Manufacturers, Suppliers, Exporters',
         description:
             'Vedantara Metal & Alloys Pvt Ltd is India’s leading manufacturer, supplier, and exporter of Stainless Steel 304/316L and Titanium Gr 2/Gr 5 Pipes & Tubes.',
         path: '/products/pipes-tubes',
@@ -26,25 +26,25 @@ export const pageMeta = {
     roundBars: {
         title: 'Round Bars | Vedantara Metal & Alloys Pvt Ltd',
         description:
-            'View titanium and stainless steel round bars available for industrial, engineering, and export use.',
+            'View stainless steel, carbon steel and alloy steel round bars available for industrial, engineering, and export use.',
         path: '/products/round-bars',
     },
     sheetsCoils: {
         title: 'Sheets & Coils | Vedantara Metal & Alloys Pvt Ltd',
         description:
-            'Explore titanium and stainless steel sheets and coils for manufacturing and fabrication projects.',
+            'Explore stainless steel, carbon steel and alloy steel sheets and coils for manufacturing and fabrication projects.',
         path: '/products/sheets-coils',
     },
     wires: {
         title: 'Wires | Vedantara Metal & Alloys Pvt Ltd',
         description:
-            'Discover titanium and stainless steel wires for demanding industrial and engineering applications.',
+            'Discover stainless steel, carbon steel and alloy steel wires for demanding industrial and engineering applications.',
         path: '/products/wires',
     },
     flanges: {
         title: 'Flanges | Vedantara Metal & Alloys Pvt Ltd',
         description:
-            'High-quality stainless steel and titanium flanges for industrial piping systems.',
+            'High-quality stainless steel, carbon steel and alloy steel flanges for industrial piping systems.',
         path: '/products/flanges',
     },
     forgedFittings: {
@@ -62,7 +62,7 @@ export const pageMeta = {
     fasteners: {
         title: 'Fasteners | Vedantara Metal & Alloys Pvt Ltd',
         description:
-            'Industrial-grade fasteners available in titanium, stainless steel, and duplex steel.',
+            'Industrial-grade fasteners available in stainless steel, carbon steel, alloy steel, and duplex steel.',
         path: '/products/fasteners',
     },
     hollowSections: {
