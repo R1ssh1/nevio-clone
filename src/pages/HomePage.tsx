@@ -221,7 +221,7 @@ export function HomePage() {
             <section className={`section-block quote-band ${revealClass('quote')}`} data-reveal="quote">
                 <div className="container quote-band__inner">
                     <h2>
-                        High-quality stainless steel, carbon steel and alloy steel round bars, sheets, and plates
+                        High-quality stainless steel, carbon steel and alloy steel sheets, plates, valves, and round bars
                         available in superior special steel grades for diverse application.
                     </h2>
                     <Link className="primary-button primary-button--light" to="/contact-us?subject=Request%20for%20Quotation">

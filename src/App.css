@@ -458,10 +458,10 @@ main {
 
 
 .hero-banner h1 {
-  max-width: 12em;
-  margin: 1rem 0 1.45rem;
-  font-size: clamp(3.35rem, 3.8vw, 4.75rem);
-  line-height: 1.06;
+  max-width: 22em;
+  margin: 1rem 0 1.25rem;
+  font-size: clamp(2.5rem, 3.2vw, 4rem);
+  line-height: 1.1;
   font-weight: 700;
   letter-spacing: 0;
   background: linear-gradient(to right, #ffffff 20%, rgba(200, 220, 255, 0.9) 40%, rgba(200, 220, 255, 0.9) 60%, #ffffff 80%);

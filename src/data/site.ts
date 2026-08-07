@@ -43,9 +43,9 @@ export const homepageHeroDescription =
 export const homepageBannerSlides = [
     {
         eyebrow: 'Welcome To Vedantara Metal & Alloys Pvt Ltd',
-        title: 'We Are Best Suppliers of Industrial Metal Products.',
+        title: 'We are the best supplier of industrial metal products — stainless steel, carbon steel and alloy steel',
         description:
-            'We are the best supplier of industrial metal products — stainless steel, carbon steel and alloy steel — engineered for superior performance, durability, and reliability across global markets.',
+            'Engineered for superior performance, durability, and reliability across global markets.',
         primaryLabel: 'Know More',
         primaryPath: '/products',
         secondaryLabel: 'Contact Us',
@@ -57,7 +57,7 @@ export const homepageBannerSlides = [
         eyebrow: 'Welcome To Vedantara Metal & Alloys Pvt Ltd',
         title: 'We Are Best Suppliers of Stainless Steel Products.',
         description:
-            'Vedantara Metal & Alloys Pvt Ltd is a leading manufacturer, exporter and supplier of Stainless Steel Products, ensuring superior performance, durability, and resistance to extreme conditions.',
+            'Vedantara Metal & Alloys Pvt Ltd is a leading manufacturer, exporter and supplier of Stainless Steel, Carbon Steel, and Alloy Steel Products, ensuring superior performance, durability, and resistance to extreme conditions.',
         primaryLabel: 'Know More',
         primaryPath: '/products',
         secondaryLabel: 'Contact Us',

@@ -84,11 +84,11 @@ export function WhyChooseUsSection() {
 
                     <div className="why-hero-card__content">
                         <h2>
-                            Vedantara Metal and Alloys Pvt Ltd is one of the major stockists of industrial metal and stainless steel
+                            Vedantara Metal and Alloys Pvt Ltd is one of the major stockists of industrial metal, stainless steel, carbon steel, and alloy steel
                             pipes and tubes.
                         </h2>
                         <p>
-                            We supply premium-grade stainless steel, industrial metal, duplex and nickel alloy products to
+                            We supply premium-grade stainless steel, carbon steel, alloy steel, duplex and nickel alloy products to
                             industries across India, delivering consistent quality, competitive pricing and dependable
                             service.
                         </p>
