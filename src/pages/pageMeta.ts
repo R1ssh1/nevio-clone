@@ -89,4 +89,10 @@ export const pageMeta = {
             'Get in touch with Vedantara Metal & Alloys Pvt Ltd for product inquiries, pricing, and export support through the contact form.',
         path: '/contact-us',
     },
+    valves: {
+        title: 'Valves | Vedantara Metal & Alloys Pvt Ltd',
+        description:
+            'High-performance industrial valves including Gate, Ball, Butterfly, and Check valves in stainless steel and specialty alloys.',
+        path: '/products/valves',
+    },
 }

@@ -166,7 +166,7 @@ export const productCards = [
     {
         title: 'Valves',
         href: '/products/valves',
-        image: '/assets/products/boiler.jpeg',
+        image: '/assets/products/valves.webp',
     },
 ]
 

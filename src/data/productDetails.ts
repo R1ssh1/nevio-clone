@@ -1680,6 +1680,77 @@ export const dynamicCategories: DynamicCategory[] = [
         ]
       }
     ]
+  },
+  {
+    "slug": "valves",
+    "title": "Valves",
+    "description": [
+      "Vedantara Metal & Alloys Pvt Ltd is a premier supplier and exporter of high-quality Industrial Valves in Mumbai, India. Designed for critical flow control applications, our valves ensure reliable performance across oil and gas, petrochemical, and power generation sectors.",
+      "We supply valves in various materials including Stainless Steel, Carbon Steel, Alloy Steel, Duplex, Super Duplex, and Nickel Alloys to handle aggressive and corrosive environments.",
+      "Our valves conform to major international standards like ASTM, ASME, ANSI, AISI, and DIN, meeting the rigorous demands of industrial piping systems."
+    ],
+    "subcategories": [
+      {
+        "name": "Gate Valve",
+        "image": "/assets/products/valves/gate-valve.webp",
+        "productLinks": [
+          {
+            "name": "Gate Valve",
+            "slug": "gate-valve"
+          }
+        ]
+      },
+      {
+        "name": "Ball Valve",
+        "image": "/assets/products/valves/ball-valve.webp",
+        "productLinks": [
+          {
+            "name": "Ball Valve",
+            "slug": "ball-valve"
+          }
+        ]
+      },
+      {
+        "name": "Globe Valve",
+        "image": "/assets/products/valves/globe-valve.jpg",
+        "productLinks": [
+          {
+            "name": "Globe Valve",
+            "slug": "globe-valve"
+          }
+        ]
+      },
+      {
+        "name": "Butterfly Valve",
+        "image": "/assets/products/valves/butterfly-valve.jpg",
+        "productLinks": [
+          {
+            "name": "Butterfly Valve",
+            "slug": "butterfly-valve"
+          }
+        ]
+      },
+      {
+        "name": "Check Valve",
+        "image": "/assets/products/valves/check-valve.webp",
+        "productLinks": [
+          {
+            "name": "Check Valve",
+            "slug": "check-valve"
+          }
+        ]
+      },
+      {
+        "name": "Cryogenic Valve",
+        "image": "/assets/products/valves/cryogenic-valve.png",
+        "productLinks": [
+          {
+            "name": "Cryogenic Valve",
+            "slug": "cryogenic-valve"
+          }
+        ]
+      }
+    ]
   }
 ];
 
@@ -15850,7 +15921,7 @@ export const dynamicProducts: DynamicProduct[] = [
         ]
       }
     ],
-    "image": "/assets/pipes&tubes/alloysteel/hero.png",
+    "image": "/assets/products/alloy-28-pipes.webp",
     "images": [
       "/assets/products/alloy-steel-p91-pipes-tubes-1.jpg",
       "/assets/products/alloy-steel-p91-pipes-tubes-2.jpg",
@@ -15940,7 +16011,7 @@ export const dynamicProducts: DynamicProduct[] = [
         ]
       }
     ],
-    "image": "/assets/pipes&tubes/alloysteel/hero.png",
+    "image": "/assets/products/alloy-28-pipes.webp",
     "images": [
       "/assets/products/alloy-steel-p22-pipes-tubes-1.jpg",
       "/assets/products/alloy-steel-p22-pipes-tubes-2.jpg",
@@ -16032,7 +16103,7 @@ export const dynamicProducts: DynamicProduct[] = [
         ]
       }
     ],
-    "image": "/assets/pipes&tubes/alloysteel/hero.png",
+    "image": "/assets/products/alloy-28-pipes.webp",
     "images": [
       "/assets/products/alloy-steel-p9-pipes-tubes-1.jpg",
       "/assets/products/alloy-steel-p9-pipes-tubes-2.jpg",
@@ -16135,7 +16206,7 @@ export const dynamicProducts: DynamicProduct[] = [
         ]
       }
     ],
-    "image": "/assets/pipes&tubes/alloysteel/hero.png",
+    "image": "/assets/products/alloy-28-pipes.webp",
     "images": [
       "/assets/products/alloy-steel-p92-pipes-tubes-1.jpg",
       "/assets/products/alloy-steel-p92-pipes-tubes-2.jpg",
@@ -16225,7 +16296,7 @@ export const dynamicProducts: DynamicProduct[] = [
         ]
       }
     ],
-    "image": "/assets/pipes&tubes/alloysteel/hero.png",
+    "image": "/assets/products/alloy-28-pipes.webp",
     "images": [
       "/assets/products/alloy-steel-p12-pipes-tubes-1.jpg",
       "/assets/products/alloy-steel-p12-pipes-tubes-2.jpg",
@@ -37757,5 +37828,149 @@ export const dynamicProducts: DynamicProduct[] = [
     "images": [
       "/assets/products/tiscral-sailhard-plates-1.jpg"
     ]
+  },
+  {
+    "categorySlug": "valves",
+    "subCategoryName": "Gate Valve",
+    "productName": "Gate Valve",
+    "slug": "gate-valve",
+    "description": [
+      "Vedantara Metal & Alloys Pvt Ltd supplies premium Gate Valves in various materials and specifications to meet demanding industrial needs. Ideal for critical flow control applications in oil, gas, and petrochemical sectors."
+    ],
+    "tables": [
+      {
+        "title": "Specifications & Standards",
+        "rows": [
+          ["Features", "Specifications"],
+          ["Material", "Stainless Steel / Duplex / Super Duplex / Nickel Alloy / Carbon Steel / Alloy Steel"],
+          ["Standard", "ASTM / ASME / ANSI / AISI / DIN"],
+          ["Grade", "WCB, WC1, WC6, WC9, LCB, LCC, LC3, C5, C12, CF8, CF8M, CF3, CF3M, CF8C, CN7M, CD4MCu, Hastelloy, Inconel, 304L, 316L, 2205, 2507 etc."],
+          ["Size", "1/2\" to 60\""],
+          ["Class", "150#, 300#, 600#, 800#, 900#, 1500# & 2500#"]
+        ]
+      }
+    ],
+    "image": "/assets/products/valves/gate-valve.webp",
+    "images": ["/assets/products/valves/gate-valve.webp"]
+  },
+  {
+    "categorySlug": "valves",
+    "subCategoryName": "Ball Valve",
+    "productName": "Ball Valve",
+    "slug": "ball-valve",
+    "description": [
+      "Vedantara Metal & Alloys Pvt Ltd supplies premium Ball Valves in various materials and specifications to meet demanding industrial needs. Ideal for critical flow control applications in oil, gas, and petrochemical sectors."
+    ],
+    "tables": [
+      {
+        "title": "Specifications & Standards",
+        "rows": [
+          ["Features", "Specifications"],
+          ["Material", "Stainless Steel / Duplex / Super Duplex / Nickel Alloy / Carbon Steel / Alloy Steel"],
+          ["Standard", "ASTM / ASME / ANSI / AISI / DIN"],
+          ["Grade", "WCB, WC1, WC6, WC9, LCB, LCC, LC3, C5, C12, CF8, CF8M, CF3, CF3M, CF8C, CN7M, CD4MCu, Hastelloy, Inconel, 304L, 316L, 2205, 2507 etc."],
+          ["Size", "1/2\" to 60\""],
+          ["Class", "150#, 300#, 600#, 800#, 900#, 1500# & 2500#"]
+        ]
+      }
+    ],
+    "image": "/assets/products/valves/ball-valve.webp",
+    "images": ["/assets/products/valves/ball-valve.webp"]
+  },
+  {
+    "categorySlug": "valves",
+    "subCategoryName": "Globe Valve",
+    "productName": "Globe Valve",
+    "slug": "globe-valve",
+    "description": [
+      "Vedantara Metal & Alloys Pvt Ltd supplies premium Globe Valves in various materials and specifications to meet demanding industrial needs. Ideal for critical flow control applications in oil, gas, and petrochemical sectors."
+    ],
+    "tables": [
+      {
+        "title": "Specifications & Standards",
+        "rows": [
+          ["Features", "Specifications"],
+          ["Material", "Stainless Steel / Duplex / Super Duplex / Nickel Alloy / Carbon Steel / Alloy Steel"],
+          ["Standard", "ASTM / ASME / ANSI / AISI / DIN"],
+          ["Grade", "WCB, WC1, WC6, WC9, LCB, LCC, LC3, C5, C12, CF8, CF8M, CF3, CF3M, CF8C, CN7M, CD4MCu, Hastelloy, Inconel, 304L, 316L, 2205, 2507 etc."],
+          ["Size", "1/2\" to 60\""],
+          ["Class", "150#, 300#, 600#, 800#, 900#, 1500# & 2500#"]
+        ]
+      }
+    ],
+    "image": "/assets/products/valves/globe-valve.jpg",
+    "images": ["/assets/products/valves/globe-valve.jpg"]
+  },
+  {
+    "categorySlug": "valves",
+    "subCategoryName": "Butterfly Valve",
+    "productName": "Butterfly Valve",
+    "slug": "butterfly-valve",
+    "description": [
+      "Vedantara Metal & Alloys Pvt Ltd supplies premium Butterfly Valves in various materials and specifications to meet demanding industrial needs. Ideal for critical flow control applications in oil, gas, and petrochemical sectors."
+    ],
+    "tables": [
+      {
+        "title": "Specifications & Standards",
+        "rows": [
+          ["Features", "Specifications"],
+          ["Material", "Stainless Steel / Duplex / Super Duplex / Nickel Alloy / Carbon Steel / Alloy Steel"],
+          ["Standard", "ASTM / ASME / ANSI / AISI / DIN"],
+          ["Grade", "WCB, WC1, WC6, WC9, LCB, LCC, LC3, C5, C12, CF8, CF8M, CF3, CF3M, CF8C, CN7M, CD4MCu, Hastelloy, Inconel, 304L, 316L, 2205, 2507 etc."],
+          ["Size", "1/2\" to 60\""],
+          ["Class", "150#, 300#, 600#, 800#, 900#, 1500# & 2500#"]
+        ]
+      }
+    ],
+    "image": "/assets/products/valves/butterfly-valve.jpg",
+    "images": ["/assets/products/valves/butterfly-valve.jpg"]
+  },
+  {
+    "categorySlug": "valves",
+    "subCategoryName": "Check Valve",
+    "productName": "Check Valve",
+    "slug": "check-valve",
+    "description": [
+      "Vedantara Metal & Alloys Pvt Ltd supplies premium Check Valves in various materials and specifications to meet demanding industrial needs. Ideal for critical flow control applications in oil, gas, and petrochemical sectors."
+    ],
+    "tables": [
+      {
+        "title": "Specifications & Standards",
+        "rows": [
+          ["Features", "Specifications"],
+          ["Material", "Stainless Steel / Duplex / Super Duplex / Nickel Alloy / Carbon Steel / Alloy Steel"],
+          ["Standard", "ASTM / ASME / ANSI / AISI / DIN"],
+          ["Grade", "WCB, WC1, WC6, WC9, LCB, LCC, LC3, C5, C12, CF8, CF8M, CF3, CF3M, CF8C, CN7M, CD4MCu, Hastelloy, Inconel, 304L, 316L, 2205, 2507 etc."],
+          ["Size", "1/2\" to 60\""],
+          ["Class", "150#, 300#, 600#, 800#, 900#, 1500# & 2500#"]
+        ]
+      }
+    ],
+    "image": "/assets/products/valves/check-valve.webp",
+    "images": ["/assets/products/valves/check-valve.webp"]
+  },
+  {
+    "categorySlug": "valves",
+    "subCategoryName": "Cryogenic Valve",
+    "productName": "Cryogenic Valve",
+    "slug": "cryogenic-valve",
+    "description": [
+      "Vedantara Metal & Alloys Pvt Ltd supplies premium Cryogenic Valves in various materials and specifications to meet demanding industrial needs. Ideal for critical flow control applications in oil, gas, and petrochemical sectors."
+    ],
+    "tables": [
+      {
+        "title": "Specifications & Standards",
+        "rows": [
+          ["Features", "Specifications"],
+          ["Material", "Stainless Steel / Duplex / Super Duplex / Nickel Alloy / Carbon Steel / Alloy Steel"],
+          ["Standard", "ASTM / ASME / ANSI / AISI / DIN"],
+          ["Grade", "WCB, WC1, WC6, WC9, LCB, LCC, LC3, C5, C12, CF8, CF8M, CF3, CF3M, CF8C, CN7M, CD4MCu, Hastelloy, Inconel, 304L, 316L, 2205, 2507 etc."],
+          ["Size", "1/2\" to 60\""],
+          ["Class", "150#, 300#, 600#, 800#, 900#, 1500# & 2500#"]
+        ]
+      }
+    ],
+    "image": "/assets/products/valves/cryogenic-valve.png",
+    "images": ["/assets/products/valves/cryogenic-valve.png"]
   }
 ];
