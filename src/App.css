@@ -11,7 +11,7 @@
 }
 
 .container {
-  width: min(1360px, calc(100% - 3rem));
+  width: min(1360px, 100% - 3rem);
   margin: 0 auto;
 }
 
@@ -2315,16 +2315,14 @@ main {
 
 @media (max-width: 992px) {
   .site-shell {
-    --site-header-height: 0px;
+    --site-header-height: 98px;
   }
 
   html {
     scroll-padding-top: 0;
   }
 
-  .site-header {
-    position: relative;
-  }
+
 
   .top-bar::before {
     width: 100%;
@@ -4378,18 +4376,8 @@ main {
 
 /* ── Mobile: 1024px ───────────────────────────── */
 @media (max-width: 1024px) {
-  .mobile-menu-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    border: none;
-    font-size: 28px;
-    cursor: pointer;
-    color: var(--navy);
-    padding: 10px;
-    margin-left: auto;
-    z-index: 10000;
+  .site-shell {
+    --site-header-height: 98px;
   }
 
   .top-bar {
@@ -4406,6 +4394,25 @@ main {
 
 /* ── Mobile: 768px ───────────────────────────── */
 @media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--navy);
+    padding: 10px;
+    margin-left: auto;
+    z-index: 10000;
+  }
+
+  .site-shell {
+    --site-header-height: 60px;
+    padding-top: var(--site-header-height);
+  }
+
   .header-inner {
     min-height: 60px;
     max-height: 60px;
@@ -4437,7 +4444,9 @@ main {
     right: 0;
     bottom: 0;
     background: #fff;
+    display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     overflow-y: auto;
     z-index: 9999;
     transform: translateX(100%);
@@ -4494,12 +4503,6 @@ main {
 
   .dropdown.is-open .dropdown-menu {
     display: block;
-  }
-
-  /* Hide the compact brochure block inside the mobile slide-out menu —
-     the full-width one at the bottom of every page is already visible */
-  .navbar-brochure {
-    display: none;
   }
 
   .quote-button {
