@@ -1,4 +1,3 @@
-import React from 'react';
 import './BrochureDownload.css';
 
 interface BrochureDownloadProps {
