@@ -63,14 +63,14 @@
    =========================================== */
 
 .navbar-brochure {
-    padding: 1.25rem 1.1rem;
+    padding: 1rem;
     border-top-width: 3px;
     box-shadow: none;
 }
 
 .navbar-brochure .brochure-download__title {
-    font-size: 1.45rem;
-    margin-bottom: 0.9rem;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
 }
 
 .navbar-brochure .brochure-download__desc {
