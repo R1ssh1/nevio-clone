@@ -268,7 +268,7 @@
   position: absolute;
   top: calc(100% - 1px);
   left: -22px;
-  width: 286px;
+  width: 340px;
   padding: 10px 0;
   background: #fff;
   border-top: 4px solid var(--navy);
@@ -443,7 +443,7 @@ main {
   position: relative;
   display: inline-block;
   margin-bottom: 2rem;
-  color: rgb(206, 206, 206);
+  color: #ffffff;
   border-color: black;
   font-size: clamp(1.05rem, 1.25vw, 1.52rem);
   font-weight: 550;
@@ -4501,6 +4501,12 @@ main {
 
   .dropdown.is-open .dropdown-menu {
     display: block;
+  }
+
+  /* Hide the compact brochure block inside the mobile slide-out menu —
+     the full-width one at the bottom of every page is already visible */
+  .navbar-brochure {
+    display: none;
   }
 
   .quote-button {

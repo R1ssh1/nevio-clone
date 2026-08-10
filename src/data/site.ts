@@ -12,7 +12,8 @@ export const navigation = [
             { label: 'Forged Fittings', path: '/products/forged-fittings' },
             { label: 'Buttweld Fittings', path: '/products/buttweld-fittings' },
             { label: 'Fasteners', path: '/products/fasteners' },
-            { label: 'Specialized Products', path: '/products/specialized-products' },
+            { label: 'Valves', path: '/products/valves' },
+            { label: 'Special Alloys', path: '/products/special-alloys' },
         ],
     },
     { label: 'Quality', path: '/quality-policy' },
@@ -20,7 +21,8 @@ export const navigation = [
 ]
 
 export const contactDetails = {
-    address: '48/50 Hafeez Bldg, Office No 8, Cawasji Patel Tank Road, Mumbai – 400004',
+    address: 'Corp Office: Plot No-48/50, Hafeez Bldg, Cawaji Patel Road, Mumbai-400004',
+    factoryAddress: 'Factory: Plot No 1312, Steel Market, Kalamboli, Navi Mumbai-410218',
     email: 'info@vedantarametal.com',
     phone: '+91 99208 50631',
 
@@ -50,8 +52,8 @@ export const homepageBannerSlides = [
         primaryPath: '/products',
         secondaryLabel: 'Contact Us',
         secondaryPath: '/contact-us',
-        image: '/assets/home/titanium-pipes-tubes.webp',
-        alt: 'Industrial metal product showcase',
+        image: '/images/factory.png',
+        alt: 'Vedantara Metal & Alloys factory',
     },
     {
         eyebrow: 'Welcome To Vedantara Metal & Alloys Pvt Ltd',
@@ -162,8 +164,8 @@ export const productCards = [
         image: '/assets/products/fasteners.webp',
     },
     {
-        title: 'Specialized Products',
-        href: '/products/specialized-products',
+        title: 'Valves',
+        href: '/products/valves',
         image: '/assets/products/boiler.jpeg',
     },
 ]
