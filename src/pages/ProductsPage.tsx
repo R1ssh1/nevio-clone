@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { productCards } from '../data/site'
 import { PageHero } from '../components/PageHero'
 import { Seo } from '../components/Seo'
+import { BrochureDownload } from '../components/BrochureDownload'
 import { pageMeta } from './pageMeta'
 
 export function ProductsPage() {
@@ -38,6 +39,10 @@ export function ProductsPage() {
                     </Link>
                 ))}
             </section>
+            
+            <div className="container" style={{ margin: '40px auto' }}>
+                <BrochureDownload />
+            </div>
         </div>
     )
 }

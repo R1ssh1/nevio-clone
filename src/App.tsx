@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { Footer } from './components/Footer'
 import { Layout } from './components/Layout'
+import { BrochureDownload } from './components/BrochureDownload'
 import { ScrollToTop } from './components/ScrollToTop'
 import { ScrollProgress } from './components/ScrollProgress'
 import { AboutPage } from './pages/AboutPage'
@@ -77,6 +78,9 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
 
+        <div className="container" style={{ marginBottom: '60px' }}>
+          <BrochureDownload />
+        </div>
         <Footer />
       </Layout>
     </>

@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import { navigation } from '../data/site'
 import { products } from '../data/products'
+import { BrochureDownload } from './BrochureDownload'
 
 export function Header() {
     const [scrolled, setScrolled] = useState(false)
@@ -166,6 +167,9 @@ export function Header() {
                                                     </NavLink>
                                                 )
                                             })}
+                                            <div style={{ marginTop: '15px' }}>
+                                                <BrochureDownload className="navbar-brochure" />
+                                            </div>
                                         </div>
                                     </div>
                                 )

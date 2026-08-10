@@ -12,7 +12,8 @@ export const navigation = [
             { label: 'Forged Fittings', path: '/products/forged-fittings' },
             { label: 'Buttweld Fittings', path: '/products/buttweld-fittings' },
             { label: 'Fasteners', path: '/products/fasteners' },
-            { label: 'Specialized Products', path: '/products/specialized-products' },
+            { label: 'Valves', path: '/products/valves' },
+            { label: 'Special Alloys', path: '/products/special-alloys' },
         ],
     },
     { label: 'Quality', path: '/quality-policy' },
@@ -20,7 +21,8 @@ export const navigation = [
 ]
 
 export const contactDetails = {
-    address: '48/50 Hafeez Bldg, Office No 8, Cawasji Patel Tank Road, Mumbai – 400004',
+    address: 'Corp Office: Plot No-48/50, Hafeez Bldg, Cawaji Patel Road, Mumbai-400004',
+    factoryAddress: 'Factory: Plot No 1312, Steel Market, Kalamboli, Navi Mumbai-410218',
     email: 'info@vedantarametal.com',
     phone: '+91 99208 50631',
 
@@ -43,21 +45,21 @@ export const homepageHeroDescription =
 export const homepageBannerSlides = [
     {
         eyebrow: 'Welcome To Vedantara Metal & Alloys Pvt Ltd',
-        title: 'We Are Best Suppliers of Industrial Metal Products.',
+        title: 'We are the best supplier of industrial metal products — stainless steel, carbon steel and alloy steel',
         description:
-            'We are the best supplier of industrial metal products — stainless steel, carbon steel and alloy steel — engineered for superior performance, durability, and reliability across global markets.',
+            'Engineered for superior performance, durability, and reliability across global markets.',
         primaryLabel: 'Know More',
         primaryPath: '/products',
         secondaryLabel: 'Contact Us',
         secondaryPath: '/contact-us',
-        image: '/assets/home/titanium-pipes-tubes.webp',
-        alt: 'Industrial metal product showcase',
+        image: '/images/factory.png',
+        alt: 'Vedantara Metal & Alloys factory',
     },
     {
         eyebrow: 'Welcome To Vedantara Metal & Alloys Pvt Ltd',
         title: 'We Are Best Suppliers of Stainless Steel Products.',
         description:
-            'Vedantara Metal & Alloys Pvt Ltd is a leading manufacturer, exporter and supplier of Stainless Steel Products, ensuring superior performance, durability, and resistance to extreme conditions.',
+            'Vedantara Metal & Alloys Pvt Ltd is a leading manufacturer, exporter and supplier of Stainless Steel, Carbon Steel, and Alloy Steel Products, ensuring superior performance, durability, and resistance to extreme conditions.',
         primaryLabel: 'Know More',
         primaryPath: '/products',
         secondaryLabel: 'Contact Us',
@@ -162,8 +164,8 @@ export const productCards = [
         image: '/assets/products/fasteners.webp',
     },
     {
-        title: 'Specialized Products',
-        href: '/products/specialized-products',
+        title: 'Valves',
+        href: '/products/valves',
         image: '/assets/products/boiler.jpeg',
     },
 ]
