@@ -81,5 +81,13 @@ export const products: ProductInfo[] = [
     description4: "Our specialized steel products undergo rigorous quality checks including chemical analysis, mechanical testing, hardness testing, and impact testing before dispatch. We follow a zero-rejection policy and deliver defect-free products worldwide with complete MTC documentation, quality reports, and test certificates at competitive pricing.",
     seoKeywords: "Abrasion Resistant Plates Supplier, Corten Steel Exporter, Boiler Steel Plates Stockist, Quenched Tempered Steel Manufacturer Mumbai, AR 400 Plates, ASTM A516 Grade 70 Plates India"
   },
-
+  {
+    name: "Valves",
+    slug: "/products/valves",
+    description1: "Vedantara Metal & Alloys Pvt Ltd is a premier manufacturer, exporter, and supplier of high-quality Industrial Valves in Mumbai, India. We offer a comprehensive range of valves including Gate Valves, Ball Valves, Butterfly Valves, Check Valves, and Cryogenic Valves, engineered to meet the stringent demands of various industries.",
+    description2: "Our valves are manufactured from premium materials such as Stainless Steel, Duplex, Super Duplex, Nickel Alloy, Carbon Steel, and Alloy Steel. They are designed in accordance with major international standards including ASTM, ASME, ANSI, AISI, and DIN, ensuring exceptional reliability, durability, and corrosion resistance in critical flow control applications.",
+    description3: "We offer valves in a wide range of sizes from 1/2\" to 60\" and pressure classes including 150#, 300#, 600#, 800#, 900#, 1500#, and 2500#. With grades spanning from WCB, CF8M, and 316L to advanced alloys like Hastelloy and Inconel, our valves cater to the specific requirements of the Oil & Gas, Petrochemical, Power Generation, Marine, and Chemical sectors.",
+    description4: "At Vedantara Metal & Alloys Pvt Ltd, every valve undergoes rigorous quality testing to guarantee zero defects and optimal performance under extreme conditions. We are committed to providing our global clients with technically superior products, timely delivery, and comprehensive documentation including material test certificates (MTC) and quality reports.",
+    seoKeywords: "Industrial Valves Supplier, Stainless Steel Gate Valves Exporter, Carbon Steel Ball Valves, Duplex Steel Butterfly Valves, Cryogenic Valves Manufacturer Mumbai, High Pressure Check Valves India"
+  }
 ]

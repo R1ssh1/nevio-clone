@@ -1,7 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { Footer } from './components/Footer'
 import { Layout } from './components/Layout'
-import { BrochureDownload } from './components/BrochureDownload'
 import { ScrollToTop } from './components/ScrollToTop'
 import { ScrollProgress } from './components/ScrollProgress'
 import { AboutPage } from './pages/AboutPage'
@@ -17,6 +16,7 @@ import { FlangesPage } from './pages/FlangesPage'
 import { ForgedFittingsPage } from './pages/ForgedFittingsPage'
 import { ButtweldFittingsPage } from './pages/ButtweldFittingsPage'
 import { FastenersPage } from './pages/FastenersPage'
+import { ValvesPage } from './pages/ValvesPage'
 import { HollowSectionsPage } from './pages/HollowSectionsPage'
 import { SpecializedProductsPage } from './pages/SpecializedProductsPage'
 
@@ -63,6 +63,9 @@ function App() {
           <Route path="/products/fasteners" element={<FastenersPage />} />
           <Route path="/products/fasteners/:id" element={<ProductDetailPage />} />
           
+          <Route path="/products/valves" element={<ValvesPage />} />
+          <Route path="/products/valves/:id" element={<ProductDetailPage />} />
+          
           {/* Hollow Sections — page kept for backward compat, removed from nav */}
           <Route path="/products/hollow-sections" element={<HollowSectionsPage />} />
           <Route path="/products/hollow-sections/:id" element={<ProductDetailPage />} />
@@ -77,13 +80,10 @@ function App() {
           <Route path="/products/:category/:id" element={<ProductDetailPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
-
-        <div className="container" style={{ marginBottom: '60px' }}>
-          <BrochureDownload />
-        </div>
         <Footer />
       </Layout>
     </>
+
   )
 }
 

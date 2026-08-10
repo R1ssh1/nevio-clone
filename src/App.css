@@ -309,11 +309,11 @@
 
 .dropdown-item {
   display: block;
-  padding: 13px 20px;
+  padding: 8px 20px;
   color: #162334;
   text-decoration: none;
   font-weight: 650;
-  transition: background 180ms ease, color 180ms ease, padding-left 180ms ease;
+  transition: all 0.2s ease;
 }
 
 .dropdown-item:hover,
@@ -5042,3 +5042,9 @@ main {
     font-size: 0.95rem;
   }
 }
+/* Valve images should use contain and white background */
+img[src*="/valves/"] {
+  object-fit: contain !important;
+  background-color: #ffffff !important;
+}
+
