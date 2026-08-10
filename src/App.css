@@ -212,8 +212,6 @@
 .header-actions {
   display: flex;
   align-items: center;
-  align-self: stretch;
-  height: 100%;
   gap: clamp(1.25rem, 2.2vw, 3rem);
   flex: 1;
   justify-content: flex-end;
@@ -230,6 +228,8 @@
 @media (min-width: 769px) {
   .nav {
     position: absolute;
+    top: 0;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
   }
